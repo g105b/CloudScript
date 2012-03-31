@@ -1,0 +1,15 @@
+CloudScript
+===========
+
+See http://cloudscript.g105b.com for an online test-drive.
+
+Requirements
+============
+You must have the following tools installed:
+* Java 1.5 or greater (http://www.java.com/en/download/index.jsp)
+* Ant 1.7 or greater (http://ant.apache.org/)
+* Ruby 1.8 or greater (http://www.ruby-lang.org)
+
+Java provides the JVM upon which the language is constructed.
+Ant provides the build, compile and test framework for the language.
+Ruby runs the test cases.
