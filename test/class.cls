@@ -5,12 +5,12 @@ print(self.class.name)
 
 # Same syntax as Ruby, "< Object" is implicit is no superclass is specified.
 class Language < Object
-  def initialize(name)
+  fn initialize(name)
     # Instance variable start with an @
     @name = name
   end
   
-  def name
+  fn name
     @name
   end
 end

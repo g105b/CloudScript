@@ -195,7 +195,7 @@ assign returns [Node node]:
   ;
 
 methodDefinition returns [MethodDefinitionNode node]:
-    DEF NAME (OPEN_PARENT parameters? CLOSE_PARENT)? terminator
+    FN NAME (OPEN_PARENT parameters? CLOSE_PARENT)? terminator
       expressions
     END                             { $node = new MethodDefinitionNode($NAME.text, $parameters.names, $expressions.nodes); }
   ;

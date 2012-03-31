@@ -1,4 +1,4 @@
-// $ANTLR 3.1.1 CloudScriptParser.g 2012-03-31 15:22:42
+// $ANTLR 3.1.1 CloudScriptParser.g 2012-03-31 15:34:09
 
   package cloudscript.lang;
   
@@ -17,11 +17,10 @@ import org.antlr.runtime.tree.*;
 
 public class CloudScriptParser extends Parser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "CLASS", "DEF", "IF", "ELSE", "WHILE", "END", "SELF", "NIL", "TRUE", "FALSE", "INTEGER", "FLOAT", "DIGIT", "NUMBER", "STRING", "LOWER", "ID_CHAR", "NAME", "UPPER", "CONSTANT", "SEMICOLON", "COLON", "DOT", "COMMA", "OPEN_PARENT", "CLOSE_PARENT", "AT", "EQ", "LE", "GE", "LT", "GT", "PLUS", "MINUS", "MUL", "DIV", "MOD", "AND", "OR", "NOT", "ASSIGN", "NEWLINE", "COMMENT", "SPACE", "WHITESPACE", "LETTER"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "CLASS", "FN", "IF", "ELSE", "WHILE", "END", "SELF", "NIL", "TRUE", "FALSE", "INTEGER", "FLOAT", "DIGIT", "NUMBER", "STRING", "LOWER", "ID_CHAR", "NAME", "UPPER", "CONSTANT", "SEMICOLON", "COLON", "DOT", "COMMA", "OPEN_PARENT", "CLOSE_PARENT", "AT", "EQ", "LE", "GE", "LT", "GT", "PLUS", "MINUS", "MUL", "DIV", "MOD", "AND", "OR", "NOT", "ASSIGN", "NEWLINE", "COMMENT", "SPACE", "WHITESPACE", "LETTER"
     };
     public static final int CLASS=4;
     public static final int LT=34;
-    public static final int DEF=5;
     public static final int WHILE=8;
     public static final int MOD=40;
     public static final int LETTER=49;
@@ -46,6 +45,7 @@ public class CloudScriptParser extends Parser {
     public static final int NUMBER=17;
     public static final int WHITESPACE=48;
     public static final int SEMICOLON=24;
+    public static final int FN=5;
     public static final int MINUS=37;
     public static final int TRUE=12;
     public static final int MUL=38;
@@ -559,7 +559,7 @@ public class CloudScriptParser extends Parser {
                 }
                 break;
             case CLASS:
-            case DEF:
+            case FN:
             case IF:
             case WHILE:
             case SELF:
@@ -2425,14 +2425,14 @@ public class CloudScriptParser extends Parser {
     };
 
     // $ANTLR start "methodDefinition"
-    // CloudScriptParser.g:197:1: methodDefinition returns [MethodDefinitionNode node] : DEF NAME ( OPEN_PARENT ( parameters )? CLOSE_PARENT )? terminator expressions END ;
+    // CloudScriptParser.g:197:1: methodDefinition returns [MethodDefinitionNode node] : FN NAME ( OPEN_PARENT ( parameters )? CLOSE_PARENT )? terminator expressions END ;
     public final CloudScriptParser.methodDefinition_return methodDefinition() throws RecognitionException {
         CloudScriptParser.methodDefinition_return retval = new CloudScriptParser.methodDefinition_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token DEF56=null;
+        Token FN56=null;
         Token NAME57=null;
         Token OPEN_PARENT58=null;
         Token CLOSE_PARENT60=null;
@@ -2444,29 +2444,29 @@ public class CloudScriptParser extends Parser {
         CloudScriptParser.expressions_return expressions62 = null;
 
 
-        Object DEF56_tree=null;
+        Object FN56_tree=null;
         Object NAME57_tree=null;
         Object OPEN_PARENT58_tree=null;
         Object CLOSE_PARENT60_tree=null;
         Object END63_tree=null;
 
         try {
-            // CloudScriptParser.g:197:53: ( DEF NAME ( OPEN_PARENT ( parameters )? CLOSE_PARENT )? terminator expressions END )
-            // CloudScriptParser.g:198:5: DEF NAME ( OPEN_PARENT ( parameters )? CLOSE_PARENT )? terminator expressions END
+            // CloudScriptParser.g:197:53: ( FN NAME ( OPEN_PARENT ( parameters )? CLOSE_PARENT )? terminator expressions END )
+            // CloudScriptParser.g:198:5: FN NAME ( OPEN_PARENT ( parameters )? CLOSE_PARENT )? terminator expressions END
             {
             root_0 = (Object)adaptor.nil();
 
-            DEF56=(Token)match(input,DEF,FOLLOW_DEF_in_methodDefinition1510); if (state.failed) return retval;
+            FN56=(Token)match(input,FN,FOLLOW_FN_in_methodDefinition1510); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            DEF56_tree = (Object)adaptor.create(DEF56);
-            adaptor.addChild(root_0, DEF56_tree);
+            FN56_tree = (Object)adaptor.create(FN56);
+            adaptor.addChild(root_0, FN56_tree);
             }
             NAME57=(Token)match(input,NAME,FOLLOW_NAME_in_methodDefinition1512); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             NAME57_tree = (Object)adaptor.create(NAME57);
             adaptor.addChild(root_0, NAME57_tree);
             }
-            // CloudScriptParser.g:198:14: ( OPEN_PARENT ( parameters )? CLOSE_PARENT )?
+            // CloudScriptParser.g:198:13: ( OPEN_PARENT ( parameters )? CLOSE_PARENT )?
             int alt21=2;
             int LA21_0 = input.LA(1);
 
@@ -2475,14 +2475,14 @@ public class CloudScriptParser extends Parser {
             }
             switch (alt21) {
                 case 1 :
-                    // CloudScriptParser.g:198:15: OPEN_PARENT ( parameters )? CLOSE_PARENT
+                    // CloudScriptParser.g:198:14: OPEN_PARENT ( parameters )? CLOSE_PARENT
                     {
                     OPEN_PARENT58=(Token)match(input,OPEN_PARENT,FOLLOW_OPEN_PARENT_in_methodDefinition1515); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     OPEN_PARENT58_tree = (Object)adaptor.create(OPEN_PARENT58);
                     adaptor.addChild(root_0, OPEN_PARENT58_tree);
                     }
-                    // CloudScriptParser.g:198:27: ( parameters )?
+                    // CloudScriptParser.g:198:26: ( parameters )?
                     int alt20=2;
                     int LA20_0 = input.LA(1);
 
@@ -5072,7 +5072,7 @@ public class CloudScriptParser extends Parser {
     public static final BitSet FOLLOW_NAME_in_assign1480 = new BitSet(new long[]{0x0000100000000000L});
     public static final BitSet FOLLOW_ASSIGN_in_assign1482 = new BitSet(new long[]{0x0000080050A4FD70L});
     public static final BitSet FOLLOW_expression_in_assign1484 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_DEF_in_methodDefinition1510 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_FN_in_methodDefinition1510 = new BitSet(new long[]{0x0000000000200000L});
     public static final BitSet FOLLOW_NAME_in_methodDefinition1512 = new BitSet(new long[]{0x0000200011000000L});
     public static final BitSet FOLLOW_OPEN_PARENT_in_methodDefinition1515 = new BitSet(new long[]{0x0000000020200000L});
     public static final BitSet FOLLOW_parameters_in_methodDefinition1517 = new BitSet(new long[]{0x0000000020000000L});

@@ -27,7 +27,7 @@ lexer grammar CloudScriptLexer;
 // Keywords
                     // {...}?=> to allow keyword as method name
 CLASS:              {!methodMode}?=> 'class';
-DEF:                {!methodMode}?=> 'def';
+FN:                 {!methodMode}?=> 'fn';
 IF:                 {!methodMode}?=> 'if';
 ELSE:               {!methodMode}?=> 'else';
 WHILE:              {!methodMode}?=> 'while';

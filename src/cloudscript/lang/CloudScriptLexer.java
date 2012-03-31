@@ -1,4 +1,4 @@
-// $ANTLR 3.1.1 CloudScriptLexer.g 2012-03-31 15:22:20
+// $ANTLR 3.1.1 CloudScriptLexer.g 2012-03-31 15:33:46
  package cloudscript.lang; 
 
 import org.antlr.runtime.*;
@@ -9,7 +9,6 @@ import java.util.ArrayList;
 public class CloudScriptLexer extends Lexer {
     public static final int CLASS=4;
     public static final int LT=34;
-    public static final int DEF=5;
     public static final int WHILE=8;
     public static final int LETTER=49;
     public static final int MOD=40;
@@ -34,6 +33,7 @@ public class CloudScriptLexer extends Lexer {
     public static final int NUMBER=17;
     public static final int WHITESPACE=48;
     public static final int SEMICOLON=24;
+    public static final int FN=5;
     public static final int MINUS=37;
     public static final int TRUE=12;
     public static final int MUL=38;
@@ -111,18 +111,18 @@ public class CloudScriptLexer extends Lexer {
     }
     // $ANTLR end "CLASS"
 
-    // $ANTLR start "DEF"
-    public final void mDEF() throws RecognitionException {
+    // $ANTLR start "FN"
+    public final void mFN() throws RecognitionException {
         try {
-            int _type = DEF;
+            int _type = FN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // CloudScriptLexer.g:30:4: ({...}? => 'def' )
-            // CloudScriptLexer.g:30:21: {...}? => 'def'
+            // CloudScriptLexer.g:30:3: ({...}? => 'fn' )
+            // CloudScriptLexer.g:30:21: {...}? => 'fn'
             {
             if ( !((!methodMode)) ) {
-                throw new FailedPredicateException(input, "DEF", "!methodMode");
+                throw new FailedPredicateException(input, "FN", "!methodMode");
             }
-            match("def"); 
+            match("fn"); 
 
 
             }
@@ -133,7 +133,7 @@ public class CloudScriptLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "DEF"
+    // $ANTLR end "FN"
 
     // $ANTLR start "IF"
     public final void mIF() throws RecognitionException {
@@ -1378,7 +1378,7 @@ public class CloudScriptLexer extends Lexer {
     // $ANTLR end "SPACE"
 
     public void mTokens() throws RecognitionException {
-        // CloudScriptLexer.g:1:8: ( CLASS | DEF | IF | ELSE | WHILE | END | SELF | NIL | TRUE | FALSE | NUMBER | STRING | NAME | CONSTANT | SEMICOLON | COLON | DOT | COMMA | OPEN_PARENT | CLOSE_PARENT | AT | EQ | LE | GE | LT | GT | PLUS | MINUS | MUL | DIV | MOD | AND | OR | NOT | ASSIGN | COMMENT | NEWLINE | WHITESPACE )
+        // CloudScriptLexer.g:1:8: ( CLASS | FN | IF | ELSE | WHILE | END | SELF | NIL | TRUE | FALSE | NUMBER | STRING | NAME | CONSTANT | SEMICOLON | COLON | DOT | COMMA | OPEN_PARENT | CLOSE_PARENT | AT | EQ | LE | GE | LT | GT | PLUS | MINUS | MUL | DIV | MOD | AND | OR | NOT | ASSIGN | COMMENT | NEWLINE | WHITESPACE )
         int alt13=38;
         alt13 = dfa13.predict(input);
         switch (alt13) {
@@ -1390,259 +1390,259 @@ public class CloudScriptLexer extends Lexer {
                 }
                 break;
             case 2 :
-                // CloudScriptLexer.g:1:16: DEF
+                // CloudScriptLexer.g:1:16: FN
                 {
-                mDEF(); 
+                mFN(); 
 
                 }
                 break;
             case 3 :
-                // CloudScriptLexer.g:1:20: IF
+                // CloudScriptLexer.g:1:19: IF
                 {
                 mIF(); 
 
                 }
                 break;
             case 4 :
-                // CloudScriptLexer.g:1:23: ELSE
+                // CloudScriptLexer.g:1:22: ELSE
                 {
                 mELSE(); 
 
                 }
                 break;
             case 5 :
-                // CloudScriptLexer.g:1:28: WHILE
+                // CloudScriptLexer.g:1:27: WHILE
                 {
                 mWHILE(); 
 
                 }
                 break;
             case 6 :
-                // CloudScriptLexer.g:1:34: END
+                // CloudScriptLexer.g:1:33: END
                 {
                 mEND(); 
 
                 }
                 break;
             case 7 :
-                // CloudScriptLexer.g:1:38: SELF
+                // CloudScriptLexer.g:1:37: SELF
                 {
                 mSELF(); 
 
                 }
                 break;
             case 8 :
-                // CloudScriptLexer.g:1:43: NIL
+                // CloudScriptLexer.g:1:42: NIL
                 {
                 mNIL(); 
 
                 }
                 break;
             case 9 :
-                // CloudScriptLexer.g:1:47: TRUE
+                // CloudScriptLexer.g:1:46: TRUE
                 {
                 mTRUE(); 
 
                 }
                 break;
             case 10 :
-                // CloudScriptLexer.g:1:52: FALSE
+                // CloudScriptLexer.g:1:51: FALSE
                 {
                 mFALSE(); 
 
                 }
                 break;
             case 11 :
-                // CloudScriptLexer.g:1:58: NUMBER
+                // CloudScriptLexer.g:1:57: NUMBER
                 {
                 mNUMBER(); 
 
                 }
                 break;
             case 12 :
-                // CloudScriptLexer.g:1:65: STRING
+                // CloudScriptLexer.g:1:64: STRING
                 {
                 mSTRING(); 
 
                 }
                 break;
             case 13 :
-                // CloudScriptLexer.g:1:72: NAME
+                // CloudScriptLexer.g:1:71: NAME
                 {
                 mNAME(); 
 
                 }
                 break;
             case 14 :
-                // CloudScriptLexer.g:1:77: CONSTANT
+                // CloudScriptLexer.g:1:76: CONSTANT
                 {
                 mCONSTANT(); 
 
                 }
                 break;
             case 15 :
-                // CloudScriptLexer.g:1:86: SEMICOLON
+                // CloudScriptLexer.g:1:85: SEMICOLON
                 {
                 mSEMICOLON(); 
 
                 }
                 break;
             case 16 :
-                // CloudScriptLexer.g:1:96: COLON
+                // CloudScriptLexer.g:1:95: COLON
                 {
                 mCOLON(); 
 
                 }
                 break;
             case 17 :
-                // CloudScriptLexer.g:1:102: DOT
+                // CloudScriptLexer.g:1:101: DOT
                 {
                 mDOT(); 
 
                 }
                 break;
             case 18 :
-                // CloudScriptLexer.g:1:106: COMMA
+                // CloudScriptLexer.g:1:105: COMMA
                 {
                 mCOMMA(); 
 
                 }
                 break;
             case 19 :
-                // CloudScriptLexer.g:1:112: OPEN_PARENT
+                // CloudScriptLexer.g:1:111: OPEN_PARENT
                 {
                 mOPEN_PARENT(); 
 
                 }
                 break;
             case 20 :
-                // CloudScriptLexer.g:1:124: CLOSE_PARENT
+                // CloudScriptLexer.g:1:123: CLOSE_PARENT
                 {
                 mCLOSE_PARENT(); 
 
                 }
                 break;
             case 21 :
-                // CloudScriptLexer.g:1:137: AT
+                // CloudScriptLexer.g:1:136: AT
                 {
                 mAT(); 
 
                 }
                 break;
             case 22 :
-                // CloudScriptLexer.g:1:140: EQ
+                // CloudScriptLexer.g:1:139: EQ
                 {
                 mEQ(); 
 
                 }
                 break;
             case 23 :
-                // CloudScriptLexer.g:1:143: LE
+                // CloudScriptLexer.g:1:142: LE
                 {
                 mLE(); 
 
                 }
                 break;
             case 24 :
-                // CloudScriptLexer.g:1:146: GE
+                // CloudScriptLexer.g:1:145: GE
                 {
                 mGE(); 
 
                 }
                 break;
             case 25 :
-                // CloudScriptLexer.g:1:149: LT
+                // CloudScriptLexer.g:1:148: LT
                 {
                 mLT(); 
 
                 }
                 break;
             case 26 :
-                // CloudScriptLexer.g:1:152: GT
+                // CloudScriptLexer.g:1:151: GT
                 {
                 mGT(); 
 
                 }
                 break;
             case 27 :
-                // CloudScriptLexer.g:1:155: PLUS
+                // CloudScriptLexer.g:1:154: PLUS
                 {
                 mPLUS(); 
 
                 }
                 break;
             case 28 :
-                // CloudScriptLexer.g:1:160: MINUS
+                // CloudScriptLexer.g:1:159: MINUS
                 {
                 mMINUS(); 
 
                 }
                 break;
             case 29 :
-                // CloudScriptLexer.g:1:166: MUL
+                // CloudScriptLexer.g:1:165: MUL
                 {
                 mMUL(); 
 
                 }
                 break;
             case 30 :
-                // CloudScriptLexer.g:1:170: DIV
+                // CloudScriptLexer.g:1:169: DIV
                 {
                 mDIV(); 
 
                 }
                 break;
             case 31 :
-                // CloudScriptLexer.g:1:174: MOD
+                // CloudScriptLexer.g:1:173: MOD
                 {
                 mMOD(); 
 
                 }
                 break;
             case 32 :
-                // CloudScriptLexer.g:1:178: AND
+                // CloudScriptLexer.g:1:177: AND
                 {
                 mAND(); 
 
                 }
                 break;
             case 33 :
-                // CloudScriptLexer.g:1:182: OR
+                // CloudScriptLexer.g:1:181: OR
                 {
                 mOR(); 
 
                 }
                 break;
             case 34 :
-                // CloudScriptLexer.g:1:185: NOT
+                // CloudScriptLexer.g:1:184: NOT
                 {
                 mNOT(); 
 
                 }
                 break;
             case 35 :
-                // CloudScriptLexer.g:1:189: ASSIGN
+                // CloudScriptLexer.g:1:188: ASSIGN
                 {
                 mASSIGN(); 
 
                 }
                 break;
             case 36 :
-                // CloudScriptLexer.g:1:196: COMMENT
+                // CloudScriptLexer.g:1:195: COMMENT
                 {
                 mCOMMENT(); 
 
                 }
                 break;
             case 37 :
-                // CloudScriptLexer.g:1:204: NEWLINE
+                // CloudScriptLexer.g:1:203: NEWLINE
                 {
                 mNEWLINE(); 
 
                 }
                 break;
             case 38 :
-                // CloudScriptLexer.g:1:212: WHITESPACE
+                // CloudScriptLexer.g:1:211: WHITESPACE
                 {
                 mWHITESPACE(); 
 
@@ -1656,52 +1656,48 @@ public class CloudScriptLexer extends Lexer {
 
     protected DFA13 dfa13 = new DFA13(this);
     static final String DFA13_eotS =
-        "\1\uffff\11\15\1\55\13\uffff\1\57\1\61\1\63\12\uffff\2\15\1\66\7"+
-        "\15\7\uffff\1\15\1\77\1\uffff\1\15\1\102\2\15\1\105\3\15\2\uffff"+
-        "\1\112\1\uffff\1\15\1\115\1\uffff\1\117\1\15\1\121\3\uffff\1\123"+
-        "\3\uffff\1\126\11\uffff";
+        "\1\uffff\10\14\1\54\13\uffff\1\56\1\60\1\62\12\uffff\1\14\1\64\1"+
+        "\14\1\66\6\14\7\uffff\1\14\1\uffff\1\14\1\uffff\1\14\1\102\2\14"+
+        "\1\105\2\14\1\uffff\1\14\1\uffff\1\111\1\uffff\1\14\1\114\1\uffff"+
+        "\1\116\1\117\1\120\2\uffff\1\122\14\uffff";
     static final String DFA13_eofS =
-        "\132\uffff";
+        "\130\uffff";
     static final String DFA13_minS =
-        "\1\11\1\154\1\145\1\146\1\154\1\150\1\145\1\151\1\162\1\141\1\60"+
-        "\13\uffff\3\75\12\uffff\1\141\1\146\1\41\1\163\1\144\1\151\2\154"+
-        "\1\165\1\154\7\uffff\1\163\1\41\1\0\1\145\1\41\1\154\1\146\1\41"+
-        "\1\145\2\163\1\0\1\uffff\1\41\1\0\1\145\1\41\1\0\1\41\1\145\1\41"+
-        "\1\uffff\1\0\1\uffff\1\41\1\0\1\uffff\1\0\1\41\1\0\1\uffff\1\0\2"+
-        "\uffff\1\0\3\uffff";
+        "\1\11\1\154\1\141\1\146\1\154\1\150\1\145\1\151\1\162\1\60\13\uffff"+
+        "\3\75\12\uffff\1\141\1\41\1\154\1\41\1\163\1\144\1\151\2\154\1\165"+
+        "\7\uffff\1\163\1\0\1\163\1\0\1\145\1\41\1\154\1\146\1\41\1\145\1"+
+        "\163\1\uffff\1\145\1\uffff\1\41\1\0\1\145\1\41\1\0\3\41\1\0\1\uffff"+
+        "\1\41\1\0\1\uffff\3\0\1\uffff\1\0\5\uffff";
     static final String DFA13_maxS =
-        "\1\174\1\154\1\145\1\146\1\156\1\150\1\145\1\151\1\162\1\141\1\71"+
-        "\13\uffff\3\75\12\uffff\1\141\1\146\1\172\1\163\1\144\1\151\2\154"+
-        "\1\165\1\154\7\uffff\1\163\1\172\1\0\1\145\1\172\1\154\1\146\1\172"+
-        "\1\145\2\163\1\0\1\uffff\1\172\1\0\1\145\1\172\1\0\1\172\1\145\1"+
-        "\172\1\uffff\1\0\1\uffff\1\172\1\0\1\uffff\1\0\1\172\1\0\1\uffff"+
-        "\1\0\2\uffff\1\0\3\uffff";
+        "\1\174\1\154\1\156\1\146\1\156\1\150\1\145\1\151\1\162\1\71\13\uffff"+
+        "\3\75\12\uffff\1\141\1\172\1\154\1\172\1\163\1\144\1\151\2\154\1"+
+        "\165\7\uffff\1\163\1\0\1\163\1\0\1\145\1\172\1\154\1\146\1\172\1"+
+        "\145\1\163\1\uffff\1\145\1\uffff\1\172\1\0\1\145\1\172\1\0\3\172"+
+        "\1\0\1\uffff\1\172\1\0\1\uffff\3\0\1\uffff\1\0\5\uffff";
     static final String DFA13_acceptS =
-        "\13\uffff\1\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22\1\23\1\24\1\25"+
+        "\12\uffff\1\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22\1\23\1\24\1\25"+
         "\3\uffff\1\33\1\35\1\36\1\37\1\40\1\41\1\42\1\44\1\45\1\46\12\uffff"+
-        "\1\34\1\26\1\43\1\27\1\31\1\30\1\32\14\uffff\1\3\10\uffff\1\2\1"+
-        "\uffff\1\6\2\uffff\1\10\3\uffff\1\4\1\uffff\1\7\1\11\1\uffff\1\1"+
-        "\1\5\1\12";
+        "\1\34\1\26\1\43\1\27\1\31\1\30\1\32\13\uffff\1\2\1\uffff\1\3\11"+
+        "\uffff\1\6\2\uffff\1\10\3\uffff\1\4\1\uffff\1\7\1\11\1\1\1\12\1"+
+        "\5";
     static final String DFA13_specialS =
-        "\66\uffff\1\5\10\uffff\1\1\2\uffff\1\2\2\uffff\1\10\4\uffff\1\4"+
-        "\2\uffff\1\11\1\uffff\1\7\1\uffff\1\0\1\uffff\1\3\2\uffff\1\6\3"+
-        "\uffff}>";
+        "\64\uffff\1\3\1\uffff\1\0\13\uffff\1\6\2\uffff\1\4\3\uffff\1\1\2"+
+        "\uffff\1\5\1\uffff\1\11\1\2\1\10\1\uffff\1\7\5\uffff}>";
     static final String[] DFA13_transitionS = {
-            "\1\42\1\41\2\uffff\1\41\22\uffff\1\42\1\37\1\14\1\40\1\uffff"+
-            "\1\34\1\35\1\uffff\1\23\1\24\1\32\1\31\1\22\1\12\1\21\1\33\12"+
-            "\13\1\20\1\17\1\27\1\26\1\30\1\uffff\1\25\32\16\4\uffff\1\15"+
-            "\1\uffff\2\15\1\1\1\2\1\4\1\11\2\15\1\3\4\15\1\7\4\15\1\6\1"+
-            "\10\2\15\1\5\3\15\1\uffff\1\36",
-            "\1\43",
-            "\1\44",
+            "\1\41\1\40\2\uffff\1\40\22\uffff\1\41\1\36\1\13\1\37\1\uffff"+
+            "\1\33\1\34\1\uffff\1\22\1\23\1\31\1\30\1\21\1\11\1\20\1\32\12"+
+            "\12\1\17\1\16\1\26\1\25\1\27\1\uffff\1\24\32\15\4\uffff\1\14"+
+            "\1\uffff\2\14\1\1\1\14\1\4\1\2\2\14\1\3\4\14\1\7\4\14\1\6\1"+
+            "\10\2\14\1\5\3\14\1\uffff\1\35",
+            "\1\42",
+            "\1\44\14\uffff\1\43",
             "\1\45",
             "\1\46\1\uffff\1\47",
             "\1\50",
             "\1\51",
             "\1\52",
             "\1\53",
-            "\1\54",
-            "\12\13",
+            "\12\12",
             "",
             "",
             "",
@@ -1713,9 +1709,9 @@ public class CloudScriptLexer extends Lexer {
             "",
             "",
             "",
-            "\1\56",
-            "\1\60",
-            "\1\62",
+            "\1\55",
+            "\1\57",
+            "\1\61",
             "",
             "",
             "",
@@ -1726,68 +1722,67 @@ public class CloudScriptLexer extends Lexer {
             "",
             "",
             "",
-            "\1\64",
+            "\1\63",
+            "\1\14\16\uffff\12\14\5\uffff\1\14\1\uffff\32\14\4\uffff\1\14"+
+            "\1\uffff\32\14",
             "\1\65",
-            "\1\15\16\uffff\12\15\5\uffff\1\15\1\uffff\32\15\4\uffff\1\15"+
-            "\1\uffff\32\15",
+            "\1\14\16\uffff\12\14\5\uffff\1\14\1\uffff\32\14\4\uffff\1\14"+
+            "\1\uffff\32\14",
             "\1\67",
             "\1\70",
             "\1\71",
             "\1\72",
             "\1\73",
             "\1\74",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\75",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\76",
-            "\1\15\16\uffff\12\15\5\uffff\1\15\1\uffff\32\15\4\uffff\1\15"+
-            "\1\uffff\32\15",
+            "\1\uffff",
+            "\1\77",
             "\1\uffff",
             "\1\101",
-            "\1\15\16\uffff\12\15\5\uffff\1\15\1\uffff\32\15\4\uffff\1\15"+
-            "\1\uffff\32\15",
+            "\1\14\16\uffff\12\14\5\uffff\1\14\1\uffff\32\14\4\uffff\1\14"+
+            "\1\uffff\32\14",
             "\1\103",
             "\1\104",
-            "\1\15\16\uffff\12\15\5\uffff\1\15\1\uffff\32\15\4\uffff\1\15"+
-            "\1\uffff\32\15",
+            "\1\14\16\uffff\12\14\5\uffff\1\14\1\uffff\32\14\4\uffff\1\14"+
+            "\1\uffff\32\14",
             "\1\106",
             "\1\107",
+            "",
             "\1\110",
+            "",
+            "\1\14\16\uffff\12\14\5\uffff\1\14\1\uffff\32\14\4\uffff\1\14"+
+            "\1\uffff\32\14",
+            "\1\uffff",
+            "\1\113",
+            "\1\14\16\uffff\12\14\5\uffff\1\14\1\uffff\32\14\4\uffff\1\14"+
+            "\1\uffff\32\14",
+            "\1\uffff",
+            "\1\14\16\uffff\12\14\5\uffff\1\14\1\uffff\32\14\4\uffff\1\14"+
+            "\1\uffff\32\14",
+            "\1\14\16\uffff\12\14\5\uffff\1\14\1\uffff\32\14\4\uffff\1\14"+
+            "\1\uffff\32\14",
+            "\1\14\16\uffff\12\14\5\uffff\1\14\1\uffff\32\14\4\uffff\1\14"+
+            "\1\uffff\32\14",
             "\1\uffff",
             "",
-            "\1\15\16\uffff\12\15\5\uffff\1\15\1\uffff\32\15\4\uffff\1\15"+
-            "\1\uffff\32\15",
-            "\1\uffff",
-            "\1\114",
-            "\1\15\16\uffff\12\15\5\uffff\1\15\1\uffff\32\15\4\uffff\1\15"+
-            "\1\uffff\32\15",
-            "\1\uffff",
-            "\1\15\16\uffff\12\15\5\uffff\1\15\1\uffff\32\15\4\uffff\1\15"+
-            "\1\uffff\32\15",
-            "\1\120",
-            "\1\15\16\uffff\12\15\5\uffff\1\15\1\uffff\32\15\4\uffff\1\15"+
-            "\1\uffff\32\15",
-            "",
-            "\1\uffff",
-            "",
-            "\1\15\16\uffff\12\15\5\uffff\1\15\1\uffff\32\15\4\uffff\1\15"+
-            "\1\uffff\32\15",
+            "\1\14\16\uffff\12\14\5\uffff\1\14\1\uffff\32\14\4\uffff\1\14"+
+            "\1\uffff\32\14",
             "\1\uffff",
             "",
             "\1\uffff",
-            "\1\15\16\uffff\12\15\5\uffff\1\15\1\uffff\32\15\4\uffff\1\15"+
-            "\1\uffff\32\15",
+            "\1\uffff",
             "\1\uffff",
             "",
             "\1\uffff",
             "",
             "",
-            "\1\uffff",
             "",
             "",
             ""
@@ -1823,88 +1818,13 @@ public class CloudScriptLexer extends Lexer {
             this.transition = DFA13_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( CLASS | DEF | IF | ELSE | WHILE | END | SELF | NIL | TRUE | FALSE | NUMBER | STRING | NAME | CONSTANT | SEMICOLON | COLON | DOT | COMMA | OPEN_PARENT | CLOSE_PARENT | AT | EQ | LE | GE | LT | GT | PLUS | MINUS | MUL | DIV | MOD | AND | OR | NOT | ASSIGN | COMMENT | NEWLINE | WHITESPACE );";
+            return "1:1: Tokens : ( CLASS | FN | IF | ELSE | WHILE | END | SELF | NIL | TRUE | FALSE | NUMBER | STRING | NAME | CONSTANT | SEMICOLON | COLON | DOT | COMMA | OPEN_PARENT | CLOSE_PARENT | AT | EQ | LE | GE | LT | GT | PLUS | MINUS | MUL | DIV | MOD | AND | OR | NOT | ASSIGN | COMMENT | NEWLINE | WHITESPACE );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA13_81 = input.LA(1);
-
-                         
-                        int index13_81 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( ((!methodMode)) ) {s = 87;}
-
-                        else if ( (true) ) {s = 13;}
-
-                         
-                        input.seek(index13_81);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA13_63 = input.LA(1);
-
-                         
-                        int index13_63 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( ((!methodMode)) ) {s = 73;}
-
-                        else if ( (true) ) {s = 13;}
-
-                         
-                        input.seek(index13_63);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
-                        int LA13_66 = input.LA(1);
-
-                         
-                        int index13_66 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( ((!methodMode)) ) {s = 75;}
-
-                        else if ( (true) ) {s = 13;}
-
-                         
-                        input.seek(index13_66);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 3 : 
-                        int LA13_83 = input.LA(1);
-
-                         
-                        int index13_83 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( ((!methodMode)) ) {s = 88;}
-
-                        else if ( (true) ) {s = 13;}
-
-                         
-                        input.seek(index13_83);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 4 : 
-                        int LA13_74 = input.LA(1);
-
-                         
-                        int index13_74 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( ((!methodMode)) ) {s = 82;}
-
-                        else if ( (true) ) {s = 13;}
-
-                         
-                        input.seek(index13_74);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 5 : 
                         int LA13_54 = input.LA(1);
 
                          
@@ -1913,28 +1833,28 @@ public class CloudScriptLexer extends Lexer {
                         s = -1;
                         if ( ((!methodMode)) ) {s = 64;}
 
-                        else if ( (true) ) {s = 13;}
+                        else if ( (true) ) {s = 12;}
 
                          
                         input.seek(index13_54);
                         if ( s>=0 ) return s;
                         break;
-                    case 6 : 
-                        int LA13_86 = input.LA(1);
+                    case 1 : 
+                        int LA13_73 = input.LA(1);
 
                          
-                        int index13_86 = input.index();
+                        int index13_73 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( ((!methodMode)) ) {s = 89;}
+                        if ( ((!methodMode)) ) {s = 81;}
 
-                        else if ( (true) ) {s = 13;}
+                        else if ( (true) ) {s = 12;}
 
                          
-                        input.seek(index13_86);
+                        input.seek(index13_73);
                         if ( s>=0 ) return s;
                         break;
-                    case 7 : 
+                    case 2 : 
                         int LA13_79 = input.LA(1);
 
                          
@@ -1943,40 +1863,115 @@ public class CloudScriptLexer extends Lexer {
                         s = -1;
                         if ( ((!methodMode)) ) {s = 85;}
 
-                        else if ( (true) ) {s = 13;}
+                        else if ( (true) ) {s = 12;}
 
                          
                         input.seek(index13_79);
                         if ( s>=0 ) return s;
                         break;
-                    case 8 : 
+                    case 3 : 
+                        int LA13_52 = input.LA(1);
+
+                         
+                        int index13_52 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((!methodMode)) ) {s = 62;}
+
+                        else if ( (true) ) {s = 12;}
+
+                         
+                        input.seek(index13_52);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 4 : 
                         int LA13_69 = input.LA(1);
 
                          
                         int index13_69 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( ((!methodMode)) ) {s = 78;}
+                        if ( ((!methodMode)) ) {s = 77;}
 
-                        else if ( (true) ) {s = 13;}
+                        else if ( (true) ) {s = 12;}
 
                          
                         input.seek(index13_69);
                         if ( s>=0 ) return s;
                         break;
-                    case 9 : 
-                        int LA13_77 = input.LA(1);
+                    case 5 : 
+                        int LA13_76 = input.LA(1);
 
                          
-                        int index13_77 = input.index();
+                        int index13_76 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((!methodMode)) ) {s = 83;}
+
+                        else if ( (true) ) {s = 12;}
+
+                         
+                        input.seek(index13_76);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 6 : 
+                        int LA13_66 = input.LA(1);
+
+                         
+                        int index13_66 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((!methodMode)) ) {s = 74;}
+
+                        else if ( (true) ) {s = 12;}
+
+                         
+                        input.seek(index13_66);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 7 : 
+                        int LA13_82 = input.LA(1);
+
+                         
+                        int index13_82 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((!methodMode)) ) {s = 87;}
+
+                        else if ( (true) ) {s = 12;}
+
+                         
+                        input.seek(index13_82);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 8 : 
+                        int LA13_80 = input.LA(1);
+
+                         
+                        int index13_80 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((!methodMode)) ) {s = 86;}
+
+                        else if ( (true) ) {s = 12;}
+
+                         
+                        input.seek(index13_80);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 9 : 
+                        int LA13_78 = input.LA(1);
+
+                         
+                        int index13_78 = input.index();
                         input.rewind();
                         s = -1;
                         if ( ((!methodMode)) ) {s = 84;}
 
-                        else if ( (true) ) {s = 13;}
+                        else if ( (true) ) {s = 12;}
 
                          
-                        input.seek(index13_77);
+                        input.seek(index13_78);
                         if ( s>=0 ) return s;
                         break;
             }

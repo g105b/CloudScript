@@ -7,12 +7,12 @@ print(X)
 class ConstantTest
   Y = 2
 
-  def get_y
+  fn get_y
     # Constants are stored at class-level and shared by all instances.
     Y
   end
   
-  def get_x
+  fn get_x
     # Constants are looked up in parent classes.
     X
   end
