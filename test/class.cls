@@ -6,12 +6,12 @@ print(self.class.name)
 # Same syntax as Ruby, "< Object" is implicit is no superclass is specified.
 class Language < Object
   fn initialize(name)
-    # Instance variable start with an @
-    @name = name
+    # Instance variable start with an underscore
+    _name = name
   end
   
   fn name
-    @name
+    _name
   end
 end
 

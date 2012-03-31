@@ -152,7 +152,7 @@ self returns [SelfNode node]:
 
 // Getting the value of an @instance_variable
 instanceVariable returns [InstanceVariableNode node]:
-    AT NAME           { $node = new InstanceVariableNode($NAME.text); }
+    PRIV NAME           { $node = new InstanceVariableNode($NAME.text); }
   ;
 
 // A method call
@@ -191,7 +191,7 @@ constant returns [ConstantNode node]:
 assign returns [Node node]:
     NAME ASSIGN expression          { $node = new LocalAssignNode($NAME.text, $expression.node); }
   | CONSTANT ASSIGN expression      { $node = new ConstantAssignNode($CONSTANT.text, $expression.node); }
-  | AT NAME ASSIGN expression       { $node = new InstanceVariableAssignNode($NAME.text, $expression.node); }
+  | PRIV NAME ASSIGN expression       { $node = new InstanceVariableAssignNode($NAME.text, $expression.node); }
   ;
 
 methodDefinition returns [MethodDefinitionNode node]:

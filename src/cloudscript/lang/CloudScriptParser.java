@@ -1,4 +1,4 @@
-// $ANTLR 3.1.1 CloudScriptParser.g 2012-03-31 15:34:09
+// $ANTLR 3.1.1 CloudScriptParser.g 2012-03-31 15:38:42
 
   package cloudscript.lang;
   
@@ -17,7 +17,7 @@ import org.antlr.runtime.tree.*;
 
 public class CloudScriptParser extends Parser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "CLASS", "FN", "IF", "ELSE", "WHILE", "END", "SELF", "NIL", "TRUE", "FALSE", "INTEGER", "FLOAT", "DIGIT", "NUMBER", "STRING", "LOWER", "ID_CHAR", "NAME", "UPPER", "CONSTANT", "SEMICOLON", "COLON", "DOT", "COMMA", "OPEN_PARENT", "CLOSE_PARENT", "AT", "EQ", "LE", "GE", "LT", "GT", "PLUS", "MINUS", "MUL", "DIV", "MOD", "AND", "OR", "NOT", "ASSIGN", "NEWLINE", "COMMENT", "SPACE", "WHITESPACE", "LETTER"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "CLASS", "FN", "IF", "ELSE", "WHILE", "END", "SELF", "NIL", "TRUE", "FALSE", "INTEGER", "FLOAT", "DIGIT", "NUMBER", "STRING", "LOWER", "ID_CHAR", "NAME", "UPPER", "CONSTANT", "SEMICOLON", "COLON", "DOT", "COMMA", "OPEN_PARENT", "CLOSE_PARENT", "PRIV", "EQ", "LE", "GE", "LT", "GT", "PLUS", "MINUS", "MUL", "DIV", "MOD", "AND", "OR", "NOT", "ASSIGN", "NEWLINE", "COMMENT", "SPACE", "WHITESPACE", "LETTER"
     };
     public static final int CLASS=4;
     public static final int LT=34;
@@ -31,7 +31,6 @@ public class CloudScriptParser extends Parser {
     public static final int SPACE=47;
     public static final int EOF=-1;
     public static final int IF=6;
-    public static final int AT=30;
     public static final int NAME=21;
     public static final int COMMA=27;
     public static final int PLUS=36;
@@ -41,6 +40,7 @@ public class CloudScriptParser extends Parser {
     public static final int DOT=26;
     public static final int INTEGER=14;
     public static final int GE=33;
+    public static final int PRIV=30;
     public static final int ELSE=7;
     public static final int NUMBER=17;
     public static final int WHITESPACE=48;
@@ -163,7 +163,7 @@ public class CloudScriptParser extends Parser {
             int alt2=2;
             int LA2_0 = input.LA(1);
 
-            if ( ((LA2_0>=CLASS && LA2_0<=IF)||LA2_0==WHILE||(LA2_0>=SELF && LA2_0<=FLOAT)||LA2_0==STRING||LA2_0==NAME||LA2_0==CONSTANT||LA2_0==OPEN_PARENT||LA2_0==AT||LA2_0==NOT) ) {
+            if ( ((LA2_0>=CLASS && LA2_0<=IF)||LA2_0==WHILE||(LA2_0>=SELF && LA2_0<=FLOAT)||LA2_0==STRING||LA2_0==NAME||LA2_0==CONSTANT||LA2_0==OPEN_PARENT||LA2_0==PRIV||LA2_0==NOT) ) {
                 alt2=1;
             }
             switch (alt2) {
@@ -528,7 +528,7 @@ public class CloudScriptParser extends Parser {
                 }
                 }
                 break;
-            case AT:
+            case PRIV:
                 {
                 int LA6_3 = input.LA(2);
 
@@ -1159,7 +1159,7 @@ public class CloudScriptParser extends Parser {
             if ( (LA12_0==NOT) ) {
                 alt12=1;
             }
-            else if ( ((LA12_0>=CLASS && LA12_0<=IF)||LA12_0==WHILE||(LA12_0>=SELF && LA12_0<=FLOAT)||LA12_0==STRING||LA12_0==NAME||LA12_0==CONSTANT||LA12_0==OPEN_PARENT||LA12_0==AT) ) {
+            else if ( ((LA12_0>=CLASS && LA12_0<=IF)||LA12_0==WHILE||(LA12_0>=SELF && LA12_0<=FLOAT)||LA12_0==STRING||LA12_0==NAME||LA12_0==CONSTANT||LA12_0==OPEN_PARENT||LA12_0==PRIV) ) {
                 alt12=2;
             }
             else {
@@ -1490,7 +1490,7 @@ public class CloudScriptParser extends Parser {
                 alt14=7;
                 }
                 break;
-            case AT:
+            case PRIV:
                 {
                 alt14=8;
                 }
@@ -1736,29 +1736,29 @@ public class CloudScriptParser extends Parser {
     };
 
     // $ANTLR start "instanceVariable"
-    // CloudScriptParser.g:154:1: instanceVariable returns [InstanceVariableNode node] : AT NAME ;
+    // CloudScriptParser.g:154:1: instanceVariable returns [InstanceVariableNode node] : PRIV NAME ;
     public final CloudScriptParser.instanceVariable_return instanceVariable() throws RecognitionException {
         CloudScriptParser.instanceVariable_return retval = new CloudScriptParser.instanceVariable_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token AT31=null;
+        Token PRIV31=null;
         Token NAME32=null;
 
-        Object AT31_tree=null;
+        Object PRIV31_tree=null;
         Object NAME32_tree=null;
 
         try {
-            // CloudScriptParser.g:154:53: ( AT NAME )
-            // CloudScriptParser.g:155:5: AT NAME
+            // CloudScriptParser.g:154:53: ( PRIV NAME )
+            // CloudScriptParser.g:155:5: PRIV NAME
             {
             root_0 = (Object)adaptor.nil();
 
-            AT31=(Token)match(input,AT,FOLLOW_AT_in_instanceVariable1019); if (state.failed) return retval;
+            PRIV31=(Token)match(input,PRIV,FOLLOW_PRIV_in_instanceVariable1019); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            AT31_tree = (Object)adaptor.create(AT31);
-            adaptor.addChild(root_0, AT31_tree);
+            PRIV31_tree = (Object)adaptor.create(PRIV31);
+            adaptor.addChild(root_0, PRIV31_tree);
             }
             NAME32=(Token)match(input,NAME,FOLLOW_NAME_in_instanceVariable1021); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
@@ -1825,7 +1825,7 @@ public class CloudScriptParser extends Parser {
             int alt15=2;
             int LA15_0 = input.LA(1);
 
-            if ( ((LA15_0>=SELF && LA15_0<=FLOAT)||LA15_0==STRING||LA15_0==CONSTANT||LA15_0==AT) ) {
+            if ( ((LA15_0>=SELF && LA15_0<=FLOAT)||LA15_0==STRING||LA15_0==CONSTANT||LA15_0==PRIV) ) {
                 alt15=1;
             }
             switch (alt15) {
@@ -1972,7 +1972,7 @@ public class CloudScriptParser extends Parser {
                     if ( (LA17_2==CLOSE_PARENT) ) {
                         alt17=2;
                     }
-                    else if ( ((LA17_2>=CLASS && LA17_2<=IF)||LA17_2==WHILE||(LA17_2>=SELF && LA17_2<=FLOAT)||LA17_2==STRING||LA17_2==NAME||LA17_2==CONSTANT||LA17_2==OPEN_PARENT||LA17_2==AT||LA17_2==NOT) ) {
+                    else if ( ((LA17_2>=CLASS && LA17_2<=IF)||LA17_2==WHILE||(LA17_2>=SELF && LA17_2<=FLOAT)||LA17_2==STRING||LA17_2==NAME||LA17_2==CONSTANT||LA17_2==OPEN_PARENT||LA17_2==PRIV||LA17_2==NOT) ) {
                         alt17=3;
                     }
                     else {
@@ -2255,7 +2255,7 @@ public class CloudScriptParser extends Parser {
     };
 
     // $ANTLR start "assign"
-    // CloudScriptParser.g:191:1: assign returns [Node node] : ( NAME ASSIGN expression | CONSTANT ASSIGN expression | AT NAME ASSIGN expression );
+    // CloudScriptParser.g:191:1: assign returns [Node node] : ( NAME ASSIGN expression | CONSTANT ASSIGN expression | PRIV NAME ASSIGN expression );
     public final CloudScriptParser.assign_return assign() throws RecognitionException {
         CloudScriptParser.assign_return retval = new CloudScriptParser.assign_return();
         retval.start = input.LT(1);
@@ -2266,7 +2266,7 @@ public class CloudScriptParser extends Parser {
         Token ASSIGN47=null;
         Token CONSTANT49=null;
         Token ASSIGN50=null;
-        Token AT52=null;
+        Token PRIV52=null;
         Token NAME53=null;
         Token ASSIGN54=null;
         CloudScriptParser.expression_return expression48 = null;
@@ -2280,12 +2280,12 @@ public class CloudScriptParser extends Parser {
         Object ASSIGN47_tree=null;
         Object CONSTANT49_tree=null;
         Object ASSIGN50_tree=null;
-        Object AT52_tree=null;
+        Object PRIV52_tree=null;
         Object NAME53_tree=null;
         Object ASSIGN54_tree=null;
 
         try {
-            // CloudScriptParser.g:191:27: ( NAME ASSIGN expression | CONSTANT ASSIGN expression | AT NAME ASSIGN expression )
+            // CloudScriptParser.g:191:27: ( NAME ASSIGN expression | CONSTANT ASSIGN expression | PRIV NAME ASSIGN expression )
             int alt19=3;
             switch ( input.LA(1) ) {
             case NAME:
@@ -2298,7 +2298,7 @@ public class CloudScriptParser extends Parser {
                 alt19=2;
                 }
                 break;
-            case AT:
+            case PRIV:
                 {
                 alt19=3;
                 }
@@ -2367,14 +2367,14 @@ public class CloudScriptParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // CloudScriptParser.g:194:5: AT NAME ASSIGN expression
+                    // CloudScriptParser.g:194:5: PRIV NAME ASSIGN expression
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    AT52=(Token)match(input,AT,FOLLOW_AT_in_assign1478); if (state.failed) return retval;
+                    PRIV52=(Token)match(input,PRIV,FOLLOW_PRIV_in_assign1478); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    AT52_tree = (Object)adaptor.create(AT52);
-                    adaptor.addChild(root_0, AT52_tree);
+                    PRIV52_tree = (Object)adaptor.create(PRIV52);
+                    adaptor.addChild(root_0, PRIV52_tree);
                     }
                     NAME53=(Token)match(input,NAME,FOLLOW_NAME_in_assign1480); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -5043,7 +5043,7 @@ public class CloudScriptParser extends Parser {
     public static final BitSet FOLLOW_instanceVariable_in_literal942 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_self_in_literal951 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_SELF_in_self985 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_AT_in_instanceVariable1019 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_PRIV_in_instanceVariable1019 = new BitSet(new long[]{0x0000000000200000L});
     public static final BitSet FOLLOW_NAME_in_instanceVariable1021 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_literal_in_call1053 = new BitSet(new long[]{0x0000000004000000L});
     public static final BitSet FOLLOW_DOT_in_call1055 = new BitSet(new long[]{0x0000000000200000L});
@@ -5068,7 +5068,7 @@ public class CloudScriptParser extends Parser {
     public static final BitSet FOLLOW_CONSTANT_in_assign1461 = new BitSet(new long[]{0x0000100000000000L});
     public static final BitSet FOLLOW_ASSIGN_in_assign1463 = new BitSet(new long[]{0x0000080050A4FD70L});
     public static final BitSet FOLLOW_expression_in_assign1465 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_AT_in_assign1478 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_PRIV_in_assign1478 = new BitSet(new long[]{0x0000000000200000L});
     public static final BitSet FOLLOW_NAME_in_assign1480 = new BitSet(new long[]{0x0000100000000000L});
     public static final BitSet FOLLOW_ASSIGN_in_assign1482 = new BitSet(new long[]{0x0000080050A4FD70L});
     public static final BitSet FOLLOW_expression_in_assign1484 = new BitSet(new long[]{0x0000000000000002L});

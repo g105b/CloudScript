@@ -1,4 +1,4 @@
-// $ANTLR 3.1.1 CloudScriptLexer.g 2012-03-31 15:33:46
+// $ANTLR 3.1.1 CloudScriptLexer.g 2012-03-31 15:38:20
  package cloudscript.lang; 
 
 import org.antlr.runtime.*;
@@ -19,7 +19,6 @@ public class CloudScriptLexer extends Lexer {
     public static final int SPACE=47;
     public static final int EOF=-1;
     public static final int IF=6;
-    public static final int AT=30;
     public static final int NAME=21;
     public static final int COMMA=27;
     public static final int PLUS=36;
@@ -29,6 +28,7 @@ public class CloudScriptLexer extends Lexer {
     public static final int DOT=26;
     public static final int INTEGER=14;
     public static final int GE=33;
+    public static final int PRIV=30;
     public static final int ELSE=7;
     public static final int NUMBER=17;
     public static final int WHITESPACE=48;
@@ -542,19 +542,11 @@ public class CloudScriptLexer extends Lexer {
         try {
             int _type = NAME;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // CloudScriptLexer.g:50:5: ( ( LOWER | '_' ) ( ID_CHAR )* ( '!' | '?' )? )
-            // CloudScriptLexer.g:50:21: ( LOWER | '_' ) ( ID_CHAR )* ( '!' | '?' )?
+            // CloudScriptLexer.g:50:5: ( LOWER ( ID_CHAR )* ( '!' | '?' )? )
+            // CloudScriptLexer.g:50:21: LOWER ( ID_CHAR )* ( '!' | '?' )?
             {
-            if ( input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
-                input.consume();
-
-            }
-            else {
-                MismatchedSetException mse = new MismatchedSetException(null,input);
-                recover(mse);
-                throw mse;}
-
-            // CloudScriptLexer.g:50:35: ( ID_CHAR )*
+            mLOWER(); 
+            // CloudScriptLexer.g:50:27: ( ID_CHAR )*
             loop6:
             do {
                 int alt6=2;
@@ -567,7 +559,7 @@ public class CloudScriptLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // CloudScriptLexer.g:50:35: ID_CHAR
+            	    // CloudScriptLexer.g:50:27: ID_CHAR
             	    {
             	    mID_CHAR(); 
 
@@ -579,7 +571,7 @@ public class CloudScriptLexer extends Lexer {
                 }
             } while (true);
 
-            // CloudScriptLexer.g:50:44: ( '!' | '?' )?
+            // CloudScriptLexer.g:50:36: ( '!' | '?' )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -783,15 +775,15 @@ public class CloudScriptLexer extends Lexer {
     }
     // $ANTLR end "CLOSE_PARENT"
 
-    // $ANTLR start "AT"
-    public final void mAT() throws RecognitionException {
+    // $ANTLR start "PRIV"
+    public final void mPRIV() throws RecognitionException {
         try {
-            int _type = AT;
+            int _type = PRIV;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // CloudScriptLexer.g:60:3: ( '@' )
-            // CloudScriptLexer.g:60:21: '@'
+            // CloudScriptLexer.g:60:5: ( '_' )
+            // CloudScriptLexer.g:60:21: '_'
             {
-            match('@'); 
+            match('_'); 
 
             }
 
@@ -801,7 +793,7 @@ public class CloudScriptLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "AT"
+    // $ANTLR end "PRIV"
 
     // $ANTLR start "EQ"
     public final void mEQ() throws RecognitionException {
@@ -1378,7 +1370,7 @@ public class CloudScriptLexer extends Lexer {
     // $ANTLR end "SPACE"
 
     public void mTokens() throws RecognitionException {
-        // CloudScriptLexer.g:1:8: ( CLASS | FN | IF | ELSE | WHILE | END | SELF | NIL | TRUE | FALSE | NUMBER | STRING | NAME | CONSTANT | SEMICOLON | COLON | DOT | COMMA | OPEN_PARENT | CLOSE_PARENT | AT | EQ | LE | GE | LT | GT | PLUS | MINUS | MUL | DIV | MOD | AND | OR | NOT | ASSIGN | COMMENT | NEWLINE | WHITESPACE )
+        // CloudScriptLexer.g:1:8: ( CLASS | FN | IF | ELSE | WHILE | END | SELF | NIL | TRUE | FALSE | NUMBER | STRING | NAME | CONSTANT | SEMICOLON | COLON | DOT | COMMA | OPEN_PARENT | CLOSE_PARENT | PRIV | EQ | LE | GE | LT | GT | PLUS | MINUS | MUL | DIV | MOD | AND | OR | NOT | ASSIGN | COMMENT | NEWLINE | WHITESPACE )
         int alt13=38;
         alt13 = dfa13.predict(input);
         switch (alt13) {
@@ -1523,126 +1515,126 @@ public class CloudScriptLexer extends Lexer {
                 }
                 break;
             case 21 :
-                // CloudScriptLexer.g:1:136: AT
+                // CloudScriptLexer.g:1:136: PRIV
                 {
-                mAT(); 
+                mPRIV(); 
 
                 }
                 break;
             case 22 :
-                // CloudScriptLexer.g:1:139: EQ
+                // CloudScriptLexer.g:1:141: EQ
                 {
                 mEQ(); 
 
                 }
                 break;
             case 23 :
-                // CloudScriptLexer.g:1:142: LE
+                // CloudScriptLexer.g:1:144: LE
                 {
                 mLE(); 
 
                 }
                 break;
             case 24 :
-                // CloudScriptLexer.g:1:145: GE
+                // CloudScriptLexer.g:1:147: GE
                 {
                 mGE(); 
 
                 }
                 break;
             case 25 :
-                // CloudScriptLexer.g:1:148: LT
+                // CloudScriptLexer.g:1:150: LT
                 {
                 mLT(); 
 
                 }
                 break;
             case 26 :
-                // CloudScriptLexer.g:1:151: GT
+                // CloudScriptLexer.g:1:153: GT
                 {
                 mGT(); 
 
                 }
                 break;
             case 27 :
-                // CloudScriptLexer.g:1:154: PLUS
+                // CloudScriptLexer.g:1:156: PLUS
                 {
                 mPLUS(); 
 
                 }
                 break;
             case 28 :
-                // CloudScriptLexer.g:1:159: MINUS
+                // CloudScriptLexer.g:1:161: MINUS
                 {
                 mMINUS(); 
 
                 }
                 break;
             case 29 :
-                // CloudScriptLexer.g:1:165: MUL
+                // CloudScriptLexer.g:1:167: MUL
                 {
                 mMUL(); 
 
                 }
                 break;
             case 30 :
-                // CloudScriptLexer.g:1:169: DIV
+                // CloudScriptLexer.g:1:171: DIV
                 {
                 mDIV(); 
 
                 }
                 break;
             case 31 :
-                // CloudScriptLexer.g:1:173: MOD
+                // CloudScriptLexer.g:1:175: MOD
                 {
                 mMOD(); 
 
                 }
                 break;
             case 32 :
-                // CloudScriptLexer.g:1:177: AND
+                // CloudScriptLexer.g:1:179: AND
                 {
                 mAND(); 
 
                 }
                 break;
             case 33 :
-                // CloudScriptLexer.g:1:181: OR
+                // CloudScriptLexer.g:1:183: OR
                 {
                 mOR(); 
 
                 }
                 break;
             case 34 :
-                // CloudScriptLexer.g:1:184: NOT
+                // CloudScriptLexer.g:1:186: NOT
                 {
                 mNOT(); 
 
                 }
                 break;
             case 35 :
-                // CloudScriptLexer.g:1:188: ASSIGN
+                // CloudScriptLexer.g:1:190: ASSIGN
                 {
                 mASSIGN(); 
 
                 }
                 break;
             case 36 :
-                // CloudScriptLexer.g:1:195: COMMENT
+                // CloudScriptLexer.g:1:197: COMMENT
                 {
                 mCOMMENT(); 
 
                 }
                 break;
             case 37 :
-                // CloudScriptLexer.g:1:203: NEWLINE
+                // CloudScriptLexer.g:1:205: NEWLINE
                 {
                 mNEWLINE(); 
 
                 }
                 break;
             case 38 :
-                // CloudScriptLexer.g:1:211: WHITESPACE
+                // CloudScriptLexer.g:1:213: WHITESPACE
                 {
                 mWHITESPACE(); 
 
@@ -1686,9 +1678,9 @@ public class CloudScriptLexer extends Lexer {
     static final String[] DFA13_transitionS = {
             "\1\41\1\40\2\uffff\1\40\22\uffff\1\41\1\36\1\13\1\37\1\uffff"+
             "\1\33\1\34\1\uffff\1\22\1\23\1\31\1\30\1\21\1\11\1\20\1\32\12"+
-            "\12\1\17\1\16\1\26\1\25\1\27\1\uffff\1\24\32\15\4\uffff\1\14"+
-            "\1\uffff\2\14\1\1\1\14\1\4\1\2\2\14\1\3\4\14\1\7\4\14\1\6\1"+
-            "\10\2\14\1\5\3\14\1\uffff\1\35",
+            "\12\1\17\1\16\1\26\1\25\1\27\2\uffff\32\15\4\uffff\1\24\1\uffff"+
+            "\2\14\1\1\1\14\1\4\1\2\2\14\1\3\4\14\1\7\4\14\1\6\1\10\2\14"+
+            "\1\5\3\14\1\uffff\1\35",
             "\1\42",
             "\1\44\14\uffff\1\43",
             "\1\45",
@@ -1818,7 +1810,7 @@ public class CloudScriptLexer extends Lexer {
             this.transition = DFA13_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( CLASS | FN | IF | ELSE | WHILE | END | SELF | NIL | TRUE | FALSE | NUMBER | STRING | NAME | CONSTANT | SEMICOLON | COLON | DOT | COMMA | OPEN_PARENT | CLOSE_PARENT | AT | EQ | LE | GE | LT | GT | PLUS | MINUS | MUL | DIV | MOD | AND | OR | NOT | ASSIGN | COMMENT | NEWLINE | WHITESPACE );";
+            return "1:1: Tokens : ( CLASS | FN | IF | ELSE | WHILE | END | SELF | NIL | TRUE | FALSE | NUMBER | STRING | NAME | CONSTANT | SEMICOLON | COLON | DOT | COMMA | OPEN_PARENT | CLOSE_PARENT | PRIV | EQ | LE | GE | LT | GT | PLUS | MINUS | MUL | DIV | MOD | AND | OR | NOT | ASSIGN | COMMENT | NEWLINE | WHITESPACE );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;

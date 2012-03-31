@@ -47,7 +47,7 @@ NUMBER:             '-'? DIGIT+
                       |                                     { $type = INTEGER; }
                       );
 STRING:             '"' ~('\\' | '"')* '"';
-NAME:               (LOWER | '_') ID_CHAR* ('!' | '?')? { methodMode = false; };
+NAME:               LOWER ID_CHAR* ('!' | '?')? { methodMode = false; };
 CONSTANT:           UPPER ID_CHAR*;
 
 // Operators
@@ -57,7 +57,7 @@ DOT:                '.' { methodMode = true; };
 COMMA:              ',';
 OPEN_PARENT:        '(';
 CLOSE_PARENT:       ')';
-AT:                 '@';
+PRIV:               '_';
 EQ:                 '==';
 LE:                 '<=';
 GE:                 '>=';
