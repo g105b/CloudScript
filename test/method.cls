@@ -1,19 +1,21 @@
-# Methoc definition
+fn fibonacci(calc)
+    index = 1
+    result = 0
+    f1 = 1
+    f2 = 0
 
-# Method names can end with ? or !
-# If no parameters, parenthesis can be skipped.
-fn no_args?
-  print("indeed")
+    while index < calc
+        index = index + 1
+        result = f1 + f2
+        f2 = f1
+        f1 = result
+    end
+
+    result
 end
 
-no_args?
-# => indeed
+print(fibonacci(8))
+print(fibonacci(12))
 
-fn call_me!(name, calling)
-  print(name, "driiiing!", calling)
-end
-
-call_me!("bob", "bill")
-# => bob
-# => driiiing!
-# => bill
+# => 21
+# => 144

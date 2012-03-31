@@ -1,11 +1,13 @@
+# true is always true.
+
 if true
   print("ok")
 end
 # => ok
 
-if false
-  print("uho...")
+if 2 + 2 == 5
+  print("Oh no!")
 else
-  print("ok")
+  print("Everything's OK")
 end
-# => ok
+# => Everything's OK

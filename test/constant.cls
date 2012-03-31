@@ -18,10 +18,10 @@ class ConstantTest
   end
 end
 
-constant_test = ConstantTest.new
+constant_test = ConstantTest.new()
 
-print(constant_test.get_x)
+print(constant_test.get_x())
 # => 1
 
-print(constant_test.get_y)
+print(constant_test.get_y())
 # => 2

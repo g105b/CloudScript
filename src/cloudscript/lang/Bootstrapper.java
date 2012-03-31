@@ -75,7 +75,7 @@ public class Bootstrapper {
       public CloudScriptObject call(CloudScriptObject receiver, CloudScriptObject arguments[]) throws CloudScriptException {
         CloudScriptClass self = (CloudScriptClass) receiver;
         CloudScriptObject instance = self.newInstance();
-        if (self.hasMethod("initialize")) instance.call("initialize", arguments);
+        if (self.hasMethod("construct")) instance.call("construct", arguments);
         return instance;
       }
     });

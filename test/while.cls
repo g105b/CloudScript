@@ -1,10 +1,19 @@
 # While loop
 
 x = 0
+y = 0
 
-while x < 10
-  x = x + 1
+counter = 0
+
+while y < 10
+    while x < 10
+        x = x + 1
+        counter = counter + 1
+    end
+    x = 0
+    y = y + 1
 end
 
-print(x)
-# => 10
+print(counter)
+
+# => 100

@@ -5,11 +5,6 @@ print(true)
 print(true.class.name)
 # => TrueClass
 
-print(nil)
-# => null
-print(nil.class.name)
-# => NilClass
-
 print(false)
 # => false
 print(false.class.name)

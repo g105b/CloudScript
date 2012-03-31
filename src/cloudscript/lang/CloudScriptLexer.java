@@ -1,4 +1,4 @@
-// $ANTLR 3.1.1 CloudScriptLexer.g 2012-03-31 15:38:20
+// $ANTLR 3.1.1 CloudScriptLexer.g 2012-03-31 15:46:48
  package cloudscript.lang; 
 
 import org.antlr.runtime.*;
