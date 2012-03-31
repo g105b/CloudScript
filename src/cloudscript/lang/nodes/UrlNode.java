@@ -68,6 +68,14 @@ public class UrlNode extends Node {
 			clazz.addMethod(key, new Method() {
 				public CloudScriptObject call(CloudScriptObject receiver, CloudScriptObject arguments[]) throws CloudScriptException {
 					ValueObject content = new ValueObject(value);
+					int numValue;
+
+					try {
+						numValue = Integer.parseInt(value);
+						content = new ValueObject(numValue);
+					}
+					catch(NumberFormatException e) {}
+
 					return content;
 				}
 			});
