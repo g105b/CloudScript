@@ -1,4 +1,4 @@
-// $ANTLR 3.1.1 CloudScriptParser.g 2012-03-31 15:11:29
+// $ANTLR 3.1.1 CloudScriptParser.g 2012-03-31 15:22:42
 
   package cloudscript.lang;
   
@@ -17,57 +17,55 @@ import org.antlr.runtime.tree.*;
 
 public class CloudScriptParser extends Parser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "CLASS", "DEF", "IF", "ELSE", "WHILE", "TRY", "CATCH", "END", "SELF", "NIL", "TRUE", "FALSE", "INTEGER", "FLOAT", "DIGIT", "NUMBER", "STRING", "LOWER", "ID_CHAR", "NAME", "UPPER", "CONSTANT", "SEMICOLON", "COLON", "DOT", "COMMA", "OPEN_PARENT", "CLOSE_PARENT", "AT", "EQ", "LE", "GE", "LT", "GT", "PLUS", "MINUS", "MUL", "DIV", "MOD", "AND", "OR", "NOT", "ASSIGN", "NEWLINE", "COMMENT", "SPACE", "WHITESPACE", "LETTER"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "CLASS", "DEF", "IF", "ELSE", "WHILE", "END", "SELF", "NIL", "TRUE", "FALSE", "INTEGER", "FLOAT", "DIGIT", "NUMBER", "STRING", "LOWER", "ID_CHAR", "NAME", "UPPER", "CONSTANT", "SEMICOLON", "COLON", "DOT", "COMMA", "OPEN_PARENT", "CLOSE_PARENT", "AT", "EQ", "LE", "GE", "LT", "GT", "PLUS", "MINUS", "MUL", "DIV", "MOD", "AND", "OR", "NOT", "ASSIGN", "NEWLINE", "COMMENT", "SPACE", "WHITESPACE", "LETTER"
     };
     public static final int CLASS=4;
-    public static final int LT=36;
+    public static final int LT=34;
     public static final int DEF=5;
     public static final int WHILE=8;
-    public static final int MOD=42;
-    public static final int LETTER=51;
-    public static final int ID_CHAR=22;
-    public static final int FLOAT=17;
-    public static final int NOT=45;
-    public static final int AND=43;
-    public static final int SPACE=49;
+    public static final int MOD=40;
+    public static final int LETTER=49;
+    public static final int ID_CHAR=20;
+    public static final int FLOAT=15;
+    public static final int NOT=43;
+    public static final int AND=41;
+    public static final int SPACE=47;
     public static final int EOF=-1;
     public static final int IF=6;
-    public static final int AT=32;
-    public static final int NAME=23;
-    public static final int COMMA=29;
-    public static final int PLUS=38;
-    public static final int DIGIT=18;
-    public static final int EQ=33;
-    public static final int COMMENT=48;
-    public static final int DOT=28;
-    public static final int INTEGER=16;
-    public static final int GE=35;
+    public static final int AT=30;
+    public static final int NAME=21;
+    public static final int COMMA=27;
+    public static final int PLUS=36;
+    public static final int DIGIT=16;
+    public static final int EQ=31;
+    public static final int COMMENT=46;
+    public static final int DOT=26;
+    public static final int INTEGER=14;
+    public static final int GE=33;
     public static final int ELSE=7;
-    public static final int NUMBER=19;
-    public static final int WHITESPACE=50;
-    public static final int SEMICOLON=26;
-    public static final int MINUS=39;
-    public static final int TRUE=14;
-    public static final int MUL=40;
-    public static final int TRY=9;
-    public static final int COLON=27;
-    public static final int NEWLINE=47;
-    public static final int NIL=13;
-    public static final int OPEN_PARENT=30;
-    public static final int OR=44;
-    public static final int CLOSE_PARENT=31;
-    public static final int ASSIGN=46;
-    public static final int CONSTANT=25;
-    public static final int GT=37;
-    public static final int LOWER=21;
-    public static final int DIV=41;
-    public static final int CATCH=10;
-    public static final int END=11;
-    public static final int FALSE=15;
-    public static final int SELF=12;
-    public static final int LE=34;
-    public static final int UPPER=24;
-    public static final int STRING=20;
+    public static final int NUMBER=17;
+    public static final int WHITESPACE=48;
+    public static final int SEMICOLON=24;
+    public static final int MINUS=37;
+    public static final int TRUE=12;
+    public static final int MUL=38;
+    public static final int COLON=25;
+    public static final int NEWLINE=45;
+    public static final int NIL=11;
+    public static final int OPEN_PARENT=28;
+    public static final int CLOSE_PARENT=29;
+    public static final int OR=42;
+    public static final int ASSIGN=44;
+    public static final int CONSTANT=23;
+    public static final int GT=35;
+    public static final int LOWER=19;
+    public static final int DIV=39;
+    public static final int END=9;
+    public static final int FALSE=13;
+    public static final int SELF=10;
+    public static final int LE=32;
+    public static final int UPPER=22;
+    public static final int STRING=18;
 
     // delegates
     // delegators
@@ -165,7 +163,7 @@ public class CloudScriptParser extends Parser {
             int alt2=2;
             int LA2_0 = input.LA(1);
 
-            if ( ((LA2_0>=CLASS && LA2_0<=IF)||(LA2_0>=WHILE && LA2_0<=TRY)||(LA2_0>=SELF && LA2_0<=FLOAT)||LA2_0==STRING||LA2_0==NAME||LA2_0==CONSTANT||LA2_0==OPEN_PARENT||LA2_0==AT||LA2_0==NOT) ) {
+            if ( ((LA2_0>=CLASS && LA2_0<=IF)||LA2_0==WHILE||(LA2_0>=SELF && LA2_0<=FLOAT)||LA2_0==STRING||LA2_0==NAME||LA2_0==CONSTANT||LA2_0==OPEN_PARENT||LA2_0==AT||LA2_0==NOT) ) {
                 alt2=1;
             }
             switch (alt2) {
@@ -499,7 +497,7 @@ public class CloudScriptParser extends Parser {
                 if ( (LA6_1==ASSIGN) ) {
                     alt6=1;
                 }
-                else if ( (LA6_1==EOF||LA6_1==ELSE||(LA6_1>=CATCH && LA6_1<=END)||LA6_1==SEMICOLON||(LA6_1>=DOT && LA6_1<=CLOSE_PARENT)||(LA6_1>=EQ && LA6_1<=OR)||LA6_1==NEWLINE) ) {
+                else if ( (LA6_1==EOF||LA6_1==ELSE||LA6_1==END||LA6_1==SEMICOLON||(LA6_1>=DOT && LA6_1<=CLOSE_PARENT)||(LA6_1>=EQ && LA6_1<=OR)||LA6_1==NEWLINE) ) {
                     alt6=2;
                 }
                 else {
@@ -518,7 +516,7 @@ public class CloudScriptParser extends Parser {
                 if ( (LA6_2==ASSIGN) ) {
                     alt6=1;
                 }
-                else if ( (LA6_2==EOF||LA6_2==ELSE||(LA6_2>=CATCH && LA6_2<=END)||LA6_2==SEMICOLON||(LA6_2>=DOT && LA6_2<=COMMA)||LA6_2==CLOSE_PARENT||(LA6_2>=EQ && LA6_2<=OR)||LA6_2==NEWLINE) ) {
+                else if ( (LA6_2==EOF||LA6_2==ELSE||LA6_2==END||LA6_2==SEMICOLON||(LA6_2>=DOT && LA6_2<=COMMA)||LA6_2==CLOSE_PARENT||(LA6_2>=EQ && LA6_2<=OR)||LA6_2==NEWLINE) ) {
                     alt6=2;
                 }
                 else {
@@ -540,7 +538,7 @@ public class CloudScriptParser extends Parser {
                     if ( (LA6_6==ASSIGN) ) {
                         alt6=1;
                     }
-                    else if ( (LA6_6==EOF||LA6_6==ELSE||(LA6_6>=CATCH && LA6_6<=END)||LA6_6==SEMICOLON||(LA6_6>=DOT && LA6_6<=COMMA)||LA6_6==CLOSE_PARENT||(LA6_6>=EQ && LA6_6<=OR)||LA6_6==NEWLINE) ) {
+                    else if ( (LA6_6==EOF||LA6_6==ELSE||LA6_6==END||LA6_6==SEMICOLON||(LA6_6>=DOT && LA6_6<=COMMA)||LA6_6==CLOSE_PARENT||(LA6_6>=EQ && LA6_6<=OR)||LA6_6==NEWLINE) ) {
                         alt6=2;
                     }
                     else {
@@ -564,7 +562,6 @@ public class CloudScriptParser extends Parser {
             case DEF:
             case IF:
             case WHILE:
-            case TRY:
             case SELF:
             case NIL:
             case TRUE:
@@ -1162,7 +1159,7 @@ public class CloudScriptParser extends Parser {
             if ( (LA12_0==NOT) ) {
                 alt12=1;
             }
-            else if ( ((LA12_0>=CLASS && LA12_0<=IF)||(LA12_0>=WHILE && LA12_0<=TRY)||(LA12_0>=SELF && LA12_0<=FLOAT)||LA12_0==STRING||LA12_0==NAME||LA12_0==CONSTANT||LA12_0==OPEN_PARENT||LA12_0==AT) ) {
+            else if ( ((LA12_0>=CLASS && LA12_0<=IF)||LA12_0==WHILE||(LA12_0>=SELF && LA12_0<=FLOAT)||LA12_0==STRING||LA12_0==NAME||LA12_0==CONSTANT||LA12_0==OPEN_PARENT||LA12_0==AT) ) {
                 alt12=2;
             }
             else {
@@ -1239,15 +1236,15 @@ public class CloudScriptParser extends Parser {
     };
 
     // $ANTLR start "primaryExpression"
-    // CloudScriptParser.g:123:1: primaryExpression returns [Node node] : ( literal | call | methodDefinition | classDefinition | ifBlock | whileBlock | tryBlock | OPEN_PARENT expression CLOSE_PARENT );
+    // CloudScriptParser.g:123:1: primaryExpression returns [Node node] : ( literal | call | methodDefinition | classDefinition | ifBlock | whileBlock | OPEN_PARENT expression CLOSE_PARENT );
     public final CloudScriptParser.primaryExpression_return primaryExpression() throws RecognitionException {
         CloudScriptParser.primaryExpression_return retval = new CloudScriptParser.primaryExpression_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token OPEN_PARENT19=null;
-        Token CLOSE_PARENT21=null;
+        Token OPEN_PARENT18=null;
+        Token CLOSE_PARENT20=null;
         CloudScriptParser.literal_return literal12 = null;
 
         CloudScriptParser.call_return call13 = null;
@@ -1260,17 +1257,15 @@ public class CloudScriptParser extends Parser {
 
         CloudScriptParser.whileBlock_return whileBlock17 = null;
 
-        CloudScriptParser.tryBlock_return tryBlock18 = null;
-
-        CloudScriptParser.expression_return expression20 = null;
+        CloudScriptParser.expression_return expression19 = null;
 
 
-        Object OPEN_PARENT19_tree=null;
-        Object CLOSE_PARENT21_tree=null;
+        Object OPEN_PARENT18_tree=null;
+        Object CLOSE_PARENT20_tree=null;
 
         try {
-            // CloudScriptParser.g:123:38: ( literal | call | methodDefinition | classDefinition | ifBlock | whileBlock | tryBlock | OPEN_PARENT expression CLOSE_PARENT )
-            int alt13=8;
+            // CloudScriptParser.g:123:38: ( literal | call | methodDefinition | classDefinition | ifBlock | whileBlock | OPEN_PARENT expression CLOSE_PARENT )
+            int alt13=7;
             alt13 = dfa13.predict(input);
             switch (alt13) {
                 case 1 :
@@ -1376,45 +1371,28 @@ public class CloudScriptParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // CloudScriptParser.g:130:5: tryBlock
+                    // CloudScriptParser.g:130:5: OPEN_PARENT expression CLOSE_PARENT
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    pushFollow(FOLLOW_tryBlock_in_primaryExpression765);
-                    tryBlock18=tryBlock();
+                    OPEN_PARENT18=(Token)match(input,OPEN_PARENT,FOLLOW_OPEN_PARENT_in_primaryExpression765); if (state.failed) return retval;
+                    if ( state.backtracking==0 ) {
+                    OPEN_PARENT18_tree = (Object)adaptor.create(OPEN_PARENT18);
+                    adaptor.addChild(root_0, OPEN_PARENT18_tree);
+                    }
+                    pushFollow(FOLLOW_expression_in_primaryExpression773);
+                    expression19=expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, tryBlock18.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression19.getTree());
+                    CLOSE_PARENT20=(Token)match(input,CLOSE_PARENT,FOLLOW_CLOSE_PARENT_in_primaryExpression779); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                       retval.node = (tryBlock18!=null?tryBlock18.node:null); 
-                    }
-
-                    }
-                    break;
-                case 8 :
-                    // CloudScriptParser.g:131:5: OPEN_PARENT expression CLOSE_PARENT
-                    {
-                    root_0 = (Object)adaptor.nil();
-
-                    OPEN_PARENT19=(Token)match(input,OPEN_PARENT,FOLLOW_OPEN_PARENT_in_primaryExpression782); if (state.failed) return retval;
-                    if ( state.backtracking==0 ) {
-                    OPEN_PARENT19_tree = (Object)adaptor.create(OPEN_PARENT19);
-                    adaptor.addChild(root_0, OPEN_PARENT19_tree);
-                    }
-                    pushFollow(FOLLOW_expression_in_primaryExpression790);
-                    expression20=expression();
-
-                    state._fsp--;
-                    if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression20.getTree());
-                    CLOSE_PARENT21=(Token)match(input,CLOSE_PARENT,FOLLOW_CLOSE_PARENT_in_primaryExpression796); if (state.failed) return retval;
-                    if ( state.backtracking==0 ) {
-                    CLOSE_PARENT21_tree = (Object)adaptor.create(CLOSE_PARENT21);
-                    adaptor.addChild(root_0, CLOSE_PARENT21_tree);
+                    CLOSE_PARENT20_tree = (Object)adaptor.create(CLOSE_PARENT20);
+                    adaptor.addChild(root_0, CLOSE_PARENT20_tree);
                     }
                     if ( state.backtracking==0 ) {
-                       retval.node = (expression20!=null?expression20.node:null); 
+                       retval.node = (expression19!=null?expression19.node:null); 
                     }
 
                     }
@@ -1446,35 +1424,35 @@ public class CloudScriptParser extends Parser {
     };
 
     // $ANTLR start "literal"
-    // CloudScriptParser.g:137:1: literal returns [Node node] : ( STRING | INTEGER | FLOAT | NIL | TRUE | FALSE | constant | instanceVariable | self );
+    // CloudScriptParser.g:136:1: literal returns [Node node] : ( STRING | INTEGER | FLOAT | NIL | TRUE | FALSE | constant | instanceVariable | self );
     public final CloudScriptParser.literal_return literal() throws RecognitionException {
         CloudScriptParser.literal_return retval = new CloudScriptParser.literal_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token STRING22=null;
-        Token INTEGER23=null;
-        Token FLOAT24=null;
-        Token NIL25=null;
-        Token TRUE26=null;
-        Token FALSE27=null;
-        CloudScriptParser.constant_return constant28 = null;
+        Token STRING21=null;
+        Token INTEGER22=null;
+        Token FLOAT23=null;
+        Token NIL24=null;
+        Token TRUE25=null;
+        Token FALSE26=null;
+        CloudScriptParser.constant_return constant27 = null;
 
-        CloudScriptParser.instanceVariable_return instanceVariable29 = null;
+        CloudScriptParser.instanceVariable_return instanceVariable28 = null;
 
-        CloudScriptParser.self_return self30 = null;
+        CloudScriptParser.self_return self29 = null;
 
 
-        Object STRING22_tree=null;
-        Object INTEGER23_tree=null;
-        Object FLOAT24_tree=null;
-        Object NIL25_tree=null;
-        Object TRUE26_tree=null;
-        Object FALSE27_tree=null;
+        Object STRING21_tree=null;
+        Object INTEGER22_tree=null;
+        Object FLOAT23_tree=null;
+        Object NIL24_tree=null;
+        Object TRUE25_tree=null;
+        Object FALSE26_tree=null;
 
         try {
-            // CloudScriptParser.g:137:28: ( STRING | INTEGER | FLOAT | NIL | TRUE | FALSE | constant | instanceVariable | self )
+            // CloudScriptParser.g:136:28: ( STRING | INTEGER | FLOAT | NIL | TRUE | FALSE | constant | instanceVariable | self )
             int alt14=9;
             switch ( input.LA(1) ) {
             case STRING:
@@ -1532,62 +1510,62 @@ public class CloudScriptParser extends Parser {
 
             switch (alt14) {
                 case 1 :
-                    // CloudScriptParser.g:138:5: STRING
+                    // CloudScriptParser.g:137:5: STRING
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    STRING22=(Token)match(input,STRING,FOLLOW_STRING_in_literal822); if (state.failed) return retval;
+                    STRING21=(Token)match(input,STRING,FOLLOW_STRING_in_literal805); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    STRING22_tree = (Object)adaptor.create(STRING22);
-                    adaptor.addChild(root_0, STRING22_tree);
+                    STRING21_tree = (Object)adaptor.create(STRING21);
+                    adaptor.addChild(root_0, STRING21_tree);
                     }
                     if ( state.backtracking==0 ) {
-                       retval.node = new LiteralNode(new ValueObject((STRING22!=null?STRING22.getText():null).substring(1, (STRING22!=null?STRING22.getText():null).length() - 1))); 
+                       retval.node = new LiteralNode(new ValueObject((STRING21!=null?STRING21.getText():null).substring(1, (STRING21!=null?STRING21.getText():null).length() - 1))); 
                     }
 
                     }
                     break;
                 case 2 :
-                    // CloudScriptParser.g:139:5: INTEGER
+                    // CloudScriptParser.g:138:5: INTEGER
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    INTEGER23=(Token)match(input,INTEGER,FOLLOW_INTEGER_in_literal841); if (state.failed) return retval;
+                    INTEGER22=(Token)match(input,INTEGER,FOLLOW_INTEGER_in_literal824); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    INTEGER23_tree = (Object)adaptor.create(INTEGER23);
-                    adaptor.addChild(root_0, INTEGER23_tree);
+                    INTEGER22_tree = (Object)adaptor.create(INTEGER22);
+                    adaptor.addChild(root_0, INTEGER22_tree);
                     }
                     if ( state.backtracking==0 ) {
-                       retval.node = new LiteralNode(new ValueObject(new Integer((INTEGER23!=null?INTEGER23.getText():null)))); 
+                       retval.node = new LiteralNode(new ValueObject(new Integer((INTEGER22!=null?INTEGER22.getText():null)))); 
                     }
 
                     }
                     break;
                 case 3 :
-                    // CloudScriptParser.g:140:5: FLOAT
+                    // CloudScriptParser.g:139:5: FLOAT
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    FLOAT24=(Token)match(input,FLOAT,FOLLOW_FLOAT_in_literal859); if (state.failed) return retval;
+                    FLOAT23=(Token)match(input,FLOAT,FOLLOW_FLOAT_in_literal842); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    FLOAT24_tree = (Object)adaptor.create(FLOAT24);
-                    adaptor.addChild(root_0, FLOAT24_tree);
+                    FLOAT23_tree = (Object)adaptor.create(FLOAT23);
+                    adaptor.addChild(root_0, FLOAT23_tree);
                     }
                     if ( state.backtracking==0 ) {
-                       retval.node = new LiteralNode(new ValueObject(new Float((FLOAT24!=null?FLOAT24.getText():null)))); 
+                       retval.node = new LiteralNode(new ValueObject(new Float((FLOAT23!=null?FLOAT23.getText():null)))); 
                     }
 
                     }
                     break;
                 case 4 :
-                    // CloudScriptParser.g:141:5: NIL
+                    // CloudScriptParser.g:140:5: NIL
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    NIL25=(Token)match(input,NIL,FOLLOW_NIL_in_literal879); if (state.failed) return retval;
+                    NIL24=(Token)match(input,NIL,FOLLOW_NIL_in_literal862); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    NIL25_tree = (Object)adaptor.create(NIL25);
-                    adaptor.addChild(root_0, NIL25_tree);
+                    NIL24_tree = (Object)adaptor.create(NIL24);
+                    adaptor.addChild(root_0, NIL24_tree);
                     }
                     if ( state.backtracking==0 ) {
                        retval.node = new LiteralNode(CloudScriptRuntime.getNil()); 
@@ -1596,14 +1574,14 @@ public class CloudScriptParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // CloudScriptParser.g:142:5: TRUE
+                    // CloudScriptParser.g:141:5: TRUE
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    TRUE26=(Token)match(input,TRUE,FOLLOW_TRUE_in_literal901); if (state.failed) return retval;
+                    TRUE25=(Token)match(input,TRUE,FOLLOW_TRUE_in_literal884); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    TRUE26_tree = (Object)adaptor.create(TRUE26);
-                    adaptor.addChild(root_0, TRUE26_tree);
+                    TRUE25_tree = (Object)adaptor.create(TRUE25);
+                    adaptor.addChild(root_0, TRUE25_tree);
                     }
                     if ( state.backtracking==0 ) {
                        retval.node = new LiteralNode(CloudScriptRuntime.getTrue()); 
@@ -1612,14 +1590,14 @@ public class CloudScriptParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // CloudScriptParser.g:143:5: FALSE
+                    // CloudScriptParser.g:142:5: FALSE
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    FALSE27=(Token)match(input,FALSE,FOLLOW_FALSE_in_literal922); if (state.failed) return retval;
+                    FALSE26=(Token)match(input,FALSE,FOLLOW_FALSE_in_literal905); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    FALSE27_tree = (Object)adaptor.create(FALSE27);
-                    adaptor.addChild(root_0, FALSE27_tree);
+                    FALSE26_tree = (Object)adaptor.create(FALSE26);
+                    adaptor.addChild(root_0, FALSE26_tree);
                     }
                     if ( state.backtracking==0 ) {
                        retval.node = new LiteralNode(CloudScriptRuntime.getFalse()); 
@@ -1628,52 +1606,52 @@ public class CloudScriptParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // CloudScriptParser.g:144:5: constant
+                    // CloudScriptParser.g:143:5: constant
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    pushFollow(FOLLOW_constant_in_literal942);
-                    constant28=constant();
+                    pushFollow(FOLLOW_constant_in_literal925);
+                    constant27=constant();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, constant28.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, constant27.getTree());
                     if ( state.backtracking==0 ) {
-                       retval.node = (constant28!=null?constant28.node:null); 
+                       retval.node = (constant27!=null?constant27.node:null); 
                     }
 
                     }
                     break;
                 case 8 :
-                    // CloudScriptParser.g:145:5: instanceVariable
+                    // CloudScriptParser.g:144:5: instanceVariable
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    pushFollow(FOLLOW_instanceVariable_in_literal959);
-                    instanceVariable29=instanceVariable();
+                    pushFollow(FOLLOW_instanceVariable_in_literal942);
+                    instanceVariable28=instanceVariable();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, instanceVariable29.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, instanceVariable28.getTree());
                     if ( state.backtracking==0 ) {
-                       retval.node = (instanceVariable29!=null?instanceVariable29.node:null); 
+                       retval.node = (instanceVariable28!=null?instanceVariable28.node:null); 
                     }
 
                     }
                     break;
                 case 9 :
-                    // CloudScriptParser.g:146:5: self
+                    // CloudScriptParser.g:145:5: self
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    pushFollow(FOLLOW_self_in_literal968);
-                    self30=self();
+                    pushFollow(FOLLOW_self_in_literal951);
+                    self29=self();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, self30.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, self29.getTree());
                     if ( state.backtracking==0 ) {
-                       retval.node = (self30!=null?self30.node:null); 
+                       retval.node = (self29!=null?self29.node:null); 
                     }
 
                     }
@@ -1705,27 +1683,27 @@ public class CloudScriptParser extends Parser {
     };
 
     // $ANTLR start "self"
-    // CloudScriptParser.g:150:1: self returns [SelfNode node] : SELF ;
+    // CloudScriptParser.g:149:1: self returns [SelfNode node] : SELF ;
     public final CloudScriptParser.self_return self() throws RecognitionException {
         CloudScriptParser.self_return retval = new CloudScriptParser.self_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token SELF31=null;
+        Token SELF30=null;
 
-        Object SELF31_tree=null;
+        Object SELF30_tree=null;
 
         try {
-            // CloudScriptParser.g:150:29: ( SELF )
-            // CloudScriptParser.g:151:5: SELF
+            // CloudScriptParser.g:149:29: ( SELF )
+            // CloudScriptParser.g:150:5: SELF
             {
             root_0 = (Object)adaptor.nil();
 
-            SELF31=(Token)match(input,SELF,FOLLOW_SELF_in_self1002); if (state.failed) return retval;
+            SELF30=(Token)match(input,SELF,FOLLOW_SELF_in_self985); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            SELF31_tree = (Object)adaptor.create(SELF31);
-            adaptor.addChild(root_0, SELF31_tree);
+            SELF30_tree = (Object)adaptor.create(SELF30);
+            adaptor.addChild(root_0, SELF30_tree);
             }
             if ( state.backtracking==0 ) {
                retval.node = new SelfNode(); 
@@ -1758,37 +1736,37 @@ public class CloudScriptParser extends Parser {
     };
 
     // $ANTLR start "instanceVariable"
-    // CloudScriptParser.g:155:1: instanceVariable returns [InstanceVariableNode node] : AT NAME ;
+    // CloudScriptParser.g:154:1: instanceVariable returns [InstanceVariableNode node] : AT NAME ;
     public final CloudScriptParser.instanceVariable_return instanceVariable() throws RecognitionException {
         CloudScriptParser.instanceVariable_return retval = new CloudScriptParser.instanceVariable_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token AT32=null;
-        Token NAME33=null;
+        Token AT31=null;
+        Token NAME32=null;
 
-        Object AT32_tree=null;
-        Object NAME33_tree=null;
+        Object AT31_tree=null;
+        Object NAME32_tree=null;
 
         try {
-            // CloudScriptParser.g:155:53: ( AT NAME )
-            // CloudScriptParser.g:156:5: AT NAME
+            // CloudScriptParser.g:154:53: ( AT NAME )
+            // CloudScriptParser.g:155:5: AT NAME
             {
             root_0 = (Object)adaptor.nil();
 
-            AT32=(Token)match(input,AT,FOLLOW_AT_in_instanceVariable1036); if (state.failed) return retval;
+            AT31=(Token)match(input,AT,FOLLOW_AT_in_instanceVariable1019); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            AT32_tree = (Object)adaptor.create(AT32);
-            adaptor.addChild(root_0, AT32_tree);
+            AT31_tree = (Object)adaptor.create(AT31);
+            adaptor.addChild(root_0, AT31_tree);
             }
-            NAME33=(Token)match(input,NAME,FOLLOW_NAME_in_instanceVariable1038); if (state.failed) return retval;
+            NAME32=(Token)match(input,NAME,FOLLOW_NAME_in_instanceVariable1021); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            NAME33_tree = (Object)adaptor.create(NAME33);
-            adaptor.addChild(root_0, NAME33_tree);
+            NAME32_tree = (Object)adaptor.create(NAME32);
+            adaptor.addChild(root_0, NAME32_tree);
             }
             if ( state.backtracking==0 ) {
-               retval.node = new InstanceVariableNode((NAME33!=null?NAME33.getText():null)); 
+               retval.node = new InstanceVariableNode((NAME32!=null?NAME32.getText():null)); 
             }
 
             }
@@ -1818,32 +1796,32 @@ public class CloudScriptParser extends Parser {
     };
 
     // $ANTLR start "call"
-    // CloudScriptParser.g:160:1: call returns [Node node] : ( literal DOT )? (head= message DOT )* tail= message ;
+    // CloudScriptParser.g:159:1: call returns [Node node] : ( literal DOT )? (head= message DOT )* tail= message ;
     public final CloudScriptParser.call_return call() throws RecognitionException {
         CloudScriptParser.call_return retval = new CloudScriptParser.call_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
+        Token DOT34=null;
         Token DOT35=null;
-        Token DOT36=null;
         CloudScriptParser.message_return head = null;
 
         CloudScriptParser.message_return tail = null;
 
-        CloudScriptParser.literal_return literal34 = null;
+        CloudScriptParser.literal_return literal33 = null;
 
 
+        Object DOT34_tree=null;
         Object DOT35_tree=null;
-        Object DOT36_tree=null;
 
         try {
-            // CloudScriptParser.g:160:25: ( ( literal DOT )? (head= message DOT )* tail= message )
-            // CloudScriptParser.g:161:5: ( literal DOT )? (head= message DOT )* tail= message
+            // CloudScriptParser.g:159:25: ( ( literal DOT )? (head= message DOT )* tail= message )
+            // CloudScriptParser.g:160:5: ( literal DOT )? (head= message DOT )* tail= message
             {
             root_0 = (Object)adaptor.nil();
 
-            // CloudScriptParser.g:161:5: ( literal DOT )?
+            // CloudScriptParser.g:160:5: ( literal DOT )?
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -1852,21 +1830,21 @@ public class CloudScriptParser extends Parser {
             }
             switch (alt15) {
                 case 1 :
-                    // CloudScriptParser.g:161:6: literal DOT
+                    // CloudScriptParser.g:160:6: literal DOT
                     {
-                    pushFollow(FOLLOW_literal_in_call1070);
-                    literal34=literal();
+                    pushFollow(FOLLOW_literal_in_call1053);
+                    literal33=literal();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, literal34.getTree());
-                    DOT35=(Token)match(input,DOT,FOLLOW_DOT_in_call1072); if (state.failed) return retval;
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, literal33.getTree());
+                    DOT34=(Token)match(input,DOT,FOLLOW_DOT_in_call1055); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    DOT35_tree = (Object)adaptor.create(DOT35);
-                    adaptor.addChild(root_0, DOT35_tree);
+                    DOT34_tree = (Object)adaptor.create(DOT34);
+                    adaptor.addChild(root_0, DOT34_tree);
                     }
                     if ( state.backtracking==0 ) {
-                       retval.node = (literal34!=null?literal34.node:null); 
+                       retval.node = (literal33!=null?literal33.node:null); 
                     }
 
                     }
@@ -1874,7 +1852,7 @@ public class CloudScriptParser extends Parser {
 
             }
 
-            // CloudScriptParser.g:163:5: (head= message DOT )*
+            // CloudScriptParser.g:162:5: (head= message DOT )*
             loop16:
             do {
                 int alt16=2;
@@ -1883,7 +1861,7 @@ public class CloudScriptParser extends Parser {
                 if ( (LA16_0==NAME) ) {
                     int LA16_1 = input.LA(2);
 
-                    if ( (synpred37_CloudScriptParser()) ) {
+                    if ( (synpred36_CloudScriptParser()) ) {
                         alt16=1;
                     }
 
@@ -1893,18 +1871,18 @@ public class CloudScriptParser extends Parser {
 
                 switch (alt16) {
             	case 1 :
-            	    // CloudScriptParser.g:163:6: head= message DOT
+            	    // CloudScriptParser.g:162:6: head= message DOT
             	    {
-            	    pushFollow(FOLLOW_message_in_call1111);
+            	    pushFollow(FOLLOW_message_in_call1094);
             	    head=message();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
             	    if ( state.backtracking==0 ) adaptor.addChild(root_0, head.getTree());
-            	    DOT36=(Token)match(input,DOT,FOLLOW_DOT_in_call1113); if (state.failed) return retval;
+            	    DOT35=(Token)match(input,DOT,FOLLOW_DOT_in_call1096); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    DOT36_tree = (Object)adaptor.create(DOT36);
-            	    adaptor.addChild(root_0, DOT36_tree);
+            	    DOT35_tree = (Object)adaptor.create(DOT35);
+            	    adaptor.addChild(root_0, DOT35_tree);
             	    }
             	    if ( state.backtracking==0 ) {
             	       ((CallNode)(head!=null?head.node:null)).setReceiver(retval.node); retval.node = (head!=null?head.node:null); 
@@ -1918,7 +1896,7 @@ public class CloudScriptParser extends Parser {
                 }
             } while (true);
 
-            pushFollow(FOLLOW_message_in_call1146);
+            pushFollow(FOLLOW_message_in_call1129);
             tail=message();
 
             state._fsp--;
@@ -1955,33 +1933,33 @@ public class CloudScriptParser extends Parser {
     };
 
     // $ANTLR start "message"
-    // CloudScriptParser.g:169:1: message returns [CallNode node] : ( NAME | NAME OPEN_PARENT CLOSE_PARENT | NAME OPEN_PARENT arguments CLOSE_PARENT );
+    // CloudScriptParser.g:168:1: message returns [CallNode node] : ( NAME | NAME OPEN_PARENT CLOSE_PARENT | NAME OPEN_PARENT arguments CLOSE_PARENT );
     public final CloudScriptParser.message_return message() throws RecognitionException {
         CloudScriptParser.message_return retval = new CloudScriptParser.message_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
+        Token NAME36=null;
         Token NAME37=null;
-        Token NAME38=null;
-        Token OPEN_PARENT39=null;
-        Token CLOSE_PARENT40=null;
-        Token NAME41=null;
-        Token OPEN_PARENT42=null;
-        Token CLOSE_PARENT44=null;
-        CloudScriptParser.arguments_return arguments43 = null;
+        Token OPEN_PARENT38=null;
+        Token CLOSE_PARENT39=null;
+        Token NAME40=null;
+        Token OPEN_PARENT41=null;
+        Token CLOSE_PARENT43=null;
+        CloudScriptParser.arguments_return arguments42 = null;
 
 
+        Object NAME36_tree=null;
         Object NAME37_tree=null;
-        Object NAME38_tree=null;
-        Object OPEN_PARENT39_tree=null;
-        Object CLOSE_PARENT40_tree=null;
-        Object NAME41_tree=null;
-        Object OPEN_PARENT42_tree=null;
-        Object CLOSE_PARENT44_tree=null;
+        Object OPEN_PARENT38_tree=null;
+        Object CLOSE_PARENT39_tree=null;
+        Object NAME40_tree=null;
+        Object OPEN_PARENT41_tree=null;
+        Object CLOSE_PARENT43_tree=null;
 
         try {
-            // CloudScriptParser.g:169:32: ( NAME | NAME OPEN_PARENT CLOSE_PARENT | NAME OPEN_PARENT arguments CLOSE_PARENT )
+            // CloudScriptParser.g:168:32: ( NAME | NAME OPEN_PARENT CLOSE_PARENT | NAME OPEN_PARENT arguments CLOSE_PARENT )
             int alt17=3;
             int LA17_0 = input.LA(1);
 
@@ -1994,7 +1972,7 @@ public class CloudScriptParser extends Parser {
                     if ( (LA17_2==CLOSE_PARENT) ) {
                         alt17=2;
                     }
-                    else if ( ((LA17_2>=CLASS && LA17_2<=IF)||(LA17_2>=WHILE && LA17_2<=TRY)||(LA17_2>=SELF && LA17_2<=FLOAT)||LA17_2==STRING||LA17_2==NAME||LA17_2==CONSTANT||LA17_2==OPEN_PARENT||LA17_2==AT||LA17_2==NOT) ) {
+                    else if ( ((LA17_2>=CLASS && LA17_2<=IF)||LA17_2==WHILE||(LA17_2>=SELF && LA17_2<=FLOAT)||LA17_2==STRING||LA17_2==NAME||LA17_2==CONSTANT||LA17_2==OPEN_PARENT||LA17_2==AT||LA17_2==NOT) ) {
                         alt17=3;
                     }
                     else {
@@ -2005,7 +1983,7 @@ public class CloudScriptParser extends Parser {
                         throw nvae;
                     }
                 }
-                else if ( (LA17_1==EOF||LA17_1==ELSE||(LA17_1>=CATCH && LA17_1<=END)||LA17_1==SEMICOLON||(LA17_1>=DOT && LA17_1<=COMMA)||LA17_1==CLOSE_PARENT||(LA17_1>=EQ && LA17_1<=OR)||LA17_1==NEWLINE) ) {
+                else if ( (LA17_1==EOF||LA17_1==ELSE||LA17_1==END||LA17_1==SEMICOLON||(LA17_1>=DOT && LA17_1<=COMMA)||LA17_1==CLOSE_PARENT||(LA17_1>=EQ && LA17_1<=OR)||LA17_1==NEWLINE) ) {
                     alt17=1;
                 }
                 else {
@@ -2025,75 +2003,75 @@ public class CloudScriptParser extends Parser {
             }
             switch (alt17) {
                 case 1 :
-                    // CloudScriptParser.g:170:5: NAME
+                    // CloudScriptParser.g:169:5: NAME
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    NAME37=(Token)match(input,NAME,FOLLOW_NAME_in_message1186); if (state.failed) return retval;
+                    NAME36=(Token)match(input,NAME,FOLLOW_NAME_in_message1169); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    NAME37_tree = (Object)adaptor.create(NAME37);
-                    adaptor.addChild(root_0, NAME37_tree);
+                    NAME36_tree = (Object)adaptor.create(NAME36);
+                    adaptor.addChild(root_0, NAME36_tree);
                     }
                     if ( state.backtracking==0 ) {
-                       retval.node = new CallNode((NAME37!=null?NAME37.getText():null)); 
+                       retval.node = new CallNode((NAME36!=null?NAME36.getText():null)); 
                     }
 
                     }
                     break;
                 case 2 :
-                    // CloudScriptParser.g:171:5: NAME OPEN_PARENT CLOSE_PARENT
+                    // CloudScriptParser.g:170:5: NAME OPEN_PARENT CLOSE_PARENT
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    NAME38=(Token)match(input,NAME,FOLLOW_NAME_in_message1221); if (state.failed) return retval;
+                    NAME37=(Token)match(input,NAME,FOLLOW_NAME_in_message1204); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    NAME38_tree = (Object)adaptor.create(NAME38);
-                    adaptor.addChild(root_0, NAME38_tree);
+                    NAME37_tree = (Object)adaptor.create(NAME37);
+                    adaptor.addChild(root_0, NAME37_tree);
                     }
-                    OPEN_PARENT39=(Token)match(input,OPEN_PARENT,FOLLOW_OPEN_PARENT_in_message1223); if (state.failed) return retval;
+                    OPEN_PARENT38=(Token)match(input,OPEN_PARENT,FOLLOW_OPEN_PARENT_in_message1206); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    OPEN_PARENT39_tree = (Object)adaptor.create(OPEN_PARENT39);
-                    adaptor.addChild(root_0, OPEN_PARENT39_tree);
+                    OPEN_PARENT38_tree = (Object)adaptor.create(OPEN_PARENT38);
+                    adaptor.addChild(root_0, OPEN_PARENT38_tree);
                     }
-                    CLOSE_PARENT40=(Token)match(input,CLOSE_PARENT,FOLLOW_CLOSE_PARENT_in_message1225); if (state.failed) return retval;
+                    CLOSE_PARENT39=(Token)match(input,CLOSE_PARENT,FOLLOW_CLOSE_PARENT_in_message1208); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    CLOSE_PARENT40_tree = (Object)adaptor.create(CLOSE_PARENT40);
-                    adaptor.addChild(root_0, CLOSE_PARENT40_tree);
+                    CLOSE_PARENT39_tree = (Object)adaptor.create(CLOSE_PARENT39);
+                    adaptor.addChild(root_0, CLOSE_PARENT39_tree);
                     }
                     if ( state.backtracking==0 ) {
-                       retval.node = new CallNode((NAME38!=null?NAME38.getText():null), new ArrayList<Node>()); 
+                       retval.node = new CallNode((NAME37!=null?NAME37.getText():null), new ArrayList<Node>()); 
                     }
 
                     }
                     break;
                 case 3 :
-                    // CloudScriptParser.g:172:5: NAME OPEN_PARENT arguments CLOSE_PARENT
+                    // CloudScriptParser.g:171:5: NAME OPEN_PARENT arguments CLOSE_PARENT
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    NAME41=(Token)match(input,NAME,FOLLOW_NAME_in_message1235); if (state.failed) return retval;
+                    NAME40=(Token)match(input,NAME,FOLLOW_NAME_in_message1218); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    NAME41_tree = (Object)adaptor.create(NAME41);
-                    adaptor.addChild(root_0, NAME41_tree);
+                    NAME40_tree = (Object)adaptor.create(NAME40);
+                    adaptor.addChild(root_0, NAME40_tree);
                     }
-                    OPEN_PARENT42=(Token)match(input,OPEN_PARENT,FOLLOW_OPEN_PARENT_in_message1237); if (state.failed) return retval;
+                    OPEN_PARENT41=(Token)match(input,OPEN_PARENT,FOLLOW_OPEN_PARENT_in_message1220); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    OPEN_PARENT42_tree = (Object)adaptor.create(OPEN_PARENT42);
-                    adaptor.addChild(root_0, OPEN_PARENT42_tree);
+                    OPEN_PARENT41_tree = (Object)adaptor.create(OPEN_PARENT41);
+                    adaptor.addChild(root_0, OPEN_PARENT41_tree);
                     }
-                    pushFollow(FOLLOW_arguments_in_message1250);
-                    arguments43=arguments();
+                    pushFollow(FOLLOW_arguments_in_message1233);
+                    arguments42=arguments();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, arguments43.getTree());
-                    CLOSE_PARENT44=(Token)match(input,CLOSE_PARENT,FOLLOW_CLOSE_PARENT_in_message1261); if (state.failed) return retval;
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, arguments42.getTree());
+                    CLOSE_PARENT43=(Token)match(input,CLOSE_PARENT,FOLLOW_CLOSE_PARENT_in_message1244); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    CLOSE_PARENT44_tree = (Object)adaptor.create(CLOSE_PARENT44);
-                    adaptor.addChild(root_0, CLOSE_PARENT44_tree);
+                    CLOSE_PARENT43_tree = (Object)adaptor.create(CLOSE_PARENT43);
+                    adaptor.addChild(root_0, CLOSE_PARENT43_tree);
                     }
                     if ( state.backtracking==0 ) {
-                       retval.node = new CallNode((NAME41!=null?NAME41.getText():null), (arguments43!=null?arguments43.nodes:null)); 
+                       retval.node = new CallNode((NAME40!=null?NAME40.getText():null), (arguments42!=null?arguments42.nodes:null)); 
                     }
 
                     }
@@ -2125,31 +2103,31 @@ public class CloudScriptParser extends Parser {
     };
 
     // $ANTLR start "arguments"
-    // CloudScriptParser.g:178:1: arguments returns [ArrayList<Node> nodes] : head= expression ( COMMA tail= expression )* ;
+    // CloudScriptParser.g:177:1: arguments returns [ArrayList<Node> nodes] : head= expression ( COMMA tail= expression )* ;
     public final CloudScriptParser.arguments_return arguments() throws RecognitionException {
         CloudScriptParser.arguments_return retval = new CloudScriptParser.arguments_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token COMMA45=null;
+        Token COMMA44=null;
         CloudScriptParser.expression_return head = null;
 
         CloudScriptParser.expression_return tail = null;
 
 
-        Object COMMA45_tree=null;
+        Object COMMA44_tree=null;
 
         try {
-            // CloudScriptParser.g:178:42: (head= expression ( COMMA tail= expression )* )
-            // CloudScriptParser.g:179:37: head= expression ( COMMA tail= expression )*
+            // CloudScriptParser.g:177:42: (head= expression ( COMMA tail= expression )* )
+            // CloudScriptParser.g:178:37: head= expression ( COMMA tail= expression )*
             {
             root_0 = (Object)adaptor.nil();
 
             if ( state.backtracking==0 ) {
                retval.nodes = new ArrayList<Node>(); 
             }
-            pushFollow(FOLLOW_expression_in_arguments1336);
+            pushFollow(FOLLOW_expression_in_arguments1319);
             head=expression();
 
             state._fsp--;
@@ -2158,7 +2136,7 @@ public class CloudScriptParser extends Parser {
             if ( state.backtracking==0 ) {
                retval.nodes.add((head!=null?head.node:null)); 
             }
-            // CloudScriptParser.g:181:5: ( COMMA tail= expression )*
+            // CloudScriptParser.g:180:5: ( COMMA tail= expression )*
             loop18:
             do {
                 int alt18=2;
@@ -2171,14 +2149,14 @@ public class CloudScriptParser extends Parser {
 
                 switch (alt18) {
             	case 1 :
-            	    // CloudScriptParser.g:181:6: COMMA tail= expression
+            	    // CloudScriptParser.g:180:6: COMMA tail= expression
             	    {
-            	    COMMA45=(Token)match(input,COMMA,FOLLOW_COMMA_in_arguments1361); if (state.failed) return retval;
+            	    COMMA44=(Token)match(input,COMMA,FOLLOW_COMMA_in_arguments1344); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    COMMA45_tree = (Object)adaptor.create(COMMA45);
-            	    adaptor.addChild(root_0, COMMA45_tree);
+            	    COMMA44_tree = (Object)adaptor.create(COMMA44);
+            	    adaptor.addChild(root_0, COMMA44_tree);
             	    }
-            	    pushFollow(FOLLOW_expression_in_arguments1370);
+            	    pushFollow(FOLLOW_expression_in_arguments1353);
             	    tail=expression();
 
             	    state._fsp--;
@@ -2224,30 +2202,30 @@ public class CloudScriptParser extends Parser {
     };
 
     // $ANTLR start "constant"
-    // CloudScriptParser.g:187:1: constant returns [ConstantNode node] : CONSTANT ;
+    // CloudScriptParser.g:186:1: constant returns [ConstantNode node] : CONSTANT ;
     public final CloudScriptParser.constant_return constant() throws RecognitionException {
         CloudScriptParser.constant_return retval = new CloudScriptParser.constant_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token CONSTANT46=null;
+        Token CONSTANT45=null;
 
-        Object CONSTANT46_tree=null;
+        Object CONSTANT45_tree=null;
 
         try {
-            // CloudScriptParser.g:187:37: ( CONSTANT )
-            // CloudScriptParser.g:188:5: CONSTANT
+            // CloudScriptParser.g:186:37: ( CONSTANT )
+            // CloudScriptParser.g:187:5: CONSTANT
             {
             root_0 = (Object)adaptor.nil();
 
-            CONSTANT46=(Token)match(input,CONSTANT,FOLLOW_CONSTANT_in_constant1413); if (state.failed) return retval;
+            CONSTANT45=(Token)match(input,CONSTANT,FOLLOW_CONSTANT_in_constant1396); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            CONSTANT46_tree = (Object)adaptor.create(CONSTANT46);
-            adaptor.addChild(root_0, CONSTANT46_tree);
+            CONSTANT45_tree = (Object)adaptor.create(CONSTANT45);
+            adaptor.addChild(root_0, CONSTANT45_tree);
             }
             if ( state.backtracking==0 ) {
-               retval.node = new ConstantNode((CONSTANT46!=null?CONSTANT46.getText():null)); 
+               retval.node = new ConstantNode((CONSTANT45!=null?CONSTANT45.getText():null)); 
             }
 
             }
@@ -2277,37 +2255,37 @@ public class CloudScriptParser extends Parser {
     };
 
     // $ANTLR start "assign"
-    // CloudScriptParser.g:192:1: assign returns [Node node] : ( NAME ASSIGN expression | CONSTANT ASSIGN expression | AT NAME ASSIGN expression );
+    // CloudScriptParser.g:191:1: assign returns [Node node] : ( NAME ASSIGN expression | CONSTANT ASSIGN expression | AT NAME ASSIGN expression );
     public final CloudScriptParser.assign_return assign() throws RecognitionException {
         CloudScriptParser.assign_return retval = new CloudScriptParser.assign_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token NAME47=null;
-        Token ASSIGN48=null;
-        Token CONSTANT50=null;
-        Token ASSIGN51=null;
-        Token AT53=null;
-        Token NAME54=null;
-        Token ASSIGN55=null;
-        CloudScriptParser.expression_return expression49 = null;
+        Token NAME46=null;
+        Token ASSIGN47=null;
+        Token CONSTANT49=null;
+        Token ASSIGN50=null;
+        Token AT52=null;
+        Token NAME53=null;
+        Token ASSIGN54=null;
+        CloudScriptParser.expression_return expression48 = null;
 
-        CloudScriptParser.expression_return expression52 = null;
+        CloudScriptParser.expression_return expression51 = null;
 
-        CloudScriptParser.expression_return expression56 = null;
+        CloudScriptParser.expression_return expression55 = null;
 
 
-        Object NAME47_tree=null;
-        Object ASSIGN48_tree=null;
-        Object CONSTANT50_tree=null;
-        Object ASSIGN51_tree=null;
-        Object AT53_tree=null;
-        Object NAME54_tree=null;
-        Object ASSIGN55_tree=null;
+        Object NAME46_tree=null;
+        Object ASSIGN47_tree=null;
+        Object CONSTANT49_tree=null;
+        Object ASSIGN50_tree=null;
+        Object AT52_tree=null;
+        Object NAME53_tree=null;
+        Object ASSIGN54_tree=null;
 
         try {
-            // CloudScriptParser.g:192:27: ( NAME ASSIGN expression | CONSTANT ASSIGN expression | AT NAME ASSIGN expression )
+            // CloudScriptParser.g:191:27: ( NAME ASSIGN expression | CONSTANT ASSIGN expression | AT NAME ASSIGN expression )
             int alt19=3;
             switch ( input.LA(1) ) {
             case NAME:
@@ -2335,87 +2313,87 @@ public class CloudScriptParser extends Parser {
 
             switch (alt19) {
                 case 1 :
-                    // CloudScriptParser.g:193:5: NAME ASSIGN expression
+                    // CloudScriptParser.g:192:5: NAME ASSIGN expression
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    NAME47=(Token)match(input,NAME,FOLLOW_NAME_in_assign1457); if (state.failed) return retval;
+                    NAME46=(Token)match(input,NAME,FOLLOW_NAME_in_assign1440); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    NAME47_tree = (Object)adaptor.create(NAME47);
-                    adaptor.addChild(root_0, NAME47_tree);
+                    NAME46_tree = (Object)adaptor.create(NAME46);
+                    adaptor.addChild(root_0, NAME46_tree);
                     }
-                    ASSIGN48=(Token)match(input,ASSIGN,FOLLOW_ASSIGN_in_assign1459); if (state.failed) return retval;
+                    ASSIGN47=(Token)match(input,ASSIGN,FOLLOW_ASSIGN_in_assign1442); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    ASSIGN48_tree = (Object)adaptor.create(ASSIGN48);
-                    adaptor.addChild(root_0, ASSIGN48_tree);
+                    ASSIGN47_tree = (Object)adaptor.create(ASSIGN47);
+                    adaptor.addChild(root_0, ASSIGN47_tree);
                     }
-                    pushFollow(FOLLOW_expression_in_assign1461);
-                    expression49=expression();
+                    pushFollow(FOLLOW_expression_in_assign1444);
+                    expression48=expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression49.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression48.getTree());
                     if ( state.backtracking==0 ) {
-                       retval.node = new LocalAssignNode((NAME47!=null?NAME47.getText():null), (expression49!=null?expression49.node:null)); 
+                       retval.node = new LocalAssignNode((NAME46!=null?NAME46.getText():null), (expression48!=null?expression48.node:null)); 
                     }
 
                     }
                     break;
                 case 2 :
-                    // CloudScriptParser.g:194:5: CONSTANT ASSIGN expression
+                    // CloudScriptParser.g:193:5: CONSTANT ASSIGN expression
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    CONSTANT50=(Token)match(input,CONSTANT,FOLLOW_CONSTANT_in_assign1478); if (state.failed) return retval;
+                    CONSTANT49=(Token)match(input,CONSTANT,FOLLOW_CONSTANT_in_assign1461); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    CONSTANT50_tree = (Object)adaptor.create(CONSTANT50);
-                    adaptor.addChild(root_0, CONSTANT50_tree);
+                    CONSTANT49_tree = (Object)adaptor.create(CONSTANT49);
+                    adaptor.addChild(root_0, CONSTANT49_tree);
                     }
-                    ASSIGN51=(Token)match(input,ASSIGN,FOLLOW_ASSIGN_in_assign1480); if (state.failed) return retval;
+                    ASSIGN50=(Token)match(input,ASSIGN,FOLLOW_ASSIGN_in_assign1463); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    ASSIGN51_tree = (Object)adaptor.create(ASSIGN51);
-                    adaptor.addChild(root_0, ASSIGN51_tree);
+                    ASSIGN50_tree = (Object)adaptor.create(ASSIGN50);
+                    adaptor.addChild(root_0, ASSIGN50_tree);
                     }
-                    pushFollow(FOLLOW_expression_in_assign1482);
-                    expression52=expression();
+                    pushFollow(FOLLOW_expression_in_assign1465);
+                    expression51=expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression52.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression51.getTree());
                     if ( state.backtracking==0 ) {
-                       retval.node = new ConstantAssignNode((CONSTANT50!=null?CONSTANT50.getText():null), (expression52!=null?expression52.node:null)); 
+                       retval.node = new ConstantAssignNode((CONSTANT49!=null?CONSTANT49.getText():null), (expression51!=null?expression51.node:null)); 
                     }
 
                     }
                     break;
                 case 3 :
-                    // CloudScriptParser.g:195:5: AT NAME ASSIGN expression
+                    // CloudScriptParser.g:194:5: AT NAME ASSIGN expression
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    AT53=(Token)match(input,AT,FOLLOW_AT_in_assign1495); if (state.failed) return retval;
+                    AT52=(Token)match(input,AT,FOLLOW_AT_in_assign1478); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    AT53_tree = (Object)adaptor.create(AT53);
-                    adaptor.addChild(root_0, AT53_tree);
+                    AT52_tree = (Object)adaptor.create(AT52);
+                    adaptor.addChild(root_0, AT52_tree);
                     }
-                    NAME54=(Token)match(input,NAME,FOLLOW_NAME_in_assign1497); if (state.failed) return retval;
+                    NAME53=(Token)match(input,NAME,FOLLOW_NAME_in_assign1480); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    NAME54_tree = (Object)adaptor.create(NAME54);
-                    adaptor.addChild(root_0, NAME54_tree);
+                    NAME53_tree = (Object)adaptor.create(NAME53);
+                    adaptor.addChild(root_0, NAME53_tree);
                     }
-                    ASSIGN55=(Token)match(input,ASSIGN,FOLLOW_ASSIGN_in_assign1499); if (state.failed) return retval;
+                    ASSIGN54=(Token)match(input,ASSIGN,FOLLOW_ASSIGN_in_assign1482); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    ASSIGN55_tree = (Object)adaptor.create(ASSIGN55);
-                    adaptor.addChild(root_0, ASSIGN55_tree);
+                    ASSIGN54_tree = (Object)adaptor.create(ASSIGN54);
+                    adaptor.addChild(root_0, ASSIGN54_tree);
                     }
-                    pushFollow(FOLLOW_expression_in_assign1501);
-                    expression56=expression();
+                    pushFollow(FOLLOW_expression_in_assign1484);
+                    expression55=expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression56.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression55.getTree());
                     if ( state.backtracking==0 ) {
-                       retval.node = new InstanceVariableAssignNode((NAME54!=null?NAME54.getText():null), (expression56!=null?expression56.node:null)); 
+                       retval.node = new InstanceVariableAssignNode((NAME53!=null?NAME53.getText():null), (expression55!=null?expression55.node:null)); 
                     }
 
                     }
@@ -2447,48 +2425,48 @@ public class CloudScriptParser extends Parser {
     };
 
     // $ANTLR start "methodDefinition"
-    // CloudScriptParser.g:198:1: methodDefinition returns [MethodDefinitionNode node] : DEF NAME ( OPEN_PARENT ( parameters )? CLOSE_PARENT )? terminator expressions END ;
+    // CloudScriptParser.g:197:1: methodDefinition returns [MethodDefinitionNode node] : DEF NAME ( OPEN_PARENT ( parameters )? CLOSE_PARENT )? terminator expressions END ;
     public final CloudScriptParser.methodDefinition_return methodDefinition() throws RecognitionException {
         CloudScriptParser.methodDefinition_return retval = new CloudScriptParser.methodDefinition_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token DEF57=null;
-        Token NAME58=null;
-        Token OPEN_PARENT59=null;
-        Token CLOSE_PARENT61=null;
-        Token END64=null;
-        CloudScriptParser.parameters_return parameters60 = null;
+        Token DEF56=null;
+        Token NAME57=null;
+        Token OPEN_PARENT58=null;
+        Token CLOSE_PARENT60=null;
+        Token END63=null;
+        CloudScriptParser.parameters_return parameters59 = null;
 
-        CloudScriptParser.terminator_return terminator62 = null;
+        CloudScriptParser.terminator_return terminator61 = null;
 
-        CloudScriptParser.expressions_return expressions63 = null;
+        CloudScriptParser.expressions_return expressions62 = null;
 
 
-        Object DEF57_tree=null;
-        Object NAME58_tree=null;
-        Object OPEN_PARENT59_tree=null;
-        Object CLOSE_PARENT61_tree=null;
-        Object END64_tree=null;
+        Object DEF56_tree=null;
+        Object NAME57_tree=null;
+        Object OPEN_PARENT58_tree=null;
+        Object CLOSE_PARENT60_tree=null;
+        Object END63_tree=null;
 
         try {
-            // CloudScriptParser.g:198:53: ( DEF NAME ( OPEN_PARENT ( parameters )? CLOSE_PARENT )? terminator expressions END )
-            // CloudScriptParser.g:199:5: DEF NAME ( OPEN_PARENT ( parameters )? CLOSE_PARENT )? terminator expressions END
+            // CloudScriptParser.g:197:53: ( DEF NAME ( OPEN_PARENT ( parameters )? CLOSE_PARENT )? terminator expressions END )
+            // CloudScriptParser.g:198:5: DEF NAME ( OPEN_PARENT ( parameters )? CLOSE_PARENT )? terminator expressions END
             {
             root_0 = (Object)adaptor.nil();
 
-            DEF57=(Token)match(input,DEF,FOLLOW_DEF_in_methodDefinition1527); if (state.failed) return retval;
+            DEF56=(Token)match(input,DEF,FOLLOW_DEF_in_methodDefinition1510); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            DEF57_tree = (Object)adaptor.create(DEF57);
-            adaptor.addChild(root_0, DEF57_tree);
+            DEF56_tree = (Object)adaptor.create(DEF56);
+            adaptor.addChild(root_0, DEF56_tree);
             }
-            NAME58=(Token)match(input,NAME,FOLLOW_NAME_in_methodDefinition1529); if (state.failed) return retval;
+            NAME57=(Token)match(input,NAME,FOLLOW_NAME_in_methodDefinition1512); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            NAME58_tree = (Object)adaptor.create(NAME58);
-            adaptor.addChild(root_0, NAME58_tree);
+            NAME57_tree = (Object)adaptor.create(NAME57);
+            adaptor.addChild(root_0, NAME57_tree);
             }
-            // CloudScriptParser.g:199:14: ( OPEN_PARENT ( parameters )? CLOSE_PARENT )?
+            // CloudScriptParser.g:198:14: ( OPEN_PARENT ( parameters )? CLOSE_PARENT )?
             int alt21=2;
             int LA21_0 = input.LA(1);
 
@@ -2497,14 +2475,14 @@ public class CloudScriptParser extends Parser {
             }
             switch (alt21) {
                 case 1 :
-                    // CloudScriptParser.g:199:15: OPEN_PARENT ( parameters )? CLOSE_PARENT
+                    // CloudScriptParser.g:198:15: OPEN_PARENT ( parameters )? CLOSE_PARENT
                     {
-                    OPEN_PARENT59=(Token)match(input,OPEN_PARENT,FOLLOW_OPEN_PARENT_in_methodDefinition1532); if (state.failed) return retval;
+                    OPEN_PARENT58=(Token)match(input,OPEN_PARENT,FOLLOW_OPEN_PARENT_in_methodDefinition1515); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    OPEN_PARENT59_tree = (Object)adaptor.create(OPEN_PARENT59);
-                    adaptor.addChild(root_0, OPEN_PARENT59_tree);
+                    OPEN_PARENT58_tree = (Object)adaptor.create(OPEN_PARENT58);
+                    adaptor.addChild(root_0, OPEN_PARENT58_tree);
                     }
-                    // CloudScriptParser.g:199:27: ( parameters )?
+                    // CloudScriptParser.g:198:27: ( parameters )?
                     int alt20=2;
                     int LA20_0 = input.LA(1);
 
@@ -2515,22 +2493,22 @@ public class CloudScriptParser extends Parser {
                         case 1 :
                             // CloudScriptParser.g:0:0: parameters
                             {
-                            pushFollow(FOLLOW_parameters_in_methodDefinition1534);
-                            parameters60=parameters();
+                            pushFollow(FOLLOW_parameters_in_methodDefinition1517);
+                            parameters59=parameters();
 
                             state._fsp--;
                             if (state.failed) return retval;
-                            if ( state.backtracking==0 ) adaptor.addChild(root_0, parameters60.getTree());
+                            if ( state.backtracking==0 ) adaptor.addChild(root_0, parameters59.getTree());
 
                             }
                             break;
 
                     }
 
-                    CLOSE_PARENT61=(Token)match(input,CLOSE_PARENT,FOLLOW_CLOSE_PARENT_in_methodDefinition1537); if (state.failed) return retval;
+                    CLOSE_PARENT60=(Token)match(input,CLOSE_PARENT,FOLLOW_CLOSE_PARENT_in_methodDefinition1520); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    CLOSE_PARENT61_tree = (Object)adaptor.create(CLOSE_PARENT61);
-                    adaptor.addChild(root_0, CLOSE_PARENT61_tree);
+                    CLOSE_PARENT60_tree = (Object)adaptor.create(CLOSE_PARENT60);
+                    adaptor.addChild(root_0, CLOSE_PARENT60_tree);
                     }
 
                     }
@@ -2538,25 +2516,25 @@ public class CloudScriptParser extends Parser {
 
             }
 
-            pushFollow(FOLLOW_terminator_in_methodDefinition1541);
-            terminator62=terminator();
+            pushFollow(FOLLOW_terminator_in_methodDefinition1524);
+            terminator61=terminator();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, terminator62.getTree());
-            pushFollow(FOLLOW_expressions_in_methodDefinition1549);
-            expressions63=expressions();
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, terminator61.getTree());
+            pushFollow(FOLLOW_expressions_in_methodDefinition1532);
+            expressions62=expressions();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, expressions63.getTree());
-            END64=(Token)match(input,END,FOLLOW_END_in_methodDefinition1555); if (state.failed) return retval;
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, expressions62.getTree());
+            END63=(Token)match(input,END,FOLLOW_END_in_methodDefinition1538); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            END64_tree = (Object)adaptor.create(END64);
-            adaptor.addChild(root_0, END64_tree);
+            END63_tree = (Object)adaptor.create(END63);
+            adaptor.addChild(root_0, END63_tree);
             }
             if ( state.backtracking==0 ) {
-               retval.node = new MethodDefinitionNode((NAME58!=null?NAME58.getText():null), (parameters60!=null?parameters60.names:null), (expressions63!=null?expressions63.nodes:null)); 
+               retval.node = new MethodDefinitionNode((NAME57!=null?NAME57.getText():null), (parameters59!=null?parameters59.names:null), (expressions62!=null?expressions62.nodes:null)); 
             }
 
             }
@@ -2586,7 +2564,7 @@ public class CloudScriptParser extends Parser {
     };
 
     // $ANTLR start "parameters"
-    // CloudScriptParser.g:205:1: parameters returns [ArrayList<String> names] : head= NAME ( COMMA tail= NAME )* ;
+    // CloudScriptParser.g:204:1: parameters returns [ArrayList<String> names] : head= NAME ( COMMA tail= NAME )* ;
     public final CloudScriptParser.parameters_return parameters() throws RecognitionException {
         CloudScriptParser.parameters_return retval = new CloudScriptParser.parameters_return();
         retval.start = input.LT(1);
@@ -2595,22 +2573,22 @@ public class CloudScriptParser extends Parser {
 
         Token head=null;
         Token tail=null;
-        Token COMMA65=null;
+        Token COMMA64=null;
 
         Object head_tree=null;
         Object tail_tree=null;
-        Object COMMA65_tree=null;
+        Object COMMA64_tree=null;
 
         try {
-            // CloudScriptParser.g:205:45: (head= NAME ( COMMA tail= NAME )* )
-            // CloudScriptParser.g:206:37: head= NAME ( COMMA tail= NAME )*
+            // CloudScriptParser.g:204:45: (head= NAME ( COMMA tail= NAME )* )
+            // CloudScriptParser.g:205:37: head= NAME ( COMMA tail= NAME )*
             {
             root_0 = (Object)adaptor.nil();
 
             if ( state.backtracking==0 ) {
                retval.names = new ArrayList<String>(); 
             }
-            head=(Token)match(input,NAME,FOLLOW_NAME_in_parameters1644); if (state.failed) return retval;
+            head=(Token)match(input,NAME,FOLLOW_NAME_in_parameters1627); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             head_tree = (Object)adaptor.create(head);
             adaptor.addChild(root_0, head_tree);
@@ -2618,7 +2596,7 @@ public class CloudScriptParser extends Parser {
             if ( state.backtracking==0 ) {
                retval.names.add((head!=null?head.getText():null)); 
             }
-            // CloudScriptParser.g:208:5: ( COMMA tail= NAME )*
+            // CloudScriptParser.g:207:5: ( COMMA tail= NAME )*
             loop22:
             do {
                 int alt22=2;
@@ -2631,14 +2609,14 @@ public class CloudScriptParser extends Parser {
 
                 switch (alt22) {
             	case 1 :
-            	    // CloudScriptParser.g:208:6: COMMA tail= NAME
+            	    // CloudScriptParser.g:207:6: COMMA tail= NAME
             	    {
-            	    COMMA65=(Token)match(input,COMMA,FOLLOW_COMMA_in_parameters1675); if (state.failed) return retval;
+            	    COMMA64=(Token)match(input,COMMA,FOLLOW_COMMA_in_parameters1658); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    COMMA65_tree = (Object)adaptor.create(COMMA65);
-            	    adaptor.addChild(root_0, COMMA65_tree);
+            	    COMMA64_tree = (Object)adaptor.create(COMMA64);
+            	    adaptor.addChild(root_0, COMMA64_tree);
             	    }
-            	    tail=(Token)match(input,NAME,FOLLOW_NAME_in_parameters1684); if (state.failed) return retval;
+            	    tail=(Token)match(input,NAME,FOLLOW_NAME_in_parameters1667); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
             	    tail_tree = (Object)adaptor.create(tail);
             	    adaptor.addChild(root_0, tail_tree);
@@ -2683,7 +2661,7 @@ public class CloudScriptParser extends Parser {
     };
 
     // $ANTLR start "classDefinition"
-    // CloudScriptParser.g:213:1: classDefinition returns [ClassDefinitionNode node] : CLASS name= CONSTANT ( LT superClass= CONSTANT )? terminator expressions END ;
+    // CloudScriptParser.g:212:1: classDefinition returns [ClassDefinitionNode node] : CLASS name= CONSTANT ( LT superClass= CONSTANT )? terminator expressions END ;
     public final CloudScriptParser.classDefinition_return classDefinition() throws RecognitionException {
         CloudScriptParser.classDefinition_return retval = new CloudScriptParser.classDefinition_return();
         retval.start = input.LT(1);
@@ -2692,37 +2670,37 @@ public class CloudScriptParser extends Parser {
 
         Token name=null;
         Token superClass=null;
-        Token CLASS66=null;
-        Token LT67=null;
-        Token END70=null;
-        CloudScriptParser.terminator_return terminator68 = null;
+        Token CLASS65=null;
+        Token LT66=null;
+        Token END69=null;
+        CloudScriptParser.terminator_return terminator67 = null;
 
-        CloudScriptParser.expressions_return expressions69 = null;
+        CloudScriptParser.expressions_return expressions68 = null;
 
 
         Object name_tree=null;
         Object superClass_tree=null;
-        Object CLASS66_tree=null;
-        Object LT67_tree=null;
-        Object END70_tree=null;
+        Object CLASS65_tree=null;
+        Object LT66_tree=null;
+        Object END69_tree=null;
 
         try {
-            // CloudScriptParser.g:213:51: ( CLASS name= CONSTANT ( LT superClass= CONSTANT )? terminator expressions END )
-            // CloudScriptParser.g:214:5: CLASS name= CONSTANT ( LT superClass= CONSTANT )? terminator expressions END
+            // CloudScriptParser.g:212:51: ( CLASS name= CONSTANT ( LT superClass= CONSTANT )? terminator expressions END )
+            // CloudScriptParser.g:213:5: CLASS name= CONSTANT ( LT superClass= CONSTANT )? terminator expressions END
             {
             root_0 = (Object)adaptor.nil();
 
-            CLASS66=(Token)match(input,CLASS,FOLLOW_CLASS_in_classDefinition1732); if (state.failed) return retval;
+            CLASS65=(Token)match(input,CLASS,FOLLOW_CLASS_in_classDefinition1715); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            CLASS66_tree = (Object)adaptor.create(CLASS66);
-            adaptor.addChild(root_0, CLASS66_tree);
+            CLASS65_tree = (Object)adaptor.create(CLASS65);
+            adaptor.addChild(root_0, CLASS65_tree);
             }
-            name=(Token)match(input,CONSTANT,FOLLOW_CONSTANT_in_classDefinition1736); if (state.failed) return retval;
+            name=(Token)match(input,CONSTANT,FOLLOW_CONSTANT_in_classDefinition1719); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
             name_tree = (Object)adaptor.create(name);
             adaptor.addChild(root_0, name_tree);
             }
-            // CloudScriptParser.g:214:25: ( LT superClass= CONSTANT )?
+            // CloudScriptParser.g:213:25: ( LT superClass= CONSTANT )?
             int alt23=2;
             int LA23_0 = input.LA(1);
 
@@ -2731,14 +2709,14 @@ public class CloudScriptParser extends Parser {
             }
             switch (alt23) {
                 case 1 :
-                    // CloudScriptParser.g:214:26: LT superClass= CONSTANT
+                    // CloudScriptParser.g:213:26: LT superClass= CONSTANT
                     {
-                    LT67=(Token)match(input,LT,FOLLOW_LT_in_classDefinition1739); if (state.failed) return retval;
+                    LT66=(Token)match(input,LT,FOLLOW_LT_in_classDefinition1722); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    LT67_tree = (Object)adaptor.create(LT67);
-                    adaptor.addChild(root_0, LT67_tree);
+                    LT66_tree = (Object)adaptor.create(LT66);
+                    adaptor.addChild(root_0, LT66_tree);
                     }
-                    superClass=(Token)match(input,CONSTANT,FOLLOW_CONSTANT_in_classDefinition1743); if (state.failed) return retval;
+                    superClass=(Token)match(input,CONSTANT,FOLLOW_CONSTANT_in_classDefinition1726); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     superClass_tree = (Object)adaptor.create(superClass);
                     adaptor.addChild(root_0, superClass_tree);
@@ -2749,25 +2727,25 @@ public class CloudScriptParser extends Parser {
 
             }
 
-            pushFollow(FOLLOW_terminator_in_classDefinition1747);
-            terminator68=terminator();
+            pushFollow(FOLLOW_terminator_in_classDefinition1730);
+            terminator67=terminator();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, terminator68.getTree());
-            pushFollow(FOLLOW_expressions_in_classDefinition1755);
-            expressions69=expressions();
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, terminator67.getTree());
+            pushFollow(FOLLOW_expressions_in_classDefinition1738);
+            expressions68=expressions();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, expressions69.getTree());
-            END70=(Token)match(input,END,FOLLOW_END_in_classDefinition1761); if (state.failed) return retval;
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, expressions68.getTree());
+            END69=(Token)match(input,END,FOLLOW_END_in_classDefinition1744); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            END70_tree = (Object)adaptor.create(END70);
-            adaptor.addChild(root_0, END70_tree);
+            END69_tree = (Object)adaptor.create(END69);
+            adaptor.addChild(root_0, END69_tree);
             }
             if ( state.backtracking==0 ) {
-               retval.node = new ClassDefinitionNode((name!=null?name.getText():null), (superClass!=null?superClass.getText():null), (expressions69!=null?expressions69.nodes:null)); 
+               retval.node = new ClassDefinitionNode((name!=null?name.getText():null), (superClass!=null?superClass.getText():null), (expressions68!=null?expressions68.nodes:null)); 
             }
 
             }
@@ -2797,61 +2775,61 @@ public class CloudScriptParser extends Parser {
     };
 
     // $ANTLR start "ifBlock"
-    // CloudScriptParser.g:219:1: ifBlock returns [IfNode node] : IF condition= expression terminator ifBody= expressions ( ELSE terminator elseBody= expressions )? END ;
+    // CloudScriptParser.g:218:1: ifBlock returns [IfNode node] : IF condition= expression terminator ifBody= expressions ( ELSE terminator elseBody= expressions )? END ;
     public final CloudScriptParser.ifBlock_return ifBlock() throws RecognitionException {
         CloudScriptParser.ifBlock_return retval = new CloudScriptParser.ifBlock_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token IF71=null;
-        Token ELSE73=null;
-        Token END75=null;
+        Token IF70=null;
+        Token ELSE72=null;
+        Token END74=null;
         CloudScriptParser.expression_return condition = null;
 
         CloudScriptParser.expressions_return ifBody = null;
 
         CloudScriptParser.expressions_return elseBody = null;
 
-        CloudScriptParser.terminator_return terminator72 = null;
+        CloudScriptParser.terminator_return terminator71 = null;
 
-        CloudScriptParser.terminator_return terminator74 = null;
+        CloudScriptParser.terminator_return terminator73 = null;
 
 
-        Object IF71_tree=null;
-        Object ELSE73_tree=null;
-        Object END75_tree=null;
+        Object IF70_tree=null;
+        Object ELSE72_tree=null;
+        Object END74_tree=null;
 
         try {
-            // CloudScriptParser.g:219:30: ( IF condition= expression terminator ifBody= expressions ( ELSE terminator elseBody= expressions )? END )
-            // CloudScriptParser.g:220:5: IF condition= expression terminator ifBody= expressions ( ELSE terminator elseBody= expressions )? END
+            // CloudScriptParser.g:218:30: ( IF condition= expression terminator ifBody= expressions ( ELSE terminator elseBody= expressions )? END )
+            // CloudScriptParser.g:219:5: IF condition= expression terminator ifBody= expressions ( ELSE terminator elseBody= expressions )? END
             {
             root_0 = (Object)adaptor.nil();
 
-            IF71=(Token)match(input,IF,FOLLOW_IF_in_ifBlock1809); if (state.failed) return retval;
+            IF70=(Token)match(input,IF,FOLLOW_IF_in_ifBlock1792); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            IF71_tree = (Object)adaptor.create(IF71);
-            adaptor.addChild(root_0, IF71_tree);
+            IF70_tree = (Object)adaptor.create(IF70);
+            adaptor.addChild(root_0, IF70_tree);
             }
-            pushFollow(FOLLOW_expression_in_ifBlock1813);
+            pushFollow(FOLLOW_expression_in_ifBlock1796);
             condition=expression();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, condition.getTree());
-            pushFollow(FOLLOW_terminator_in_ifBlock1815);
-            terminator72=terminator();
+            pushFollow(FOLLOW_terminator_in_ifBlock1798);
+            terminator71=terminator();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, terminator72.getTree());
-            pushFollow(FOLLOW_expressions_in_ifBlock1825);
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, terminator71.getTree());
+            pushFollow(FOLLOW_expressions_in_ifBlock1808);
             ifBody=expressions();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, ifBody.getTree());
-            // CloudScriptParser.g:222:5: ( ELSE terminator elseBody= expressions )?
+            // CloudScriptParser.g:221:5: ( ELSE terminator elseBody= expressions )?
             int alt24=2;
             int LA24_0 = input.LA(1);
 
@@ -2860,20 +2838,20 @@ public class CloudScriptParser extends Parser {
             }
             switch (alt24) {
                 case 1 :
-                    // CloudScriptParser.g:222:6: ELSE terminator elseBody= expressions
+                    // CloudScriptParser.g:221:6: ELSE terminator elseBody= expressions
                     {
-                    ELSE73=(Token)match(input,ELSE,FOLLOW_ELSE_in_ifBlock1832); if (state.failed) return retval;
+                    ELSE72=(Token)match(input,ELSE,FOLLOW_ELSE_in_ifBlock1815); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    ELSE73_tree = (Object)adaptor.create(ELSE73);
-                    adaptor.addChild(root_0, ELSE73_tree);
+                    ELSE72_tree = (Object)adaptor.create(ELSE72);
+                    adaptor.addChild(root_0, ELSE72_tree);
                     }
-                    pushFollow(FOLLOW_terminator_in_ifBlock1834);
-                    terminator74=terminator();
+                    pushFollow(FOLLOW_terminator_in_ifBlock1817);
+                    terminator73=terminator();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, terminator74.getTree());
-                    pushFollow(FOLLOW_expressions_in_ifBlock1844);
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, terminator73.getTree());
+                    pushFollow(FOLLOW_expressions_in_ifBlock1827);
                     elseBody=expressions();
 
                     state._fsp--;
@@ -2885,10 +2863,10 @@ public class CloudScriptParser extends Parser {
 
             }
 
-            END75=(Token)match(input,END,FOLLOW_END_in_ifBlock1857); if (state.failed) return retval;
+            END74=(Token)match(input,END,FOLLOW_END_in_ifBlock1840); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            END75_tree = (Object)adaptor.create(END75);
-            adaptor.addChild(root_0, END75_tree);
+            END74_tree = (Object)adaptor.create(END74);
+            adaptor.addChild(root_0, END74_tree);
             }
             if ( state.backtracking==0 ) {
                retval.node = new IfNode((condition!=null?condition.node:null), (ifBody!=null?ifBody.nodes:null), (elseBody!=null?elseBody.nodes:null)); 
@@ -2921,58 +2899,58 @@ public class CloudScriptParser extends Parser {
     };
 
     // $ANTLR start "whileBlock"
-    // CloudScriptParser.g:228:1: whileBlock returns [WhileNode node] : WHILE condition= expression terminator body= expressions END ;
+    // CloudScriptParser.g:227:1: whileBlock returns [WhileNode node] : WHILE condition= expression terminator body= expressions END ;
     public final CloudScriptParser.whileBlock_return whileBlock() throws RecognitionException {
         CloudScriptParser.whileBlock_return retval = new CloudScriptParser.whileBlock_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token WHILE76=null;
-        Token END78=null;
+        Token WHILE75=null;
+        Token END77=null;
         CloudScriptParser.expression_return condition = null;
 
         CloudScriptParser.expressions_return body = null;
 
-        CloudScriptParser.terminator_return terminator77 = null;
+        CloudScriptParser.terminator_return terminator76 = null;
 
 
-        Object WHILE76_tree=null;
-        Object END78_tree=null;
+        Object WHILE75_tree=null;
+        Object END77_tree=null;
 
         try {
-            // CloudScriptParser.g:228:36: ( WHILE condition= expression terminator body= expressions END )
-            // CloudScriptParser.g:229:5: WHILE condition= expression terminator body= expressions END
+            // CloudScriptParser.g:227:36: ( WHILE condition= expression terminator body= expressions END )
+            // CloudScriptParser.g:228:5: WHILE condition= expression terminator body= expressions END
             {
             root_0 = (Object)adaptor.nil();
 
-            WHILE76=(Token)match(input,WHILE,FOLLOW_WHILE_in_whileBlock1905); if (state.failed) return retval;
+            WHILE75=(Token)match(input,WHILE,FOLLOW_WHILE_in_whileBlock1888); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            WHILE76_tree = (Object)adaptor.create(WHILE76);
-            adaptor.addChild(root_0, WHILE76_tree);
+            WHILE75_tree = (Object)adaptor.create(WHILE75);
+            adaptor.addChild(root_0, WHILE75_tree);
             }
-            pushFollow(FOLLOW_expression_in_whileBlock1909);
+            pushFollow(FOLLOW_expression_in_whileBlock1892);
             condition=expression();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, condition.getTree());
-            pushFollow(FOLLOW_terminator_in_whileBlock1911);
-            terminator77=terminator();
+            pushFollow(FOLLOW_terminator_in_whileBlock1894);
+            terminator76=terminator();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, terminator77.getTree());
-            pushFollow(FOLLOW_expressions_in_whileBlock1921);
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, terminator76.getTree());
+            pushFollow(FOLLOW_expressions_in_whileBlock1904);
             body=expressions();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, body.getTree());
-            END78=(Token)match(input,END,FOLLOW_END_in_whileBlock1927); if (state.failed) return retval;
+            END77=(Token)match(input,END,FOLLOW_END_in_whileBlock1910); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            END78_tree = (Object)adaptor.create(END78);
-            adaptor.addChild(root_0, END78_tree);
+            END77_tree = (Object)adaptor.create(END77);
+            adaptor.addChild(root_0, END77_tree);
             }
             if ( state.backtracking==0 ) {
                retval.node = new WhileNode((condition!=null?condition.node:null), (body!=null?body.nodes:null)); 
@@ -2997,153 +2975,6 @@ public class CloudScriptParser extends Parser {
         return retval;
     }
     // $ANTLR end "whileBlock"
-
-    public static class tryBlock_return extends ParserRuleReturnScope {
-        public TryNode node;
-        Object tree;
-        public Object getTree() { return tree; }
-    };
-
-    // $ANTLR start "tryBlock"
-    // CloudScriptParser.g:234:1: tryBlock returns [TryNode node] : TRY terminator tryBody= expressions ( CATCH CONSTANT COLON NAME terminator catchBody= expressions )* END ;
-    public final CloudScriptParser.tryBlock_return tryBlock() throws RecognitionException {
-        CloudScriptParser.tryBlock_return retval = new CloudScriptParser.tryBlock_return();
-        retval.start = input.LT(1);
-
-        Object root_0 = null;
-
-        Token TRY79=null;
-        Token CATCH81=null;
-        Token CONSTANT82=null;
-        Token COLON83=null;
-        Token NAME84=null;
-        Token END86=null;
-        CloudScriptParser.expressions_return tryBody = null;
-
-        CloudScriptParser.expressions_return catchBody = null;
-
-        CloudScriptParser.terminator_return terminator80 = null;
-
-        CloudScriptParser.terminator_return terminator85 = null;
-
-
-        Object TRY79_tree=null;
-        Object CATCH81_tree=null;
-        Object CONSTANT82_tree=null;
-        Object COLON83_tree=null;
-        Object NAME84_tree=null;
-        Object END86_tree=null;
-
-        try {
-            // CloudScriptParser.g:234:32: ( TRY terminator tryBody= expressions ( CATCH CONSTANT COLON NAME terminator catchBody= expressions )* END )
-            // CloudScriptParser.g:235:5: TRY terminator tryBody= expressions ( CATCH CONSTANT COLON NAME terminator catchBody= expressions )* END
-            {
-            root_0 = (Object)adaptor.nil();
-
-            TRY79=(Token)match(input,TRY,FOLLOW_TRY_in_tryBlock1975); if (state.failed) return retval;
-            if ( state.backtracking==0 ) {
-            TRY79_tree = (Object)adaptor.create(TRY79);
-            adaptor.addChild(root_0, TRY79_tree);
-            }
-            pushFollow(FOLLOW_terminator_in_tryBlock1977);
-            terminator80=terminator();
-
-            state._fsp--;
-            if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, terminator80.getTree());
-            pushFollow(FOLLOW_expressions_in_tryBlock1987);
-            tryBody=expressions();
-
-            state._fsp--;
-            if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, tryBody.getTree());
-            if ( state.backtracking==0 ) {
-               retval.node = new TryNode((tryBody!=null?tryBody.nodes:null)); 
-            }
-            // CloudScriptParser.g:237:5: ( CATCH CONSTANT COLON NAME terminator catchBody= expressions )*
-            loop25:
-            do {
-                int alt25=2;
-                int LA25_0 = input.LA(1);
-
-                if ( (LA25_0==CATCH) ) {
-                    alt25=1;
-                }
-
-
-                switch (alt25) {
-            	case 1 :
-            	    // CloudScriptParser.g:237:6: CATCH CONSTANT COLON NAME terminator catchBody= expressions
-            	    {
-            	    CATCH81=(Token)match(input,CATCH,FOLLOW_CATCH_in_tryBlock2014); if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) {
-            	    CATCH81_tree = (Object)adaptor.create(CATCH81);
-            	    adaptor.addChild(root_0, CATCH81_tree);
-            	    }
-            	    CONSTANT82=(Token)match(input,CONSTANT,FOLLOW_CONSTANT_in_tryBlock2016); if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) {
-            	    CONSTANT82_tree = (Object)adaptor.create(CONSTANT82);
-            	    adaptor.addChild(root_0, CONSTANT82_tree);
-            	    }
-            	    COLON83=(Token)match(input,COLON,FOLLOW_COLON_in_tryBlock2018); if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) {
-            	    COLON83_tree = (Object)adaptor.create(COLON83);
-            	    adaptor.addChild(root_0, COLON83_tree);
-            	    }
-            	    NAME84=(Token)match(input,NAME,FOLLOW_NAME_in_tryBlock2020); if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) {
-            	    NAME84_tree = (Object)adaptor.create(NAME84);
-            	    adaptor.addChild(root_0, NAME84_tree);
-            	    }
-            	    pushFollow(FOLLOW_terminator_in_tryBlock2022);
-            	    terminator85=terminator();
-
-            	    state._fsp--;
-            	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, terminator85.getTree());
-            	    pushFollow(FOLLOW_expressions_in_tryBlock2032);
-            	    catchBody=expressions();
-
-            	    state._fsp--;
-            	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, catchBody.getTree());
-            	    if ( state.backtracking==0 ) {
-            	       retval.node.addCatchBlock((CONSTANT82!=null?CONSTANT82.getText():null), (NAME84!=null?NAME84.getText():null), (catchBody!=null?catchBody.nodes:null));  
-            	    }
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop25;
-                }
-            } while (true);
-
-            END86=(Token)match(input,END,FOLLOW_END_in_tryBlock2063); if (state.failed) return retval;
-            if ( state.backtracking==0 ) {
-            END86_tree = (Object)adaptor.create(END86);
-            adaptor.addChild(root_0, END86_tree);
-            }
-
-            }
-
-            retval.stop = input.LT(-1);
-
-            if ( state.backtracking==0 ) {
-
-            retval.tree = (Object)adaptor.rulePostProcessing(root_0);
-            adaptor.setTokenBoundaries(retval.tree, retval.start, retval.stop);
-            }
-        }
-
-          catch(RecognitionException recognitionException) {
-            throw recognitionException;
-          }
-        finally {
-        }
-        return retval;
-    }
-    // $ANTLR end "tryBlock"
 
     // $ANTLR start synpred8_CloudScriptParser
     public final void synpred8_CloudScriptParser_fragment() throws RecognitionException {   
@@ -3308,27 +3139,41 @@ public class CloudScriptParser extends Parser {
     }
     // $ANTLR end synpred19_CloudScriptParser
 
-    // $ANTLR start synpred37_CloudScriptParser
-    public final void synpred37_CloudScriptParser_fragment() throws RecognitionException {   
+    // $ANTLR start synpred36_CloudScriptParser
+    public final void synpred36_CloudScriptParser_fragment() throws RecognitionException {   
         CloudScriptParser.message_return head = null;
 
 
-        // CloudScriptParser.g:163:6: (head= message DOT )
-        // CloudScriptParser.g:163:6: head= message DOT
+        // CloudScriptParser.g:162:6: (head= message DOT )
+        // CloudScriptParser.g:162:6: head= message DOT
         {
-        pushFollow(FOLLOW_message_in_synpred37_CloudScriptParser1111);
+        pushFollow(FOLLOW_message_in_synpred36_CloudScriptParser1094);
         head=message();
 
         state._fsp--;
         if (state.failed) return ;
-        match(input,DOT,FOLLOW_DOT_in_synpred37_CloudScriptParser1113); if (state.failed) return ;
+        match(input,DOT,FOLLOW_DOT_in_synpred36_CloudScriptParser1096); if (state.failed) return ;
 
         }
     }
-    // $ANTLR end synpred37_CloudScriptParser
+    // $ANTLR end synpred36_CloudScriptParser
 
     // Delegated rules
 
+    public final boolean synpred36_CloudScriptParser() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred36_CloudScriptParser_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
     public final boolean synpred8_CloudScriptParser() {
         state.backtracking++;
         int start = input.mark();
@@ -3362,20 +3207,6 @@ public class CloudScriptParser extends Parser {
         int start = input.mark();
         try {
             synpred16_CloudScriptParser_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
-    public final boolean synpred37_CloudScriptParser() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred37_CloudScriptParser_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -3429,14 +3260,14 @@ public class CloudScriptParser extends Parser {
     static final String DFA3_minS =
         "\1\7\1\4\2\uffff";
     static final String DFA3_maxS =
-        "\2\57\2\uffff";
+        "\2\55\2\uffff";
     static final String DFA3_acceptS =
         "\2\uffff\1\2\1\1";
     static final String DFA3_specialS =
         "\4\uffff}>";
     static final String[] DFA3_transitionS = {
-            "\1\2\2\uffff\2\2\16\uffff\1\1\24\uffff\1\1",
-            "\3\3\1\2\2\3\2\2\6\3\2\uffff\1\3\2\uffff\1\3\1\uffff\1\3\1"+
+            "\1\2\1\uffff\1\2\16\uffff\1\1\24\uffff\1\1",
+            "\3\3\1\2\1\3\1\2\6\3\2\uffff\1\3\2\uffff\1\3\1\uffff\1\3\1"+
             "\1\3\uffff\1\3\1\uffff\1\3\14\uffff\1\3\1\uffff\1\1",
             "",
             ""
@@ -3476,23 +3307,22 @@ public class CloudScriptParser extends Parser {
         }
     }
     static final String DFA7_eotS =
-        "\24\uffff";
+        "\23\uffff";
     static final String DFA7_eofS =
-        "\24\uffff";
+        "\23\uffff";
     static final String DFA7_minS =
-        "\1\4\21\0\2\uffff";
+        "\1\4\20\0\2\uffff";
     static final String DFA7_maxS =
-        "\1\55\21\0\2\uffff";
+        "\1\53\20\0\2\uffff";
     static final String DFA7_acceptS =
-        "\22\uffff\1\1\1\2";
+        "\21\uffff\1\1\1\2";
     static final String DFA7_specialS =
         "\1\uffff\1\0\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14"+
-        "\1\15\1\16\1\17\1\20\2\uffff}>";
+        "\1\15\1\16\1\17\2\uffff}>";
     static final String[] DFA7_transitionS = {
-            "\1\15\1\14\1\16\1\uffff\1\17\1\20\2\uffff\1\12\1\5\1\6\1\7\1"+
-            "\3\1\4\2\uffff\1\2\2\uffff\1\13\1\uffff\1\10\4\uffff\1\21\1"+
-            "\uffff\1\11\14\uffff\1\1",
-            "\1\uffff",
+            "\1\15\1\14\1\16\1\uffff\1\17\1\uffff\1\12\1\5\1\6\1\7\1\3\1"+
+            "\4\2\uffff\1\2\2\uffff\1\13\1\uffff\1\10\4\uffff\1\20\1\uffff"+
+            "\1\11\14\uffff\1\1",
             "\1\uffff",
             "\1\uffff",
             "\1\uffff",
@@ -3556,9 +3386,9 @@ public class CloudScriptParser extends Parser {
                         int index7_1 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred8_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index7_1);
@@ -3571,9 +3401,9 @@ public class CloudScriptParser extends Parser {
                         int index7_2 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred8_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index7_2);
@@ -3586,9 +3416,9 @@ public class CloudScriptParser extends Parser {
                         int index7_3 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred8_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index7_3);
@@ -3601,9 +3431,9 @@ public class CloudScriptParser extends Parser {
                         int index7_4 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred8_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index7_4);
@@ -3616,9 +3446,9 @@ public class CloudScriptParser extends Parser {
                         int index7_5 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred8_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index7_5);
@@ -3631,9 +3461,9 @@ public class CloudScriptParser extends Parser {
                         int index7_6 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred8_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index7_6);
@@ -3646,9 +3476,9 @@ public class CloudScriptParser extends Parser {
                         int index7_7 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred8_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index7_7);
@@ -3661,9 +3491,9 @@ public class CloudScriptParser extends Parser {
                         int index7_8 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred8_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index7_8);
@@ -3676,9 +3506,9 @@ public class CloudScriptParser extends Parser {
                         int index7_9 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred8_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index7_9);
@@ -3691,9 +3521,9 @@ public class CloudScriptParser extends Parser {
                         int index7_10 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred8_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index7_10);
@@ -3706,9 +3536,9 @@ public class CloudScriptParser extends Parser {
                         int index7_11 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred8_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index7_11);
@@ -3721,9 +3551,9 @@ public class CloudScriptParser extends Parser {
                         int index7_12 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred8_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index7_12);
@@ -3736,9 +3566,9 @@ public class CloudScriptParser extends Parser {
                         int index7_13 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred8_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index7_13);
@@ -3751,9 +3581,9 @@ public class CloudScriptParser extends Parser {
                         int index7_14 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred8_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index7_14);
@@ -3766,9 +3596,9 @@ public class CloudScriptParser extends Parser {
                         int index7_15 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred8_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index7_15);
@@ -3781,27 +3611,12 @@ public class CloudScriptParser extends Parser {
                         int index7_16 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred8_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index7_16);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 16 : 
-                        int LA7_17 = input.LA(1);
-
-                         
-                        int index7_17 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred8_CloudScriptParser()) ) {s = 18;}
-
-                        else if ( (true) ) {s = 19;}
-
-                         
-                        input.seek(index7_17);
                         if ( s>=0 ) return s;
                         break;
             }
@@ -3813,23 +3628,22 @@ public class CloudScriptParser extends Parser {
         }
     }
     static final String DFA8_eotS =
-        "\24\uffff";
+        "\23\uffff";
     static final String DFA8_eofS =
-        "\24\uffff";
+        "\23\uffff";
     static final String DFA8_minS =
-        "\1\4\21\0\2\uffff";
+        "\1\4\20\0\2\uffff";
     static final String DFA8_maxS =
-        "\1\55\21\0\2\uffff";
+        "\1\53\20\0\2\uffff";
     static final String DFA8_acceptS =
-        "\22\uffff\1\1\1\2";
+        "\21\uffff\1\1\1\2";
     static final String DFA8_specialS =
         "\1\uffff\1\0\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14"+
-        "\1\15\1\16\1\17\1\20\2\uffff}>";
+        "\1\15\1\16\1\17\2\uffff}>";
     static final String[] DFA8_transitionS = {
-            "\1\15\1\14\1\16\1\uffff\1\17\1\20\2\uffff\1\12\1\5\1\6\1\7\1"+
-            "\3\1\4\2\uffff\1\2\2\uffff\1\13\1\uffff\1\10\4\uffff\1\21\1"+
-            "\uffff\1\11\14\uffff\1\1",
-            "\1\uffff",
+            "\1\15\1\14\1\16\1\uffff\1\17\1\uffff\1\12\1\5\1\6\1\7\1\3\1"+
+            "\4\2\uffff\1\2\2\uffff\1\13\1\uffff\1\10\4\uffff\1\20\1\uffff"+
+            "\1\11\14\uffff\1\1",
             "\1\uffff",
             "\1\uffff",
             "\1\uffff",
@@ -3893,9 +3707,9 @@ public class CloudScriptParser extends Parser {
                         int index8_1 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred9_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index8_1);
@@ -3908,9 +3722,9 @@ public class CloudScriptParser extends Parser {
                         int index8_2 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred9_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index8_2);
@@ -3923,9 +3737,9 @@ public class CloudScriptParser extends Parser {
                         int index8_3 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred9_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index8_3);
@@ -3938,9 +3752,9 @@ public class CloudScriptParser extends Parser {
                         int index8_4 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred9_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index8_4);
@@ -3953,9 +3767,9 @@ public class CloudScriptParser extends Parser {
                         int index8_5 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred9_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index8_5);
@@ -3968,9 +3782,9 @@ public class CloudScriptParser extends Parser {
                         int index8_6 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred9_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index8_6);
@@ -3983,9 +3797,9 @@ public class CloudScriptParser extends Parser {
                         int index8_7 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred9_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index8_7);
@@ -3998,9 +3812,9 @@ public class CloudScriptParser extends Parser {
                         int index8_8 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred9_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index8_8);
@@ -4013,9 +3827,9 @@ public class CloudScriptParser extends Parser {
                         int index8_9 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred9_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index8_9);
@@ -4028,9 +3842,9 @@ public class CloudScriptParser extends Parser {
                         int index8_10 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred9_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index8_10);
@@ -4043,9 +3857,9 @@ public class CloudScriptParser extends Parser {
                         int index8_11 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred9_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index8_11);
@@ -4058,9 +3872,9 @@ public class CloudScriptParser extends Parser {
                         int index8_12 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred9_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index8_12);
@@ -4073,9 +3887,9 @@ public class CloudScriptParser extends Parser {
                         int index8_13 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred9_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index8_13);
@@ -4088,9 +3902,9 @@ public class CloudScriptParser extends Parser {
                         int index8_14 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred9_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index8_14);
@@ -4103,9 +3917,9 @@ public class CloudScriptParser extends Parser {
                         int index8_15 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred9_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index8_15);
@@ -4118,27 +3932,12 @@ public class CloudScriptParser extends Parser {
                         int index8_16 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred9_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index8_16);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 16 : 
-                        int LA8_17 = input.LA(1);
-
-                         
-                        int index8_17 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred9_CloudScriptParser()) ) {s = 18;}
-
-                        else if ( (true) ) {s = 19;}
-
-                         
-                        input.seek(index8_17);
                         if ( s>=0 ) return s;
                         break;
             }
@@ -4150,23 +3949,22 @@ public class CloudScriptParser extends Parser {
         }
     }
     static final String DFA9_eotS =
-        "\24\uffff";
+        "\23\uffff";
     static final String DFA9_eofS =
-        "\24\uffff";
+        "\23\uffff";
     static final String DFA9_minS =
-        "\1\4\21\0\2\uffff";
+        "\1\4\20\0\2\uffff";
     static final String DFA9_maxS =
-        "\1\55\21\0\2\uffff";
+        "\1\53\20\0\2\uffff";
     static final String DFA9_acceptS =
-        "\22\uffff\1\1\1\2";
+        "\21\uffff\1\1\1\2";
     static final String DFA9_specialS =
         "\1\uffff\1\0\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14"+
-        "\1\15\1\16\1\17\1\20\2\uffff}>";
+        "\1\15\1\16\1\17\2\uffff}>";
     static final String[] DFA9_transitionS = {
-            "\1\15\1\14\1\16\1\uffff\1\17\1\20\2\uffff\1\12\1\5\1\6\1\7\1"+
-            "\3\1\4\2\uffff\1\2\2\uffff\1\13\1\uffff\1\10\4\uffff\1\21\1"+
-            "\uffff\1\11\14\uffff\1\1",
-            "\1\uffff",
+            "\1\15\1\14\1\16\1\uffff\1\17\1\uffff\1\12\1\5\1\6\1\7\1\3\1"+
+            "\4\2\uffff\1\2\2\uffff\1\13\1\uffff\1\10\4\uffff\1\20\1\uffff"+
+            "\1\11\14\uffff\1\1",
             "\1\uffff",
             "\1\uffff",
             "\1\uffff",
@@ -4230,9 +4028,9 @@ public class CloudScriptParser extends Parser {
                         int index9_1 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred14_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index9_1);
@@ -4245,9 +4043,9 @@ public class CloudScriptParser extends Parser {
                         int index9_2 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred14_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index9_2);
@@ -4260,9 +4058,9 @@ public class CloudScriptParser extends Parser {
                         int index9_3 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred14_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index9_3);
@@ -4275,9 +4073,9 @@ public class CloudScriptParser extends Parser {
                         int index9_4 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred14_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index9_4);
@@ -4290,9 +4088,9 @@ public class CloudScriptParser extends Parser {
                         int index9_5 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred14_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index9_5);
@@ -4305,9 +4103,9 @@ public class CloudScriptParser extends Parser {
                         int index9_6 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred14_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index9_6);
@@ -4320,9 +4118,9 @@ public class CloudScriptParser extends Parser {
                         int index9_7 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred14_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index9_7);
@@ -4335,9 +4133,9 @@ public class CloudScriptParser extends Parser {
                         int index9_8 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred14_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index9_8);
@@ -4350,9 +4148,9 @@ public class CloudScriptParser extends Parser {
                         int index9_9 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred14_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index9_9);
@@ -4365,9 +4163,9 @@ public class CloudScriptParser extends Parser {
                         int index9_10 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred14_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index9_10);
@@ -4380,9 +4178,9 @@ public class CloudScriptParser extends Parser {
                         int index9_11 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred14_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index9_11);
@@ -4395,9 +4193,9 @@ public class CloudScriptParser extends Parser {
                         int index9_12 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred14_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index9_12);
@@ -4410,9 +4208,9 @@ public class CloudScriptParser extends Parser {
                         int index9_13 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred14_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index9_13);
@@ -4425,9 +4223,9 @@ public class CloudScriptParser extends Parser {
                         int index9_14 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred14_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index9_14);
@@ -4440,9 +4238,9 @@ public class CloudScriptParser extends Parser {
                         int index9_15 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred14_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index9_15);
@@ -4455,27 +4253,12 @@ public class CloudScriptParser extends Parser {
                         int index9_16 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred14_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index9_16);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 16 : 
-                        int LA9_17 = input.LA(1);
-
-                         
-                        int index9_17 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred14_CloudScriptParser()) ) {s = 18;}
-
-                        else if ( (true) ) {s = 19;}
-
-                         
-                        input.seek(index9_17);
                         if ( s>=0 ) return s;
                         break;
             }
@@ -4487,23 +4270,22 @@ public class CloudScriptParser extends Parser {
         }
     }
     static final String DFA10_eotS =
-        "\24\uffff";
+        "\23\uffff";
     static final String DFA10_eofS =
-        "\24\uffff";
+        "\23\uffff";
     static final String DFA10_minS =
-        "\1\4\21\0\2\uffff";
+        "\1\4\20\0\2\uffff";
     static final String DFA10_maxS =
-        "\1\55\21\0\2\uffff";
+        "\1\53\20\0\2\uffff";
     static final String DFA10_acceptS =
-        "\22\uffff\1\1\1\2";
+        "\21\uffff\1\1\1\2";
     static final String DFA10_specialS =
         "\1\uffff\1\0\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14"+
-        "\1\15\1\16\1\17\1\20\2\uffff}>";
+        "\1\15\1\16\1\17\2\uffff}>";
     static final String[] DFA10_transitionS = {
-            "\1\15\1\14\1\16\1\uffff\1\17\1\20\2\uffff\1\12\1\5\1\6\1\7\1"+
-            "\3\1\4\2\uffff\1\2\2\uffff\1\13\1\uffff\1\10\4\uffff\1\21\1"+
-            "\uffff\1\11\14\uffff\1\1",
-            "\1\uffff",
+            "\1\15\1\14\1\16\1\uffff\1\17\1\uffff\1\12\1\5\1\6\1\7\1\3\1"+
+            "\4\2\uffff\1\2\2\uffff\1\13\1\uffff\1\10\4\uffff\1\20\1\uffff"+
+            "\1\11\14\uffff\1\1",
             "\1\uffff",
             "\1\uffff",
             "\1\uffff",
@@ -4567,9 +4349,9 @@ public class CloudScriptParser extends Parser {
                         int index10_1 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred16_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index10_1);
@@ -4582,9 +4364,9 @@ public class CloudScriptParser extends Parser {
                         int index10_2 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred16_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index10_2);
@@ -4597,9 +4379,9 @@ public class CloudScriptParser extends Parser {
                         int index10_3 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred16_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index10_3);
@@ -4612,9 +4394,9 @@ public class CloudScriptParser extends Parser {
                         int index10_4 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred16_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index10_4);
@@ -4627,9 +4409,9 @@ public class CloudScriptParser extends Parser {
                         int index10_5 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred16_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index10_5);
@@ -4642,9 +4424,9 @@ public class CloudScriptParser extends Parser {
                         int index10_6 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred16_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index10_6);
@@ -4657,9 +4439,9 @@ public class CloudScriptParser extends Parser {
                         int index10_7 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred16_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index10_7);
@@ -4672,9 +4454,9 @@ public class CloudScriptParser extends Parser {
                         int index10_8 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred16_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index10_8);
@@ -4687,9 +4469,9 @@ public class CloudScriptParser extends Parser {
                         int index10_9 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred16_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index10_9);
@@ -4702,9 +4484,9 @@ public class CloudScriptParser extends Parser {
                         int index10_10 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred16_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index10_10);
@@ -4717,9 +4499,9 @@ public class CloudScriptParser extends Parser {
                         int index10_11 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred16_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index10_11);
@@ -4732,9 +4514,9 @@ public class CloudScriptParser extends Parser {
                         int index10_12 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred16_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index10_12);
@@ -4747,9 +4529,9 @@ public class CloudScriptParser extends Parser {
                         int index10_13 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred16_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index10_13);
@@ -4762,9 +4544,9 @@ public class CloudScriptParser extends Parser {
                         int index10_14 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred16_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index10_14);
@@ -4777,9 +4559,9 @@ public class CloudScriptParser extends Parser {
                         int index10_15 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred16_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index10_15);
@@ -4792,27 +4574,12 @@ public class CloudScriptParser extends Parser {
                         int index10_16 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred16_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index10_16);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 16 : 
-                        int LA10_17 = input.LA(1);
-
-                         
-                        int index10_17 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred16_CloudScriptParser()) ) {s = 18;}
-
-                        else if ( (true) ) {s = 19;}
-
-                         
-                        input.seek(index10_17);
                         if ( s>=0 ) return s;
                         break;
             }
@@ -4824,23 +4591,22 @@ public class CloudScriptParser extends Parser {
         }
     }
     static final String DFA11_eotS =
-        "\24\uffff";
+        "\23\uffff";
     static final String DFA11_eofS =
-        "\24\uffff";
+        "\23\uffff";
     static final String DFA11_minS =
-        "\1\4\21\0\2\uffff";
+        "\1\4\20\0\2\uffff";
     static final String DFA11_maxS =
-        "\1\55\21\0\2\uffff";
+        "\1\53\20\0\2\uffff";
     static final String DFA11_acceptS =
-        "\22\uffff\1\1\1\2";
+        "\21\uffff\1\1\1\2";
     static final String DFA11_specialS =
         "\1\uffff\1\0\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14"+
-        "\1\15\1\16\1\17\1\20\2\uffff}>";
+        "\1\15\1\16\1\17\2\uffff}>";
     static final String[] DFA11_transitionS = {
-            "\1\15\1\14\1\16\1\uffff\1\17\1\20\2\uffff\1\12\1\5\1\6\1\7\1"+
-            "\3\1\4\2\uffff\1\2\2\uffff\1\13\1\uffff\1\10\4\uffff\1\21\1"+
-            "\uffff\1\11\14\uffff\1\1",
-            "\1\uffff",
+            "\1\15\1\14\1\16\1\uffff\1\17\1\uffff\1\12\1\5\1\6\1\7\1\3\1"+
+            "\4\2\uffff\1\2\2\uffff\1\13\1\uffff\1\10\4\uffff\1\20\1\uffff"+
+            "\1\11\14\uffff\1\1",
             "\1\uffff",
             "\1\uffff",
             "\1\uffff",
@@ -4904,9 +4670,9 @@ public class CloudScriptParser extends Parser {
                         int index11_1 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred19_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index11_1);
@@ -4919,9 +4685,9 @@ public class CloudScriptParser extends Parser {
                         int index11_2 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred19_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index11_2);
@@ -4934,9 +4700,9 @@ public class CloudScriptParser extends Parser {
                         int index11_3 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred19_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index11_3);
@@ -4949,9 +4715,9 @@ public class CloudScriptParser extends Parser {
                         int index11_4 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred19_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index11_4);
@@ -4964,9 +4730,9 @@ public class CloudScriptParser extends Parser {
                         int index11_5 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred19_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index11_5);
@@ -4979,9 +4745,9 @@ public class CloudScriptParser extends Parser {
                         int index11_6 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred19_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index11_6);
@@ -4994,9 +4760,9 @@ public class CloudScriptParser extends Parser {
                         int index11_7 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred19_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index11_7);
@@ -5009,9 +4775,9 @@ public class CloudScriptParser extends Parser {
                         int index11_8 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred19_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index11_8);
@@ -5024,9 +4790,9 @@ public class CloudScriptParser extends Parser {
                         int index11_9 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred19_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index11_9);
@@ -5039,9 +4805,9 @@ public class CloudScriptParser extends Parser {
                         int index11_10 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred19_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index11_10);
@@ -5054,9 +4820,9 @@ public class CloudScriptParser extends Parser {
                         int index11_11 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred19_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index11_11);
@@ -5069,9 +4835,9 @@ public class CloudScriptParser extends Parser {
                         int index11_12 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred19_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index11_12);
@@ -5084,9 +4850,9 @@ public class CloudScriptParser extends Parser {
                         int index11_13 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred19_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index11_13);
@@ -5099,9 +4865,9 @@ public class CloudScriptParser extends Parser {
                         int index11_14 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred19_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index11_14);
@@ -5114,9 +4880,9 @@ public class CloudScriptParser extends Parser {
                         int index11_15 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred19_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index11_15);
@@ -5129,27 +4895,12 @@ public class CloudScriptParser extends Parser {
                         int index11_16 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_CloudScriptParser()) ) {s = 18;}
+                        if ( (synpred19_CloudScriptParser()) ) {s = 17;}
 
-                        else if ( (true) ) {s = 19;}
+                        else if ( (true) ) {s = 18;}
 
                          
                         input.seek(index11_16);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 16 : 
-                        int LA11_17 = input.LA(1);
-
-                         
-                        int index11_17 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred19_CloudScriptParser()) ) {s = 18;}
-
-                        else if ( (true) ) {s = 19;}
-
-                         
-                        input.seek(index11_17);
                         if ( s>=0 ) return s;
                         break;
             }
@@ -5161,38 +4912,38 @@ public class CloudScriptParser extends Parser {
         }
     }
     static final String DFA13_eotS =
-        "\23\uffff";
+        "\22\uffff";
     static final String DFA13_eofS =
-        "\1\uffff\7\21\1\uffff\1\21\10\uffff\1\21";
+        "\1\uffff\7\20\1\uffff\1\20\7\uffff\1\20";
     static final String DFA13_minS =
-        "\1\4\7\7\1\27\1\7\10\uffff\1\7";
+        "\1\4\7\7\1\25\1\7\7\uffff\1\7";
     static final String DFA13_maxS =
-        "\1\40\7\57\1\27\1\57\10\uffff\1\57";
+        "\1\36\7\55\1\25\1\55\7\uffff\1\55";
     static final String DFA13_acceptS =
-        "\12\uffff\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\1\1\uffff";
+        "\12\uffff\1\2\1\3\1\4\1\5\1\6\1\7\1\1\1\uffff";
     static final String DFA13_specialS =
-        "\23\uffff}>";
+        "\22\uffff}>";
     static final String[] DFA13_transitionS = {
-            "\1\14\1\13\1\15\1\uffff\1\16\1\17\2\uffff\1\11\1\4\1\5\1\6\1"+
-            "\2\1\3\2\uffff\1\1\2\uffff\1\12\1\uffff\1\7\4\uffff\1\20\1\uffff"+
+            "\1\14\1\13\1\15\1\uffff\1\16\1\uffff\1\11\1\4\1\5\1\6\1\2\1"+
+            "\3\2\uffff\1\1\2\uffff\1\12\1\uffff\1\7\4\uffff\1\17\1\uffff"+
             "\1\10",
-            "\1\21\2\uffff\2\21\16\uffff\1\21\1\uffff\1\12\1\21\1\uffff"+
-            "\1\21\1\uffff\14\21\2\uffff\1\21",
-            "\1\21\2\uffff\2\21\16\uffff\1\21\1\uffff\1\12\1\21\1\uffff"+
-            "\1\21\1\uffff\14\21\2\uffff\1\21",
-            "\1\21\2\uffff\2\21\16\uffff\1\21\1\uffff\1\12\1\21\1\uffff"+
-            "\1\21\1\uffff\14\21\2\uffff\1\21",
-            "\1\21\2\uffff\2\21\16\uffff\1\21\1\uffff\1\12\1\21\1\uffff"+
-            "\1\21\1\uffff\14\21\2\uffff\1\21",
-            "\1\21\2\uffff\2\21\16\uffff\1\21\1\uffff\1\12\1\21\1\uffff"+
-            "\1\21\1\uffff\14\21\2\uffff\1\21",
-            "\1\21\2\uffff\2\21\16\uffff\1\21\1\uffff\1\12\1\21\1\uffff"+
-            "\1\21\1\uffff\14\21\2\uffff\1\21",
-            "\1\21\2\uffff\2\21\16\uffff\1\21\1\uffff\1\12\1\21\1\uffff"+
-            "\1\21\1\uffff\14\21\2\uffff\1\21",
-            "\1\22",
-            "\1\21\2\uffff\2\21\16\uffff\1\21\1\uffff\1\12\1\21\1\uffff"+
-            "\1\21\1\uffff\14\21\2\uffff\1\21",
+            "\1\20\1\uffff\1\20\16\uffff\1\20\1\uffff\1\12\1\20\1\uffff"+
+            "\1\20\1\uffff\14\20\2\uffff\1\20",
+            "\1\20\1\uffff\1\20\16\uffff\1\20\1\uffff\1\12\1\20\1\uffff"+
+            "\1\20\1\uffff\14\20\2\uffff\1\20",
+            "\1\20\1\uffff\1\20\16\uffff\1\20\1\uffff\1\12\1\20\1\uffff"+
+            "\1\20\1\uffff\14\20\2\uffff\1\20",
+            "\1\20\1\uffff\1\20\16\uffff\1\20\1\uffff\1\12\1\20\1\uffff"+
+            "\1\20\1\uffff\14\20\2\uffff\1\20",
+            "\1\20\1\uffff\1\20\16\uffff\1\20\1\uffff\1\12\1\20\1\uffff"+
+            "\1\20\1\uffff\14\20\2\uffff\1\20",
+            "\1\20\1\uffff\1\20\16\uffff\1\20\1\uffff\1\12\1\20\1\uffff"+
+            "\1\20\1\uffff\14\20\2\uffff\1\20",
+            "\1\20\1\uffff\1\20\16\uffff\1\20\1\uffff\1\12\1\20\1\uffff"+
+            "\1\20\1\uffff\14\20\2\uffff\1\20",
+            "\1\21",
+            "\1\20\1\uffff\1\20\16\uffff\1\20\1\uffff\1\12\1\20\1\uffff"+
+            "\1\20\1\uffff\14\20\2\uffff\1\20",
             "",
             "",
             "",
@@ -5200,9 +4951,8 @@ public class CloudScriptParser extends Parser {
             "",
             "",
             "",
-            "",
-            "\1\21\2\uffff\2\21\16\uffff\1\21\1\uffff\1\12\1\21\1\uffff"+
-            "\1\21\1\uffff\14\21\2\uffff\1\21"
+            "\1\20\1\uffff\1\20\16\uffff\1\20\1\uffff\1\12\1\20\1\uffff"+
+            "\1\20\1\uffff\14\20\2\uffff\1\20"
     };
 
     static final short[] DFA13_eot = DFA.unpackEncodedString(DFA13_eotS);
@@ -5235,43 +4985,43 @@ public class CloudScriptParser extends Parser {
             this.transition = DFA13_transition;
         }
         public String getDescription() {
-            return "123:1: primaryExpression returns [Node node] : ( literal | call | methodDefinition | classDefinition | ifBlock | whileBlock | tryBlock | OPEN_PARENT expression CLOSE_PARENT );";
+            return "123:1: primaryExpression returns [Node node] : ( literal | call | methodDefinition | classDefinition | ifBlock | whileBlock | OPEN_PARENT expression CLOSE_PARENT );";
         }
     }
  
 
-    public static final BitSet FOLLOW_terminator_in_root77 = new BitSet(new long[]{0x000020014293F370L});
+    public static final BitSet FOLLOW_terminator_in_root77 = new BitSet(new long[]{0x0000080050A4FD70L});
     public static final BitSet FOLLOW_expressions_in_root80 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_root83 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expression_in_expressions131 = new BitSet(new long[]{0x0000800004000002L});
-    public static final BitSet FOLLOW_terminator_in_expressions142 = new BitSet(new long[]{0x000020014293F370L});
-    public static final BitSet FOLLOW_expression_in_expressions151 = new BitSet(new long[]{0x0000800004000002L});
+    public static final BitSet FOLLOW_expression_in_expressions131 = new BitSet(new long[]{0x0000200001000002L});
+    public static final BitSet FOLLOW_terminator_in_expressions142 = new BitSet(new long[]{0x0000080050A4FD70L});
+    public static final BitSet FOLLOW_expression_in_expressions151 = new BitSet(new long[]{0x0000200001000002L});
     public static final BitSet FOLLOW_terminator_in_expressions167 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_assignExpression_in_expression187 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_set_in_terminator205 = new BitSet(new long[]{0x0000800004000002L});
+    public static final BitSet FOLLOW_set_in_terminator205 = new BitSet(new long[]{0x0000200001000002L});
     public static final BitSet FOLLOW_assign_in_assignExpression231 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_orExpression_in_assignExpression256 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_andExpression_in_orExpression285 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_OR_in_orExpression293 = new BitSet(new long[]{0x000020014293F370L});
+    public static final BitSet FOLLOW_andExpression_in_orExpression285 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_OR_in_orExpression293 = new BitSet(new long[]{0x0000080050A4FD70L});
     public static final BitSet FOLLOW_orExpression_in_orExpression297 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_andExpression_in_orExpression313 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_relationalExpression_in_andExpression347 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_AND_in_andExpression355 = new BitSet(new long[]{0x000020014293F370L});
+    public static final BitSet FOLLOW_relationalExpression_in_andExpression347 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_AND_in_andExpression355 = new BitSet(new long[]{0x0000080050A4FD70L});
     public static final BitSet FOLLOW_andExpression_in_andExpression359 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_relationalExpression_in_andExpression373 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_additiveExpression_in_relationalExpression400 = new BitSet(new long[]{0x0000003E00000000L});
-    public static final BitSet FOLLOW_set_in_relationalExpression410 = new BitSet(new long[]{0x000020014293F370L});
+    public static final BitSet FOLLOW_additiveExpression_in_relationalExpression400 = new BitSet(new long[]{0x0000000F80000000L});
+    public static final BitSet FOLLOW_set_in_relationalExpression410 = new BitSet(new long[]{0x0000080050A4FD70L});
     public static final BitSet FOLLOW_relationalExpression_in_relationalExpression430 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_additiveExpression_in_relationalExpression441 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_multiplicativeExpression_in_additiveExpression470 = new BitSet(new long[]{0x000000C000000000L});
-    public static final BitSet FOLLOW_set_in_additiveExpression480 = new BitSet(new long[]{0x000020014293F370L});
+    public static final BitSet FOLLOW_multiplicativeExpression_in_additiveExpression470 = new BitSet(new long[]{0x0000003000000000L});
+    public static final BitSet FOLLOW_set_in_additiveExpression480 = new BitSet(new long[]{0x0000080050A4FD70L});
     public static final BitSet FOLLOW_additiveExpression_in_additiveExpression488 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_multiplicativeExpression_in_additiveExpression499 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_unaryExpression_in_multiplicativeExpression536 = new BitSet(new long[]{0x0000070000000000L});
-    public static final BitSet FOLLOW_set_in_multiplicativeExpression546 = new BitSet(new long[]{0x000020014293F370L});
+    public static final BitSet FOLLOW_unaryExpression_in_multiplicativeExpression536 = new BitSet(new long[]{0x000001C000000000L});
+    public static final BitSet FOLLOW_set_in_multiplicativeExpression546 = new BitSet(new long[]{0x0000080050A4FD70L});
     public static final BitSet FOLLOW_multiplicativeExpression_in_multiplicativeExpression556 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_unaryExpression_in_multiplicativeExpression567 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NOT_in_unaryExpression618 = new BitSet(new long[]{0x000020014293F370L});
+    public static final BitSet FOLLOW_NOT_in_unaryExpression618 = new BitSet(new long[]{0x0000080050A4FD70L});
     public static final BitSet FOLLOW_unaryExpression_in_unaryExpression622 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_primaryExpression_in_unaryExpression638 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_literal_in_primaryExpression674 = new BitSet(new long[]{0x0000000000000002L});
@@ -5280,106 +5030,95 @@ public class CloudScriptParser extends Parser {
     public static final BitSet FOLLOW_classDefinition_in_primaryExpression722 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ifBlock_in_primaryExpression732 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_whileBlock_in_primaryExpression750 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_tryBlock_in_primaryExpression765 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_OPEN_PARENT_in_primaryExpression782 = new BitSet(new long[]{0x000020014293F370L});
-    public static final BitSet FOLLOW_expression_in_primaryExpression790 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_CLOSE_PARENT_in_primaryExpression796 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_STRING_in_literal822 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_INTEGER_in_literal841 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_FLOAT_in_literal859 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NIL_in_literal879 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_TRUE_in_literal901 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_FALSE_in_literal922 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_constant_in_literal942 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_instanceVariable_in_literal959 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_self_in_literal968 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_SELF_in_self1002 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_AT_in_instanceVariable1036 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_NAME_in_instanceVariable1038 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_literal_in_call1070 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_DOT_in_call1072 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_message_in_call1111 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_DOT_in_call1113 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_message_in_call1146 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NAME_in_message1186 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NAME_in_message1221 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_OPEN_PARENT_in_message1223 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_CLOSE_PARENT_in_message1225 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NAME_in_message1235 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_OPEN_PARENT_in_message1237 = new BitSet(new long[]{0x000020014293F370L});
-    public static final BitSet FOLLOW_arguments_in_message1250 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_CLOSE_PARENT_in_message1261 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expression_in_arguments1336 = new BitSet(new long[]{0x0000000020000002L});
-    public static final BitSet FOLLOW_COMMA_in_arguments1361 = new BitSet(new long[]{0x000020014293F370L});
-    public static final BitSet FOLLOW_expression_in_arguments1370 = new BitSet(new long[]{0x0000000020000002L});
-    public static final BitSet FOLLOW_CONSTANT_in_constant1413 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NAME_in_assign1457 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_ASSIGN_in_assign1459 = new BitSet(new long[]{0x000020014293F370L});
-    public static final BitSet FOLLOW_expression_in_assign1461 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CONSTANT_in_assign1478 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_ASSIGN_in_assign1480 = new BitSet(new long[]{0x000020014293F370L});
-    public static final BitSet FOLLOW_expression_in_assign1482 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_AT_in_assign1495 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_NAME_in_assign1497 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_ASSIGN_in_assign1499 = new BitSet(new long[]{0x000020014293F370L});
-    public static final BitSet FOLLOW_expression_in_assign1501 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_DEF_in_methodDefinition1527 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_NAME_in_methodDefinition1529 = new BitSet(new long[]{0x0000800044000000L});
-    public static final BitSet FOLLOW_OPEN_PARENT_in_methodDefinition1532 = new BitSet(new long[]{0x0000000080800000L});
-    public static final BitSet FOLLOW_parameters_in_methodDefinition1534 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_CLOSE_PARENT_in_methodDefinition1537 = new BitSet(new long[]{0x0000800004000000L});
-    public static final BitSet FOLLOW_terminator_in_methodDefinition1541 = new BitSet(new long[]{0x000020014293F370L});
-    public static final BitSet FOLLOW_expressions_in_methodDefinition1549 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_END_in_methodDefinition1555 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NAME_in_parameters1644 = new BitSet(new long[]{0x0000000020000002L});
-    public static final BitSet FOLLOW_COMMA_in_parameters1675 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_NAME_in_parameters1684 = new BitSet(new long[]{0x0000000020000002L});
-    public static final BitSet FOLLOW_CLASS_in_classDefinition1732 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_CONSTANT_in_classDefinition1736 = new BitSet(new long[]{0x0000801004000000L});
-    public static final BitSet FOLLOW_LT_in_classDefinition1739 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_CONSTANT_in_classDefinition1743 = new BitSet(new long[]{0x0000800004000000L});
-    public static final BitSet FOLLOW_terminator_in_classDefinition1747 = new BitSet(new long[]{0x000020014293F370L});
-    public static final BitSet FOLLOW_expressions_in_classDefinition1755 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_END_in_classDefinition1761 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IF_in_ifBlock1809 = new BitSet(new long[]{0x000020014293F370L});
-    public static final BitSet FOLLOW_expression_in_ifBlock1813 = new BitSet(new long[]{0x0000800004000000L});
-    public static final BitSet FOLLOW_terminator_in_ifBlock1815 = new BitSet(new long[]{0x000020014293F370L});
-    public static final BitSet FOLLOW_expressions_in_ifBlock1825 = new BitSet(new long[]{0x0000000000000880L});
-    public static final BitSet FOLLOW_ELSE_in_ifBlock1832 = new BitSet(new long[]{0x0000800004000000L});
-    public static final BitSet FOLLOW_terminator_in_ifBlock1834 = new BitSet(new long[]{0x000020014293F370L});
-    public static final BitSet FOLLOW_expressions_in_ifBlock1844 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_END_in_ifBlock1857 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_WHILE_in_whileBlock1905 = new BitSet(new long[]{0x000020014293F370L});
-    public static final BitSet FOLLOW_expression_in_whileBlock1909 = new BitSet(new long[]{0x0000800004000000L});
-    public static final BitSet FOLLOW_terminator_in_whileBlock1911 = new BitSet(new long[]{0x000020014293F370L});
-    public static final BitSet FOLLOW_expressions_in_whileBlock1921 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_END_in_whileBlock1927 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_TRY_in_tryBlock1975 = new BitSet(new long[]{0x0000800004000000L});
-    public static final BitSet FOLLOW_terminator_in_tryBlock1977 = new BitSet(new long[]{0x000020014293F370L});
-    public static final BitSet FOLLOW_expressions_in_tryBlock1987 = new BitSet(new long[]{0x0000000000000C00L});
-    public static final BitSet FOLLOW_CATCH_in_tryBlock2014 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_CONSTANT_in_tryBlock2016 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_COLON_in_tryBlock2018 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_NAME_in_tryBlock2020 = new BitSet(new long[]{0x0000800004000000L});
-    public static final BitSet FOLLOW_terminator_in_tryBlock2022 = new BitSet(new long[]{0x000020014293F370L});
-    public static final BitSet FOLLOW_expressions_in_tryBlock2032 = new BitSet(new long[]{0x0000000000000C00L});
-    public static final BitSet FOLLOW_END_in_tryBlock2063 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_andExpression_in_synpred8_CloudScriptParser285 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_OR_in_synpred8_CloudScriptParser293 = new BitSet(new long[]{0x000020014293F370L});
+    public static final BitSet FOLLOW_OPEN_PARENT_in_primaryExpression765 = new BitSet(new long[]{0x0000080050A4FD70L});
+    public static final BitSet FOLLOW_expression_in_primaryExpression773 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_CLOSE_PARENT_in_primaryExpression779 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_STRING_in_literal805 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_INTEGER_in_literal824 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_FLOAT_in_literal842 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NIL_in_literal862 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_TRUE_in_literal884 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_FALSE_in_literal905 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_constant_in_literal925 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_instanceVariable_in_literal942 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_self_in_literal951 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SELF_in_self985 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_AT_in_instanceVariable1019 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_NAME_in_instanceVariable1021 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_literal_in_call1053 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_DOT_in_call1055 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_message_in_call1094 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_DOT_in_call1096 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_message_in_call1129 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NAME_in_message1169 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NAME_in_message1204 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_OPEN_PARENT_in_message1206 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_CLOSE_PARENT_in_message1208 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NAME_in_message1218 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_OPEN_PARENT_in_message1220 = new BitSet(new long[]{0x0000080050A4FD70L});
+    public static final BitSet FOLLOW_arguments_in_message1233 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_CLOSE_PARENT_in_message1244 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expression_in_arguments1319 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_COMMA_in_arguments1344 = new BitSet(new long[]{0x0000080050A4FD70L});
+    public static final BitSet FOLLOW_expression_in_arguments1353 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_CONSTANT_in_constant1396 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NAME_in_assign1440 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_ASSIGN_in_assign1442 = new BitSet(new long[]{0x0000080050A4FD70L});
+    public static final BitSet FOLLOW_expression_in_assign1444 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CONSTANT_in_assign1461 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_ASSIGN_in_assign1463 = new BitSet(new long[]{0x0000080050A4FD70L});
+    public static final BitSet FOLLOW_expression_in_assign1465 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_AT_in_assign1478 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_NAME_in_assign1480 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_ASSIGN_in_assign1482 = new BitSet(new long[]{0x0000080050A4FD70L});
+    public static final BitSet FOLLOW_expression_in_assign1484 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_DEF_in_methodDefinition1510 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_NAME_in_methodDefinition1512 = new BitSet(new long[]{0x0000200011000000L});
+    public static final BitSet FOLLOW_OPEN_PARENT_in_methodDefinition1515 = new BitSet(new long[]{0x0000000020200000L});
+    public static final BitSet FOLLOW_parameters_in_methodDefinition1517 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_CLOSE_PARENT_in_methodDefinition1520 = new BitSet(new long[]{0x0000200001000000L});
+    public static final BitSet FOLLOW_terminator_in_methodDefinition1524 = new BitSet(new long[]{0x0000080050A4FD70L});
+    public static final BitSet FOLLOW_expressions_in_methodDefinition1532 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_END_in_methodDefinition1538 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NAME_in_parameters1627 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_COMMA_in_parameters1658 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_NAME_in_parameters1667 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_CLASS_in_classDefinition1715 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_CONSTANT_in_classDefinition1719 = new BitSet(new long[]{0x0000200401000000L});
+    public static final BitSet FOLLOW_LT_in_classDefinition1722 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_CONSTANT_in_classDefinition1726 = new BitSet(new long[]{0x0000200001000000L});
+    public static final BitSet FOLLOW_terminator_in_classDefinition1730 = new BitSet(new long[]{0x0000080050A4FD70L});
+    public static final BitSet FOLLOW_expressions_in_classDefinition1738 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_END_in_classDefinition1744 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IF_in_ifBlock1792 = new BitSet(new long[]{0x0000080050A4FD70L});
+    public static final BitSet FOLLOW_expression_in_ifBlock1796 = new BitSet(new long[]{0x0000200001000000L});
+    public static final BitSet FOLLOW_terminator_in_ifBlock1798 = new BitSet(new long[]{0x0000080050A4FD70L});
+    public static final BitSet FOLLOW_expressions_in_ifBlock1808 = new BitSet(new long[]{0x0000000000000280L});
+    public static final BitSet FOLLOW_ELSE_in_ifBlock1815 = new BitSet(new long[]{0x0000200001000000L});
+    public static final BitSet FOLLOW_terminator_in_ifBlock1817 = new BitSet(new long[]{0x0000080050A4FD70L});
+    public static final BitSet FOLLOW_expressions_in_ifBlock1827 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_END_in_ifBlock1840 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_WHILE_in_whileBlock1888 = new BitSet(new long[]{0x0000080050A4FD70L});
+    public static final BitSet FOLLOW_expression_in_whileBlock1892 = new BitSet(new long[]{0x0000200001000000L});
+    public static final BitSet FOLLOW_terminator_in_whileBlock1894 = new BitSet(new long[]{0x0000080050A4FD70L});
+    public static final BitSet FOLLOW_expressions_in_whileBlock1904 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_END_in_whileBlock1910 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_andExpression_in_synpred8_CloudScriptParser285 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_OR_in_synpred8_CloudScriptParser293 = new BitSet(new long[]{0x0000080050A4FD70L});
     public static final BitSet FOLLOW_orExpression_in_synpred8_CloudScriptParser297 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_relationalExpression_in_synpred9_CloudScriptParser347 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_AND_in_synpred9_CloudScriptParser355 = new BitSet(new long[]{0x000020014293F370L});
+    public static final BitSet FOLLOW_relationalExpression_in_synpred9_CloudScriptParser347 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_AND_in_synpred9_CloudScriptParser355 = new BitSet(new long[]{0x0000080050A4FD70L});
     public static final BitSet FOLLOW_andExpression_in_synpred9_CloudScriptParser359 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_additiveExpression_in_synpred14_CloudScriptParser400 = new BitSet(new long[]{0x0000003E00000000L});
-    public static final BitSet FOLLOW_set_in_synpred14_CloudScriptParser410 = new BitSet(new long[]{0x000020014293F370L});
+    public static final BitSet FOLLOW_additiveExpression_in_synpred14_CloudScriptParser400 = new BitSet(new long[]{0x0000000F80000000L});
+    public static final BitSet FOLLOW_set_in_synpred14_CloudScriptParser410 = new BitSet(new long[]{0x0000080050A4FD70L});
     public static final BitSet FOLLOW_relationalExpression_in_synpred14_CloudScriptParser430 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_multiplicativeExpression_in_synpred16_CloudScriptParser470 = new BitSet(new long[]{0x000000C000000000L});
-    public static final BitSet FOLLOW_set_in_synpred16_CloudScriptParser480 = new BitSet(new long[]{0x000020014293F370L});
+    public static final BitSet FOLLOW_multiplicativeExpression_in_synpred16_CloudScriptParser470 = new BitSet(new long[]{0x0000003000000000L});
+    public static final BitSet FOLLOW_set_in_synpred16_CloudScriptParser480 = new BitSet(new long[]{0x0000080050A4FD70L});
     public static final BitSet FOLLOW_additiveExpression_in_synpred16_CloudScriptParser488 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_unaryExpression_in_synpred19_CloudScriptParser536 = new BitSet(new long[]{0x0000070000000000L});
-    public static final BitSet FOLLOW_set_in_synpred19_CloudScriptParser546 = new BitSet(new long[]{0x000020014293F370L});
+    public static final BitSet FOLLOW_unaryExpression_in_synpred19_CloudScriptParser536 = new BitSet(new long[]{0x000001C000000000L});
+    public static final BitSet FOLLOW_set_in_synpred19_CloudScriptParser546 = new BitSet(new long[]{0x0000080050A4FD70L});
     public static final BitSet FOLLOW_multiplicativeExpression_in_synpred19_CloudScriptParser556 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_message_in_synpred37_CloudScriptParser1111 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_DOT_in_synpred37_CloudScriptParser1113 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_message_in_synpred36_CloudScriptParser1094 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_DOT_in_synpred36_CloudScriptParser1096 = new BitSet(new long[]{0x0000000000000002L});
 
 }

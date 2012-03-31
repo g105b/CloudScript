@@ -127,7 +127,6 @@ primaryExpression returns [Node node]:
   | classDefinition   { $node = $classDefinition.node; }
   | ifBlock           { $node = $ifBlock.node; }
   | whileBlock        { $node = $whileBlock.node; }
-  | tryBlock          { $node = $tryBlock.node; }
   | OPEN_PARENT
       expression
     CLOSE_PARENT      { $node = $expression.node; }
@@ -230,13 +229,3 @@ whileBlock returns [WhileNode node]:
       body=expressions
     END                             { $node = new WhileNode($condition.node, $body.nodes); }
   ;
-
-tryBlock returns [TryNode node]:
-    TRY terminator
-      tryBody=expressions                   { $node = new TryNode($tryBody.nodes); }
-    (CATCH CONSTANT COLON NAME terminator
-      catchBody=expressions                 { $node.addCatchBlock($CONSTANT.text, $NAME.text, $catchBody.nodes);  }
-    )*
-    END
-  ;
-
