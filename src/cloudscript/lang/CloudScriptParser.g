@@ -143,6 +143,7 @@ literal returns [Node node]:
   | constant          { $node = $constant.node; }
   | instanceVariable  { $node = $instanceVariable.node; }
   | self              { $node = $self.node; }
+  | URL               { $node = new UrlNode($URL.text); }
   ;
 
 // self

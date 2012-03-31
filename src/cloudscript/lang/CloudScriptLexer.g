@@ -49,6 +49,7 @@ NUMBER:             '-'? DIGIT+
 STRING:             '"' ~('\\' | '"')* '"';
 NAME:               LOWER ID_CHAR* ('!' | '?')? { methodMode = false; };
 CONSTANT:           UPPER ID_CHAR*;
+URL:				('http://' | 'https://') URL_CHAR*;
 
 // Operators
 SEMICOLON:          ';';
@@ -84,4 +85,4 @@ fragment LOWER:     'a'..'z';
 fragment UPPER:     'A'..'Z';
 fragment DIGIT:     '0'..'9';
 fragment SPACE:     ' ' | '\t';
-
+fragment URL_CHAR:	'a'..'z' | 'A'..'Z' | '0'..'9' | '-' | '+' | '?' | '&' | '_' | '%' | '.' | '/';
