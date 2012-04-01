@@ -11,3 +11,9 @@ print("Hello".substring(2))
 
 print("hello".substring(2, 4))
 # => ll
+
+print("One" + 1)
+# => One1
+
+print(2 + "Two")
+# => 2Two

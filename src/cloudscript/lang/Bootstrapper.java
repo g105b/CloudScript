@@ -113,9 +113,19 @@ public class Bootstrapper {
     });
     
     //// Integer
-    integerClass.addMethod("+", new OperatorMethod<Integer>() {
-      public CloudScriptObject perform(Integer receiver, Integer argument) throws CloudScriptException {
-        return new ValueObject(receiver + argument);
+    integerClass.addMethod("+", new OperatorMethod<Object>() {
+      public CloudScriptObject perform(Object receiver, Object argument) throws CloudScriptException {
+		if(receiver instanceof Integer && argument instanceof Integer) {
+			Integer receiverInt = (Integer)receiver;
+			Integer argumentInt = (Integer)argument;
+			return new ValueObject( receiverInt + argumentInt );
+		}
+		else {
+			Integer receiverInt = (Integer)receiver;
+			String receiverString = receiverInt.toString();
+			String argumentString = (String)argument;
+			return new ValueObject( receiverString.concat(argumentString) );
+		}
       }
     });
     integerClass.addMethod("-", new OperatorMethod<Integer>() {
@@ -160,9 +170,19 @@ public class Bootstrapper {
     });
     
     //// String
-    stringClass.addMethod("+", new OperatorMethod<String>() {
-      public CloudScriptObject perform(String receiver, String argument) throws CloudScriptException {
-        return new ValueObject(receiver + argument);
+    stringClass.addMethod("+", new OperatorMethod<Object>() {
+      public CloudScriptObject perform(Object receiver, Object argument) throws CloudScriptException {
+		if(receiver instanceof String && argument instanceof String) {
+			String receiverString = (String)receiver;
+			String argumentString = (String)argument;
+			return new ValueObject( receiverString.concat(argumentString) );
+		}
+		else {
+			String receiverString = (String)receiver;
+			Integer argumentInt = (Integer)argument;
+			String argumentString = argumentInt.toString();
+			return new ValueObject( receiverString.concat(argumentString) );
+		}
       }
     });
     stringClass.addMethod("size", new Method() {
